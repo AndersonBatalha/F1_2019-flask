@@ -1,0 +1,175 @@
+@font-face {
+    font-family: F1_Regular;
+    src: url('../fonts/Formula1-Regular.woff')
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "F1_Regular";
+    font-size: 12px;
+    margin: auto;
+}
+
+nav {
+    background-color:red; 
+}
+
+.nav-link, .nav-link:hover, .nav-link:visited  {
+    color: white;
+}
+
+.nav-link {
+    font-size: 14px;
+}
+
+.card-title, .card-text, small a, small a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover, a:link, a:active, a:visited, small a:hover, small a:link, small a:active, small a:visited {
+    text-decoration: none;
+}
+
+.card {
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+.card:hover {
+    border-right: 3px red solid;
+    border-bottom: 3px red solid;
+
+}
+
+@media (min-width: 1200px) and (min-width: 992px) {
+    .noticia {
+        height: 400px; 
+    }     
+}
+
+.destaque {
+    height: 850px;
+}
+
+.btn, .btn:hover, .btn:visited, thead {
+    color: white;
+    background-color: red;
+    border: none;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .card img {
+        width: 80%;
+        height: 60%;
+    }
+    .classificacao_pilotos {
+        max-width: 400px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    .card img {
+        width: 90%;
+        height: 75%;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    .card img {
+        width: 100%;
+        height: 90%;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) { ... }
+
+
+@media (max-width: 991.98px) {
+} */
+
+@media (max-width: 400px) { 
+    .evento img{
+        max-height: 45% ;
+        width: 100%;
+    }
+    .evento .card-text {
+        max-height: 50% ;
+    }
+}
+
+@media (min-width: 485px) and (max-width: 767px) { 
+    .evento {
+        max-height: 75% ;
+        width: 80%;
+        margin: auto;
+    }
+    .evento .card-text {
+        max-height: 30% ;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 960px) { 
+    .evento {
+        max-height: 85% ;
+        width: 90%;
+    }
+}
+
+@media (min-width: 965px) { 
+    .evento {
+        max-height: 80% ;
+        max-width: 100%;
+    }
+    .evento .card-text {
+        min-width: 100%;
+    }
+}
+
+ion-icon {
+    color: white;
+}
+
+img[alt='F1 Logo'] {
+    height: 50px;
+    width: 75px;
+}
+
+thead {
+    font-size: 14px;
+}
+
+p[class='card-text'] {
+    font-size: 16px;
+    font-weight: bold;
+    height: 65px;
+}
+
+footer {
+    background-color:rgb(66, 67, 68);
+    color: white;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.carousel-item a {
+    width: 100%;
+}
+
+.nome-piloto {
+    max-width: 125px;
+}
+.icon {
+    max-width: 2px;
+    margin: 0;
+    padding: 0;
+}
+

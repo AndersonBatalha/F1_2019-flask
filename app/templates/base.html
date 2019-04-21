@@ -9,43 +9,84 @@
 
 {% block title %}Fórmula 1{% endblock %}
 
-{% block navbar %}
-    <nav class="navbar navbar-expand-lg">
-        <a href="index.html" class="navbar-brand">
-            <img src="{{ url_for('static', filename='img/f1_logo.svg') }}" alt="F1 Logo" class='border-0'>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <ion-icon name="menu"></ion-icon>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class='nav-item'>
-                    <a class="nav-link mr-3" href='equipes.html'>Equipes</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link mr-3" href='pilotos.html'>Pilotos</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link mr-3" href='calendario.html'>Calendário</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link mr-3" href='classificacao.html'>Classificação</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link mr-3" href='cadastro.html'>Cadastre-se</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link mr-3" href='login.html'>Login</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-{% endblock %}
+{% block body %}
 
-{% block content %}
+    <div class="container-fluid">
 
-{% endblock %}
+        {% block navbar %}
+            <nav class="navbar navbar-expand-lg">
+                <a href="/" class="navbar-brand">
+                    <img src="{{ url_for('static', filename='img/f1_logo.svg') }}" alt="F1 Logo" class='border-0'>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class='nav-item'>
+                            <a class="nav-link mr-3" href='/equipes'>Equipes</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class="nav-link mr-3" href='/pilotos'>Pilotos</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class="nav-link mr-3" href='/calendario'>Calendário</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class="nav-link mr-3" href='/classificacao'>Classificação</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class="nav-link mr-3" href='/cadastro'>Cadastre-se</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class="nav-link mr-3" href='/login'>Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        {% endblock %}
 
-{% block scripts %}
-    {{ super() }}
-{% endblock %}
+        {% block content %}
+
+        {% endblock content %}
+
+        <footer class="bg-dark">
+            <div class="row align-items-center justify-content-center" id='rodape'>
+                <div class="col-xl-7 col-lg-7 col-md-6 col-sm-12 mx-1">
+                    <p class="text-center">
+                        © 2003-2019 Formula One World Championship Limited
+                    </p>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mx-1">
+                    <div class="row justify-content-center">
+                        <h1>
+                            <a href="https://www.facebook.com/Formula1" class="text-white text-decoration-none" target="_blank">
+                                <ion-icon class="px-2" name='logo-facebook'></ion-icon>
+                            </a>
+                            <a href="https://twitter.com/f1" class="text-white" target="_blank">
+                                <ion-icon class="px-2" name='logo-twitter'></ion-icon>
+                            </a>
+                            <a href="https://www.instagram.com/f1/" class="text-white text-decoration-none" target="_blank">
+                                <ion-icon class="px-2" name='logo-instagram'></ion-icon>
+                            </a>
+                            <a href="https://www.youtube.com/F1" class="text-white text-decoration-none" target="_blank">
+                                <ion-icon class="px-2" name='logo-youtube'></ion-icon>
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    {% block scripts %}
+        {{ super() }}
+        <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    {% endblock %}
+
+{% endblock body %}
+
+
+
+

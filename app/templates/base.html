@@ -1,7 +1,7 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block styles %}
-    {{ super() }}
+    {{ bootstrap.load_css() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"
           type='text/css'>
     <link rel="icon" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}"/>
@@ -81,7 +81,7 @@
     </div>
 
     {% block scripts %}
-        {{ super() }}
+        {{ bootstrap.load_js() }}
         <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     {% endblock %}
 

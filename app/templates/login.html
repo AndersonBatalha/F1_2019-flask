@@ -13,6 +13,19 @@
                      alt="Logo F1" class="img-thumbnail mb-3" width="100%">
                 <form method="POST" role="form">
                     {{ form.csrf_token }}
+
+                    {% if form.errors %}
+                        {% for field in form %}
+                            {% if field.errors %}
+                                {% for error in field.errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ error }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+
                     <div class="form-group">
                             {{ wtf.form_field(form.email, form_type='inline',
                             class='form-control', placeholder=form.email.label.text ) }}

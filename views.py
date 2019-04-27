@@ -21,6 +21,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(BASE_DIR, 'd
 
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
+db.init_app(app)
 migrate = Migrate(app, db)
 
 # forms
@@ -120,7 +121,7 @@ class Cidade(db.Model):
     nome_cidade = db.Column(db.String(50), nullable=False, unique=True)
 
     id_pais = db.Column(db.Integer, db.ForeignKey('pais.id_pais'), nullable=False)
-    pais = db.relationship('pais', backref=db.backref('cidade', lazy=True))
+    pais = db.relationship(Pais, backref=db.backref('cidade', lazy=True))
 
     def __repr__(self):
         return "<Cidade: %r>" % self.nome_cidade
@@ -138,7 +139,7 @@ class Equipe(db.Model):
     melhor_resultado = db.Column(db.String(25))
 
     id_cidade = db.Column(db.Integer, db.ForeignKey('cidade.id_cidade'), nullable=False)
-    cidade = db.relationship('cidade', backref=db.backref('equipe', lazy=True))
+    cidade = db.relationship(Cidade, backref=db.backref('equipe', lazy=True))
 
     def __repr__(self):
         return "<Equipe: %r>" % self.nome_equipe
@@ -156,7 +157,7 @@ class Circuito(db.Model):
     tempo_recorde_pista = db.Column(db.Time)
 
     id_cidade = db.Column(db.Integer, db.ForeignKey('cidade.id_cidade'), nullable=False)
-    cidade = db.relationship('cidade', backref=db.backref('circuito', lazy=True))
+    cidade = db.relationship(Cidade, backref=db.backref('circuito', lazy=True))
 
     def __repr__(self):
         return "<Circuito: %r>" % self.nome_circuito
@@ -169,7 +170,7 @@ class Evento(db.Model):
     data_termino = db.Column(db.Date)
 
     id_circuito = db.Column(db.Integer, db.ForeignKey('circuito.id_circuito'), nullable=False)
-    circuito = db.relationship('circuito', backref=db.backref('evento', lazy=True))
+    circuito = db.relationship(Circuito, backref=db.backref('evento', lazy=True))
 
     def __repr__(self):
         return "<Evento: %r>" % self.nome_evento
@@ -181,7 +182,7 @@ class Resultados(db.Model):
     pontuacao_corrida = db.Column(db.Integer)
 
     id_evento = db.Column(db.Integer, db.ForeignKey('evento.id_evento'), nullable=False)
-    evento = db.relationship('evento', backref=db.backref('resultados', lazy=True))
+    evento = db.relationship(Evento, backref=db.backref('resultados', lazy=True))
 
     def __repr__(self):
         return "<Resultado: %r - %r>" % (self.evento.nome_evento, self.posicao)
@@ -201,8 +202,8 @@ class Piloto(db.Model):
     id_equipe = db.Column(db.Integer, db.ForeignKey('equipe.id_equipe'), nullable=False)
     id_cidade = db.Column(db.Integer, db.ForeignKey('cidade.id_cidade'), nullable=False)
 
-    equipe = db.relationship('equipe', backref=db.backref('piloto', lazy=True))
-    cidade = db.relationship('cidade', backref=db.backref('piloto', lazy=True))
+    equipe = db.relationship(Equipe, backref=db.backref('piloto', lazy=True))
+    cidade = db.relationship(Cidade, backref=db.backref('piloto', lazy=True))
 
     def __repr__(self):
         return "<Piloto: %r>" % self.nome_piloto
@@ -215,5 +216,5 @@ class Resultado_Piloto(db.Model):
     id_piloto = db.Column(db.Integer, db.ForeignKey('piloto.id_piloto'),
                              nullable=False)
 
-    resultado = db.relationship('resultados', backref=db.backref('resultado_piloto', lazy=True))
-    piloto = db.relationship('piloto', backref=db.backref('resultado_piloto', lazy=True))
+    resultado = db.relationship(Resultados, backref=db.backref('resultado_piloto', lazy=True))
+    piloto = db.relationship(Piloto, backref=db.backref('resultado_piloto', lazy=True))

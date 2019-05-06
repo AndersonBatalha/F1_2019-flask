@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
@@ -19,6 +17,7 @@ def create_app():
     config.init_app(app)
 
     bootstrap.init_app(app)
+
     db.init_app(app)
     login_manager.init_app(app)
 

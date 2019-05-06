@@ -21,7 +21,7 @@ nav {
     color: white;
 }
 
-.nav-link {
+.nav-link, #navbar a {
     font-size: 14px;
 }
 

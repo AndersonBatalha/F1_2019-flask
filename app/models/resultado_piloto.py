@@ -1,3 +1,6 @@
+from app import db
+from .resultados import Resultados
+from .piloto import Piloto
 
 class Resultado_Piloto(db.Model):
     __tablename__ = 'resultado_piloto'

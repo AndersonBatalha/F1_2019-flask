@@ -1,3 +1,6 @@
+from app import db
+from . import Cidade
+
 class Equipe(db.Model):
     __tablename__ = 'equipe'
     id_equipe = db.Column(db.Integer, primary_key=True, autoincrement=True)

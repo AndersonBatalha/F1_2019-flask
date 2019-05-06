@@ -1,3 +1,5 @@
+from app import db
+
 class Pais(db.Model):
     __tablename__ = 'pais'
     id_pais = db.Column(db.Integer, primary_key=True, autoincrement=True)

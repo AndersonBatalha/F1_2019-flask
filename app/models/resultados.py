@@ -1,3 +1,6 @@
+from app import db
+from .evento import Evento
+
 class Resultados(db.Model):
     __tablename__ = 'resultados'
     id_resultado = db.Column(db.Integer, primary_key=True, autoincrement=True, nullable=False)

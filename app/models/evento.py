@@ -1,3 +1,6 @@
+from app import db
+from . import Circuito
+
 class Evento(db.Model):
     __tablename__ = 'evento'
     id_evento = db.Column(db.Integer, primary_key=True, autoincrement=True)

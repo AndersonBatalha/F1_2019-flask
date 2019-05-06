@@ -1,3 +1,6 @@
+from app import db
+from . import Equipe, Cidade
+
 class Piloto(db.Model):
     __tablename__ = 'piloto'
     id_piloto = db.Column(db.Integer, primary_key=True, autoincrement=True)

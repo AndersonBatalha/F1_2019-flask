@@ -1,54 +1,42 @@
-from main import *
-import sqlite3, os, requests, json
+import os, requests, json
 
-print("Nome do app: {0}".format(app.name))
+from app import db
+from app.models import *
 
-if 'data.sqlite' not in os.listdir(BASE_DIR):
-    os.system('export FLASK_DEBUG=1 FLASK_ENV=development FLASK_APP={0}.py'.format(app.name))
-    os.system('touch data.sqlite')
-    os.system('flask db init')
-    os.system('flask db migrate')
-    os.system('flask db upgrade')
 
-paises = ["Brasil", "Reino Unido", "França", "Finlândia", "Tailândia", "Dinamarca", "Austrália",
-          "Canadá", "Alemanha", "Rússia", "Polônia", "Espanha", "Itália", "Países Baixos"]
+class Populate_DB():
 
-cidades = {"São Paulo": "Brasil",
-           "Stevenage": "Reino Unido",
-           "Nastola": "Finlândia",
-           "Ufa": "Rússia",
-           "Rio de Janeiro": "Brasil",
-           "Brasília": "Brasil"}
+    def __init__(self):
+        self.url_data = 'https://api.myjson.com/bins/qowkk'
 
-for pais in paises:
-    if sqlite3.IntegrityError:
-        pass
-    else:
-        q = Pais.query.filter_by(nome_pais=pais).first()
-        if not q:
-            p = Pais(nome_pais=pais)
-            db.session.add(p)
-            print(p)
+    def json_request(self):
+        return requests.get(url=self.url_data).content
+
+    def load_json(self):
+        return json.loads(self.json_request(), encoding='utf-8')
+
+    def pais(self, valor):
+        r = Pais()
+        r.nome_pais = valor
+        db.session.add(r)
         db.session.commit()
 
-print("Inseridos %d registros" %(int(len(paises))))
 
-for cidade, pais in cidades.items():
-    if sqlite3.IntegrityError:
-        pass
-    else:
-        p = Pais.query.filter_by(nome_pais=pais).first()
-        if p is None:
-            p = Pais(nome_pais=pais)
-            db.session.add(p)
-            db.session.commit()
-        c = Cidade(nome_cidade=cidade, pais=p)
-        db.session.add(c)
-        db.session.commit()
-        print(c)
 
-print("Inseridos %d registros" %(int(len(cidades))))
+a = Populate_DB()
+data = a.load_json()
 
-json_data = requests.get('https://my-json-server.typicode.com/AndersonBatalha/json-data/db').content
-data = json.loads(json_data)
+corridas = data['calendario_temporada']
+equipes = data['equipes']
+
+for corrida in corridas:
+    a.pais(corrida['localização']['pais'])
+#     print("\n")
+#     for i in corrida:
+#         if type(corrida[i]).__name__ == 'dict':
+#             print(i)
+#             for j in corrida[i]:
+#                 print('\t', j, ":", corrida[i][j])
+#         else:
+#             print(i, ":", corrida[i])
 

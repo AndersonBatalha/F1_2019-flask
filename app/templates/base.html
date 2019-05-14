@@ -37,8 +37,21 @@
                             <a class="nav-link mr-3" href='/classificacao'>Classificação</a>
                         </li>
                     </ul>
-                    <a class="mr-3 text-white" href='/cadastro'>Cadastre-se</a>
-                    <a class="mr-3 text-white" href='/login'>Login</a>
+                    {% if current_user.is_authenticated %}
+                        <div class="dropdown">
+                            <a class="dropdown-toggle text-white" href="#" role="button"
+                             id="link" data-toggle="dropdown" aria-haspopup="true"
+                             aria-expanded="false">
+                                <ion-icon name="person" class="mr-2"></ion-icon>{{ current_user.nome_usuario }}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="link">
+                                <a class="dropdown-item" href="/logout">Logout</a>
+                            </div>
+                        </div>
+                    {% else %}
+                        <a class="mr-3 text-white" href='/cadastro'>Cadastre-se</a>
+                        <a class="mr-3 text-white" href='/login'>Login</a>
+                    {% endif %}
                 </div>
             </nav>
         {% endblock %}

@@ -18,4 +18,4 @@ class Equipe(db.Model):
     cidade = db.relationship(Cidade, backref=db.backref('equipe', lazy=True))
 
     def __repr__(self):
-        return "<Equipe: %r>" % self.nome_equipe
+        return "<Equipe: (%d) %r>" % (self.id_equipe, self.nome_equipe)

@@ -6,4 +6,4 @@ class Pais(db.Model):
     nome_pais = db.Column(db.String(65), nullable=False, unique=True)
 
     def __repr__(self):
-        return "<País: %d - %r>" % (self.id_pais, self.nome_pais)
+        return "<País: %r>" % (self.nome_pais)

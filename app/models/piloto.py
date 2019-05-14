@@ -14,11 +14,11 @@ class Piloto(db.Model):
     pos_melhor_resultado = db.Column(db.Integer)
     nr_melhor_resultado = db.Column(db.Integer)
 
-    id_equipe = db.Column(db.Integer, db.ForeignKey('equipe.id_equipe'), nullable=False)
     id_cidade = db.Column(db.Integer, db.ForeignKey('cidade.id_cidade'), nullable=False)
+    cidade = db.relationship(Cidade, backref=db.backref('piloto', lazy=None))
 
+    id_equipe = db.Column(db.Integer, db.ForeignKey('equipe.id_equipe'))
     equipe = db.relationship(Equipe, backref=db.backref('piloto', lazy=True))
-    cidade = db.relationship(Cidade, backref=db.backref('piloto', lazy=True))
 
     def __repr__(self):
         return "<Piloto: %r>" % self.nome_piloto

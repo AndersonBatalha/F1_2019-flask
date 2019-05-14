@@ -26,13 +26,17 @@
                     {% endif %}
 
                     <div class="form-group my-1">
-                        {{ wtf.form_field(form.nome, placeholder="Nome") }}
+                        <div class="form-row">
+                            <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6 my-1">
+                                {{ wtf.form_field(form.nome) }}
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6">
+                               {{ wtf.form_field(form.nome_usuario) }}
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group my-1">
-                        {{ wtf.form_field(form.nome_usuario, placeholder="Nome de usuário") }}
-                    </div>
-                    <div class="form-group my-1">
-                        {{ wtf.form_field(form.email, placeholder="nome@email.com") }}
+                        {{ wtf.form_field(form.email) }}
                     </div>
                     <div class="form-group my-1">
                         {{ wtf.form_field(form.data_nasc, type='date', placeholder="DD/MM/AAAA") }}
@@ -40,51 +44,43 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-sm-12 col-md-6 col-xl-4 col-lg-4 my-1">
-                                {{ wtf.form_field(form.endereco, placeholder=form.endereco.label
-                                .text) }}
+                                {{ wtf.form_field(form.endereco) }}
                             </div>
                             <div class="col-sm-12 col-md-6 col-xl-4 col-lg-4 my-1">
-                                {{ wtf.form_field(form.numero, placeholder=form.numero.label
-                                .text) }}
+                                {{ wtf.form_field(form.numero, type='number') }}
                             </div>
                             <div class="col-sm-12 col-md-12 col-xl-4 col-lg-4 mt-1">
-                                {{ wtf.form_field(form.complemento, placeholder=form.complemento
-                                .label.text) }}
+                                {{ wtf.form_field(form.complemento) }}
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6">
-                                {{ wtf.form_field(form.bairro, placeholder=form.bairro.label
-                                .text) }}
+                                {{ wtf.form_field(form.bairro) }}
                             </div>
                             <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6 mt-1">
-                                {{ wtf.form_field(form.cidade, placeholder=form.cidade.label
-                                .text) }}
+                                {{ wtf.form_field(form.cidade) }}
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6 mt-1">
-                                {{ wtf.form_field(form.estado, placeholder=form.estado.label
-                                .text) }}
+                                {{ wtf.form_field(form.estado) }}
                             </div>
                             <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6 mt-1">
-                                {{ wtf.form_field(form.pais, placeholder=form.pais.label
-                                .text) }}
+                                {{ wtf.form_field(form.pais) }}
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6">
-                                {{ wtf.form_field(form.senha, placeholder=form.senha.label
-                                .text) }}
+                                {{ wtf.form_field(form.senha) }}
                             </div>
                             <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6 my-1">
-                                {{ wtf.form_field(form.confirmacao_senha, placeholder=form.confirmacao_senha.label.text) }}
+                                {{ wtf.form_field(form.confirmacao_senha) }}
                             </div>
                         </div>
                     </div>

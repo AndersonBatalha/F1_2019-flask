@@ -1,4 +1,5 @@
 import requests, json, os, datetime
+from sqlalchemy.exc import IntegrityError
 
 from config import Config, BASE_DIR
 from app.models import *
@@ -50,32 +51,28 @@ flask db downgrade""")
 
     def pais(self, **kwargs):
         r = Pais.query.filter_by(nome_pais=kwargs['pais']).first()
-        if r:
-            return r
-        else:
+        if r is None:
             r = Pais()
             r.nome_pais = kwargs['pais']
-            db.session.add(r)
-            db.session.commit()
+        db.session.add(r)
+        db.session.commit()
         print(r)
+        return r
 
     def cidade(self, **kwargs):
         r = Cidade.query.filter_by(nome_cidade=kwargs['cidade']).first()
-        if r:
-            return r
-        else:
+        if r is None:
             r = Cidade()
             r.nome_cidade = kwargs['cidade']
             r.pais = self.pais(**kwargs)
-            db.session.add(r)
-            db.session.commit()
+        db.session.add(r)
+        db.session.commit()
         print(r)
+        return r
 
     def circuito(self, **kwargs):
         r = Circuito.query.filter_by(nome_circuito=kwargs['nome_circuito']).first()
-        if r:
-            return r
-        else:
+        if r is None:
             r = Circuito()
             r.nome_circuito = kwargs['nome_circuito']
             r.percurso = kwargs['percurso']
@@ -88,15 +85,14 @@ flask db downgrade""")
                        int(kwargs['tempo_recorde'][5:8])
             r.tempo_recorde_pista = self.str_to_time(0, m, s, ms)
             r.cidade = self.cidade(**kwargs)
-            db.session.add(r)
-            db.session.commit()
+        db.session.add(r)
+        db.session.commit()
         print(r)
+        return r
 
     def evento(self, **kwargs):
         r = Evento.query.filter_by(nome_evento=kwargs['nome_oficial_evento']).first()
-        if r:
-            return r
-        else:
+        if r is None:
             r = Evento()
             r.nome_evento = kwargs['nome_oficial_evento']
             d, M, A = kwargs['data_inicio'][0:2], kwargs['data_inicio'][3:5], \
@@ -108,15 +104,14 @@ flask db downgrade""")
 
             r.circuito = self.circuito(**kwargs)
 
-            db.session.add(r)
-            db.session.commit()
+        db.session.add(r)
+        db.session.commit()
         print(r)
+        return r
 
     def equipe(self, **kwargs):
         r = Equipe.query.filter_by(nome_equipe=kwargs['equipe']).first()
-        if r:
-            return r
-        else:
+        if r is None:
             r = Equipe()
             r.nome_equipe = kwargs['equipe']
             r.nome_oficial = kwargs['nome_oficial']
@@ -130,15 +125,14 @@ flask db downgrade""")
 
             r.cidade = self.cidade(**kwargs)
 
-            db.session.add(r)
-            db.session.commit()
+        db.session.add(r)
+        db.session.commit()
         print(r)
+        return r
 
     def piloto(self, **kwargs):
         r = Piloto.query.filter_by(nome_piloto=kwargs['nome']).first()
-        if r:
-            return r
-        else:
+        if r is None:
             r = Piloto()
             r.nome_piloto = kwargs['nome']
             r.numero_piloto = kwargs['#']
@@ -155,10 +149,8 @@ flask db downgrade""")
             r.cidade = self.cidade(**kwargs)
             r.equipe = self.equipe(**kwargs)
 
-            db.session.add(r)
-            db.session.commit()
         print(r)
-
+        return r
 
 if __name__ == '__main__':
 
@@ -214,4 +206,5 @@ if __name__ == '__main__':
                 kwargs[i] = piloto[i]
         a.pais(**kwargs)
         a.cidade(**kwargs)
-        # a.piloto(**dic)
+        a.equipe(**kwargs)
+        a.piloto(**kwargs)

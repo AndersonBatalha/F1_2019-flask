@@ -5,3 +5,4 @@ from .equipes import equipes
 from .index import index
 from .login import login
 from .pilotos import pilotos
+from .logout import logout

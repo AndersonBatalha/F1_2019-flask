@@ -11,7 +11,8 @@ class Equipe(db.Model):
     nr_pole_positions = db.Column(db.Integer)
     unidade_potencia = db.Column(db.String(75))
     chassi = db.Column(db.String(15))
-    melhor_resultado = db.Column(db.String(25))
+    posicao_melhor_resultado = db.Column(db.Integer)
+    nr_melhor_resultado = db.Column(db.Integer)
 
     id_cidade = db.Column(db.Integer, db.ForeignKey('cidade.id_cidade'), nullable=False)
     cidade = db.relationship(Cidade, backref=db.backref('equipe', lazy=True))

@@ -528,7 +528,7 @@
     ],
     "equipes": [
         {
-            "nome_equipe": "Mercedes",
+            "equipe": "Mercedes",
             "nome_oficial": "Mercedes AMG Petronas Motorsport",
             "sede": {
                 "cidade": "Brackley",
@@ -544,88 +544,10 @@
             },
             "pole_positions": 94,
             "voltas_mais_rapidas": 58,
-            "url": "https://www.formula1.com/en/teams/Mercedes.html",
-            "pilotos": [
-                {
-                    "nome": "Lewis Hamilton",
-                    "#": 44,
-                    "equipe": "Mercedes",
-                    "podios": 135,
-                    "pontos_ganhos": 3036,
-                    "gps_disputados": 230,
-                    "titulos_mundiais": {
-                        "quantidade": 5,
-                        "titulos": [2008, 2014, 2015, 2017, 2018]
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 1,
-                        "quantidade": 73
-                    },
-                    "data_nascimento": "07/01/1985",
-                    "naturalidade": {
-                        "cidade_nasc": "Stevenage",
-                        "pais_nasc": "Reino Unido"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 2,
-                            "pontos_ganhos": 18
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 1,
-                            "pontos_ganhos": 25
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 1,
-                            "pontos_ganhos": 25
-                        }
-                    ]
-                },
-                {
-                    "nome": "Valtteri Bottas",
-                    "#": 77,
-                    "equipe": "Mercedes",
-                    "podios": 31,
-                    "pontos_ganhos": 989,
-                    "gps_disputados": 120,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 1,
-                        "quantidade": 4
-                    },
-                    "data_nascimento": "28/08/1989",
-                    "naturalidade": {
-                        "cidade_nasc": "Nastola",
-                        "pais_nasc": "Finlândia"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 1,
-                            "pontos_ganhos": 26
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 2,
-                            "pontos_ganhos": 18
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 2,
-                            "pontos_ganhos": 18
-                        }
-                    ]
-                }
-            ]
+            "url": "https://www.formula1.com/en/teams/Mercedes.html"
         },
         {
-            "nome_equipe": "Ferrari",
+            "equipe": "Ferrari",
             "nome_oficial": "Scuderia Ferrari Mission Winnow",
             "sede": {
                 "cidade": "Maranello",
@@ -641,88 +563,10 @@
             },
             "pole_positions": 215,
             "voltas_mais_rapidas": 247,
-            "url": "https://www.formula1.com/en/teams/Ferrari.html",
-            "pilotos": [
-                {
-                    "nome": "Sebastian Vettel",
-                    "#": 5,
-                    "equipe": "Ferrari",
-                    "podios": 111,
-                    "pontos_ganhos": 2757,
-                    "gps_disputados": 221,
-                    "titulos_mundiais": {
-                        "quantidade": 4,
-                        "titulos": [2010, 2011, 2012, 2013]
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 1,
-                        "quantidade": 52
-                    },
-                    "data_nascimento": "03/07/1987",
-                    "naturalidade": {
-                        "cidade_nasc": "Heppenheim",
-                        "pais_nasc": "Alemanha"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 4,
-                            "pontos_ganhos": 12
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 5,
-                            "pontos_ganhos": 10
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 3,
-                            "pontos_ganhos": 15
-                        }
-                    ]
-                },
-                {
-                    "nome": "Charles Leclerc",
-                    "#": 16,
-                    "equipe": "Ferrari",
-                    "podios": 0,
-                    "pontos_ganhos": 49,
-                    "gps_disputados": 22,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 5,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "16/10/1997",
-                    "naturalidade": {
-                        "cidade_nasc": "Monte Carlo",
-                        "pais_nasc": "Mônaco"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 5,
-                            "pontos_ganhos": 10
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 3,
-                            "pontos_ganhos": 16
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 5,
-                            "pontos_ganhos": 10
-                        }
-                    ]
-                }
-            ]
+            "url": "https://www.formula1.com/en/teams/Ferrari.html"
         },
         {
-            "nome_equipe": "Red Bull",
+            "equipe": "Red Bull",
             "nome_oficial": "Aston Martin Red Bull Racing",
             "sede": {
                 "cidade": "Milton Keynes",
@@ -738,88 +582,10 @@
             },
             "pole_positions": 60,
             "voltas_mais_rapidas": 60,
-            "url": "https://www.formula1.com/en/teams/Red-Bull.html",
-            "pilotos": [
-                {
-                    "nome": "Max Verstappen",
-                    "#": 33,
-                    "equipe": "Red Bull",
-                    "podios": 23,
-                    "pontos_ganhos": 685,
-                    "gps_disputados": 82,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 1,
-                        "quantidade": 5
-                    },
-                    "data_nascimento": "30/09/1997",
-                    "naturalidade": {
-                        "cidade_nasc": "Hasselt",
-                        "pais_nasc": "Bélgica"
-                    }, 
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 3,
-                            "pontos_ganhos": 15
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 4,
-                            "pontos_ganhos": 12
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 4,
-                            "pontos_ganhos": 12
-                        }
-                    ]
-                },
-                {
-                    "nome": "Pierre Gasly",
-                    "#": 10,
-                    "equipe": "Red Bull",
-                    "podios": 0,
-                    "pontos_ganhos": 29,
-                    "gps_disputados": 27,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 4,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "07/02/1996",
-                    "naturalidade": {
-                        "cidade_nasc": "Rouen",
-                        "pais_nasc": "França"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 11,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 8,
-                            "pontos_ganhos": 4
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 6,
-                            "pontos_ganhos": 9
-                        }
-                    ]
-                }
-            ]
+            "url": "https://www.formula1.com/en/teams/Red-Bull.html"
         },
         {       
-            "nome_equipe": "Haas",
+            "equipe": "Haas",
             "nome_oficial": "Rich Energy Haas F1 Team",
             "sede": {
                 "cidade": "Kannapolis",
@@ -835,88 +601,10 @@
             },
             "pole_positions": 0,
             "voltas_mais_rapidas": 1,
-            "url": "https://www.formula1.com/en/teams/Haas.html",
-            "pilotos": [
-                {
-                    "nome": "Kevin Magnussen",
-                    "#": 20,
-                    "equipe": "Haas",
-                    "podios": 1,
-                    "pontos_ganhos": 145,
-                    "gps_disputados": 83,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 2,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "05/10/1992",
-                    "naturalidade": {
-                        "cidade_nasc": "Roskilde",
-                        "pais_nasc": "Dinamarca"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 6,
-                            "pontos_ganhos": 8
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 13,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 13,
-                            "pontos_ganhos": 0
-                        }
-                    ]
-                },
-                {
-                    "nome": "Romain Grosjean",
-                    "#": 8,
-                    "equipe": "Haas",
-                    "podios": 10,
-                    "pontos_ganhos": 381,
-                    "gps_disputados": 146,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 2,
-                        "quantidade": 2
-                    },
-                    "data_nascimento": "17/04/1986",
-                    "naturalidade": {
-                        "cidade_nasc": "Genebra",
-                        "pais_nasc": "Suíça"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 0,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 0,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 11,
-                            "pontos_ganhos": 0
-                        }
-                    ]
-                }
-            ]
+            "url": "https://www.formula1.com/en/teams/Haas.html"
         },
         {
-            "nome_equipe": "Renault",
+            "equipe": "Renault",
             "nome_oficial": "Renault F1 Team",
             "sede": {
                 "cidade": "Enstone",
@@ -932,88 +620,10 @@
             },
             "pole_positions": 20,
             "voltas_mais_rapidas": 13,
-            "url": "https://www.formula1.com/en/teams/Renault.html",
-            "pilotos": [
-                {
-                    "nome": "Nico Hulkenberg",
-                    "#": 27,
-                    "equipe": "Renault",
-                    "podios": 0,
-                    "pontos_ganhos": 480,
-                    "gps_disputados": 159,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 4,
-                        "quantidade": 3
-                    },
-                    "data_nascimento": "19/08/1987",
-                    "naturalidade": {
-                        "cidade_nasc": "Emmerich am Rhein",
-                        "pais_nasc": "Alemanha"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 7,
-                            "pontos_ganhos": 6
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 0,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 0,
-                            "pontos_ganhos": 0
-                        }
-                    ]
-                },
-                {
-                    "nome": "Daniel Ricciardo",
-                    "#": 3,
-                    "equipe": "Renault",
-                    "podios": 29,
-                    "pontos_ganhos": 986,
-                    "gps_disputados": 151,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 1,
-                        "quantidade": 7
-                    },
-                    "data_nascimento": "01/07/1989",
-                    "naturalidade": {
-                        "cidade_nasc": "Perth",
-                        "pais_nasc": "Austrália"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 0,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 0,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 7,
-                            "pontos_ganhos": 6
-                        }
-                    ]
-                }
-            ]
+            "url": "https://www.formula1.com/en/teams/Renault.html"
         },
         {
-            "nome_equipe": "Alfa Romeo",
+            "equipe": "Alfa Romeo",
             "nome_oficial": "Alfa Romeo Racing",
             "sede": {
                 "cidade": "Hinwil",
@@ -1029,88 +639,10 @@
             },
             "pole_positions": 1,
             "voltas_mais_rapidas": 5,
-            "url": "https://www.formula1.com/en/teams/Alfa-Romeo.html",
-            "pilotos": [
-                {
-                    "nome": "Kimi Räikkönen",
-                    "#": 7,
-                    "equipe": "Alfa Romeo",
-                    "podios": 103,
-                    "pontos_ganhos": 1820,
-                    "gps_disputados": 295,
-                    "titulos_mundiais": {
-                        "quantidade": 1,
-                        "titulos": [2007]
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 1,
-                        "quantidade": 21
-                    },
-                    "data_nascimento": "17/10/1979",
-                    "naturalidade": {
-                        "cidade_nasc": "Espoo",
-                        "pais_nasc": "Finlândia"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 8,
-                            "pontos_ganhos": 4
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 7,
-                            "pontos_ganhos": 6
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 9,
-                            "pontos_ganhos": 2
-                        }
-                    ]
-                },
-                {
-                    "nome": "Antonio Giovinazzi",
-                    "#": 99,
-                    "equipe": "Alfa Romeo",
-                    "podios": 0,
-                    "pontos_ganhos": 0,
-                    "gps_disputados": 3,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 12,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "14/12/1993",
-                    "naturalidade": {
-                        "cidade_nasc": "Martina Franca",
-                        "pais_nasc": "Itália"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 15,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 11,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 15,
-                            "pontos_ganhos": 0
-                        }
-                    ]
-                }
-            ]
+            "url": "https://www.formula1.com/en/teams/Alfa-Romeo.html"
         },
         {
-            "nome_equipe": "Racing Point",
+            "equipe": "Racing Point",
             "nome_oficial": "SportPesa Racing Point F1 Team",
             "sede": {
                 "cidade": "Silverstone",
@@ -1126,88 +658,10 @@
             },
             "pole_positions": 0,
             "voltas_mais_rapidas": 0,
-            "url": "https://www.formula1.com/en/teams/Racing-Point.html",
-            "pilotos": [
-                {
-                    "nome": "Sergio Perez",
-                    "#": 11,
-                    "equipe": "Racing Point",
-                    "podios": 8,
-                    "pontos_ganhos": 529,
-                    "gps_disputados": 158,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 2,
-                        "quantidade": 2
-                    },
-                    "data_nascimento": "26/01/1990",
-                    "naturalidade": {
-                        "cidade_nasc": "Guadalajara",
-                        "pais_nasc": "México"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 13,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 10,
-                            "pontos_ganhos": 1
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 8,
-                            "pontos_ganhos": 4
-                        }
-                    ]
-                },
-                {
-                    "nome": "Lance Stroll",
-                    "#": 18,
-                    "equipe": "Racing Point",
-                    "podios": 1,
-                    "pontos_ganhos": 48,
-                    "gps_disputados": 42,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 3,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "29/10/1998",
-                    "naturalidade": {
-                        "cidade_nasc": "Montreal",
-                        "pais_nasc": "Canadá"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 9,
-                            "pontos_ganhos": 2
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 14,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 12,
-                            "pontos_ganhos": 0
-                        }
-                    ]
-                }
-            ]
+            "url": "https://www.formula1.com/en/teams/Racing-Point.html"
         },
         {
-            "nome_equipe": "Toro Rosso",
+            "equipe": "Toro Rosso",
             "nome_oficial": "Red Bull Toro Rosso Honda",
             "sede": {
                 "cidade": "Faenza",
@@ -1223,88 +677,10 @@
             },
             "pole_positions": 1,
             "voltas_mais_rapidas": 1,
-            "url": "https://www.formula1.com/en/teams/Toro-Rosso.html",
-            "pilotos": [
-                {
-                    "nome": "Daniil Kvyat",
-                    "#": 26,
-                    "equipe": "Toro Rosso",
-                    "podios": 2,
-                    "pontos_ganhos": 134,
-                    "gps_disputados": 75,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 2,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "26/04/1994",
-                    "naturalidade": {
-                        "cidade_nasc": "Ufa",
-                        "pais_nasc": "Rússia"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 10,
-                            "pontos_ganhos": 1
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 12,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 0,
-                            "pontos_ganhos": 0
-                        }
-                    ]
-                },
-                {
-                    "nome": "Alexander Albon",
-                    "#": 23,
-                    "equipe": "Toro Rosso",
-                    "podios": 0,
-                    "pontos_ganhos": 0,
-                    "gps_disputados": 1,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 14,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "23/03/1996",
-                    "naturalidade": {
-                        "cidade_nasc": "Londres",
-                        "pais_nasc": "Inglaterra"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 14,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 9,
-                            "pontos_ganhos": 2
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 10,
-                            "pontos_ganhos": 1
-                        }
-                    ]
-                }
-            ]
+            "url": "https://www.formula1.com/en/teams/Toro-Rosso.html"
         },
         {
-            "nome_equipe": "McLaren",
+            "equipe": "McLaren",
             "nome_oficial": "McLaren F1 Team",
             "sede": {
                 "cidade": "Woking",
@@ -1320,88 +696,10 @@
             },
             "pole_positions": 155,
             "voltas_mais_rapidas": 155,
-            "url": "https://www.formula1.com/en/teams/McLaren.html",
-            "pilotos": [
-                {
-                    "nome": "Carlos Sainz",
-                    "#": 55,
-                    "equipe": "McLaren",
-                    "podios": 0,
-                    "pontos_ganhos": 171,
-                    "gps_disputados": 82,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 4,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "01/09/1994",
-                    "naturalidade": {
-                        "cidade_nasc": "Madri",
-                        "pais_nasc": "Espanha"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 0,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 0,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 14,
-                            "pontos_ganhos": 0
-                        }
-                    ]
-                },
-                {
-                    "nome": "Lando Norris",
-                    "#": 4,
-                    "equipe": "McLaren",
-                    "podios": 0,
-                    "pontos_ganhos": 0,
-                    "gps_disputados": 1,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 12,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "13/11/1999",
-                    "naturalidade": {
-                        "cidade_nasc": "Bristol",
-                        "pais_nasc": "Inglaterra"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 12,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 6,
-                            "pontos_ganhos": 8
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 0,
-                            "pontos_ganhos": 0
-                        }
-                    ]
-                }
-            ]
+            "url": "https://www.formula1.com/en/teams/McLaren.html"
         },
         {
-            "nome_equipe": "Williams",
+            "equipe": "Williams",
             "nome_oficial": "ROKiT Williams Racing",
             "sede": {
                 "cidade": "Grove",
@@ -1417,83 +715,767 @@
             },
             "pole_positions": 129,
             "voltas_mais_rapidas": 133,
-            "url": "https://www.formula1.com/en/teams/Williams.html",
-            "pilotos": [
+            "url": "https://www.formula1.com/en/teams/Williams.html"
+        }
+    ],
+    "pilotos": [
+        {
+            "nome": "Lewis Hamilton",
+            "#": 44,
+            "equipe": "Mercedes",
+            "podios": 135,
+            "pontos_ganhos": 3036,
+            "gps_disputados": 230,
+            "titulos_mundiais": {
+                "nr_titulos": 5,
+                "titulos": [2008, 2014, 2015, 2017, 2018]
+            },
+            "melhor_colocacao": {
+                "posicao": 1,
+                "quantidade": 73
+            },
+            "data_nascimento": "07/01/1985",
+            "naturalidade": {
+                "cidade": "Stevenage",
+                "pais": "Reino Unido"
+            },
+            "resultados": [
                 {
-                    "nome": "Robert Kubica",
-                    "#": 88,
-                    "equipe": "Williams",
-                    "podios": 12,
-                    "pontos_ganhos": 273,
-                    "gps_disputados": 77,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 1,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "07/12/1984",
-                    "naturalidade": {
-                        "cidade_nasc": "Cracóvia",
-                        "pais_nasc": "Polônia"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 17,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 16,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 17,
-                            "pontos_ganhos": 0
-                        }
-                    ]
+                    "grande_premio": "Austrália",
+                    "posicao": 2,
+                    "pontos_ganhos": 18
                 },
                 {
-                    "nome": "George Russell",
-                    "#": 63,
-                    "equipe": "Williams",
-                    "podios": 0,
-                    "pontos_ganhos": 0,
-                    "gps_disputados": 1,
-                    "titulos_mundiais": {
-                        "quantidade": 0,
-                        "titulos": []
-                    },
-                    "melhor_colocacao": {
-                        "posicao": 16,
-                        "quantidade": 1
-                    },
-                    "data_nascimento": "15/02/1998",
-                    "naturalidade": {
-                        "cidade_nasc": "King's Lynn",
-                        "pais_nasc": "Inglaterra"
-                    },
-                    "resultados": [
-                        {
-                            "grande_premio": "Austrália",
-                            "posicao": 16,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "Bahrein",
-                            "posicao": 15,
-                            "pontos_ganhos": 0
-                        },
-                        {
-                            "grande_premio": "China",
-                            "posicao": 16,
-                            "pontos_ganhos": 0
-                        }
-                    ]
+                    "grande_premio": "Bahrein",
+                    "posicao": 1,
+                    "pontos_ganhos": 25
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 1,
+                    "pontos_ganhos": 25
+                }
+            ]
+        },
+        {
+            "nome": "Valtteri Bottas",
+            "#": 77,
+            "equipe": "Mercedes",
+            "podios": 31,
+            "pontos_ganhos": 989,
+            "gps_disputados": 120,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 1,
+                "quantidade": 4
+            },
+            "data_nascimento": "28/08/1989",
+            "naturalidade": {
+                "cidade": "Nastola",
+                "pais": "Finlândia"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 1,
+                    "pontos_ganhos": 26
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 2,
+                    "pontos_ganhos": 18
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 2,
+                    "pontos_ganhos": 18
+                }
+            ]
+        },
+        {
+            "nome": "Sebastian Vettel",
+            "#": 5,
+            "equipe": "Ferrari",
+            "podios": 111,
+            "pontos_ganhos": 2757,
+            "gps_disputados": 221,
+            "titulos_mundiais": {
+                "nr_titulos": 4,
+                "titulos": [2010, 2011, 2012, 2013]
+            },
+            "melhor_colocacao": {
+                "posicao": 1,
+                "quantidade": 52
+            },
+            "data_nascimento": "03/07/1987",
+            "naturalidade": {
+                "cidade": "Heppenheim",
+                "pais": "Alemanha"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 4,
+                    "pontos_ganhos": 12
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 5,
+                    "pontos_ganhos": 10
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 3,
+                    "pontos_ganhos": 15
+                }
+            ]
+        },
+        {
+            "nome": "Charles Leclerc",
+            "#": 16,
+            "equipe": "Ferrari",
+            "podios": 0,
+            "pontos_ganhos": 49,
+            "gps_disputados": 22,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 5,
+                "quantidade": 1
+            },
+            "data_nascimento": "16/10/1997",
+            "naturalidade": {
+                "cidade": "Monte Carlo",
+                "pais": "Mônaco"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 5,
+                    "pontos_ganhos": 10
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 3,
+                    "pontos_ganhos": 16
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 5,
+                    "pontos_ganhos": 10
+                }
+            ]
+        },
+        {
+            "nome": "Max Verstappen",
+            "#": 33,
+            "equipe": "Red Bull",
+            "podios": 23,
+            "pontos_ganhos": 685,
+            "gps_disputados": 82,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 1,
+                "quantidade": 5
+            },
+            "data_nascimento": "30/09/1997",
+            "naturalidade": {
+                "cidade": "Hasselt",
+                "pais": "Bélgica"
+            }, 
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 3,
+                    "pontos_ganhos": 15
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 4,
+                    "pontos_ganhos": 12
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 4,
+                    "pontos_ganhos": 12
+                }
+            ]
+        },
+        {
+            "nome": "Pierre Gasly",
+            "#": 10,
+            "equipe": "Red Bull",
+            "podios": 0,
+            "pontos_ganhos": 29,
+            "gps_disputados": 27,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 4,
+                "quantidade": 1
+            },
+            "data_nascimento": "07/02/1996",
+            "naturalidade": {
+                "cidade": "Rouen",
+                "pais": "França"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 11,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 8,
+                    "pontos_ganhos": 4
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 6,
+                    "pontos_ganhos": 9
+                }
+            ]
+        },
+        {
+            "nome": "Kevin Magnussen",
+            "#": 20,
+            "equipe": "Haas",
+            "podios": 1,
+            "pontos_ganhos": 145,
+            "gps_disputados": 83,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 2,
+                "quantidade": 1
+            },
+            "data_nascimento": "05/10/1992",
+            "naturalidade": {
+                "cidade": "Roskilde",
+                "pais": "Dinamarca"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 6,
+                    "pontos_ganhos": 8
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 13,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 13,
+                    "pontos_ganhos": 0
+                }
+            ]
+        },
+        {
+            "nome": "Romain Grosjean",
+            "#": 8,
+            "equipe": "Haas",
+            "podios": 10,
+            "pontos_ganhos": 381,
+            "gps_disputados": 146,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 2,
+                "quantidade": 2
+            },
+            "data_nascimento": "17/04/1986",
+            "naturalidade": {
+                "cidade": "Genebra",
+                "pais": "Suíça"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 0,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 0,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 11,
+                    "pontos_ganhos": 0
+                }
+            ]
+        },
+        {
+            "nome": "Daniil Kvyat",
+            "#": 26,
+            "equipe": "Toro Rosso",
+            "podios": 2,
+            "pontos_ganhos": 134,
+            "gps_disputados": 75,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 2,
+                "quantidade": 1
+            },
+            "data_nascimento": "26/04/1994",
+            "naturalidade": {
+                "cidade": "Ufa",
+                "pais": "Rússia"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 10,
+                    "pontos_ganhos": 1
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 12,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 0,
+                    "pontos_ganhos": 0
+                }
+            ]
+        },
+        {
+            "nome": "Alexander Albon",
+            "#": 23,
+            "equipe": "Toro Rosso",
+            "podios": 0,
+            "pontos_ganhos": 0,
+            "gps_disputados": 1,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 14,
+                "quantidade": 1
+            },
+            "data_nascimento": "23/03/1996",
+            "naturalidade": {
+                "cidade": "Londres",
+                "pais": "Inglaterra"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 14,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 9,
+                    "pontos_ganhos": 2
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 10,
+                    "pontos_ganhos": 1
+                }
+            ]
+        },
+        {
+            "nome": "Nico Hulkenberg",
+            "#": 27,
+            "equipe": "Renault",
+            "podios": 0,
+            "pontos_ganhos": 480,
+            "gps_disputados": 159,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 4,
+                "quantidade": 3
+            },
+            "data_nascimento": "19/08/1987",
+            "naturalidade": {
+                "cidade": "Emmerich am Rhein",
+                "pais": "Alemanha"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 7,
+                    "pontos_ganhos": 6
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 0,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 0,
+                    "pontos_ganhos": 0
+                }
+            ]
+        },
+        {
+            "nome": "Daniel Ricciardo",
+            "#": 3,
+            "equipe": "Renault",
+            "podios": 29,
+            "pontos_ganhos": 986,
+            "gps_disputados": 151,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 1,
+                "quantidade": 7
+            },
+            "data_nascimento": "01/07/1989",
+            "naturalidade": {
+                "cidade": "Perth",
+                "pais": "Austrália"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 0,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 0,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 7,
+                    "pontos_ganhos": 6
+                }
+            ]
+        },
+        {
+            "nome": "Kimi Räikkönen",
+            "#": 7,
+            "equipe": "Alfa Romeo",
+            "podios": 103,
+            "pontos_ganhos": 1820,
+            "gps_disputados": 295,
+            "titulos_mundiais": {
+                "nr_titulos": 1,
+                "titulos": [2007]
+            },
+            "melhor_colocacao": {
+                "posicao": 1,
+                "quantidade": 21
+            },
+            "data_nascimento": "17/10/1979",
+            "naturalidade": {
+                "cidade": "Espoo",
+                "pais": "Finlândia"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 8,
+                    "pontos_ganhos": 4
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 7,
+                    "pontos_ganhos": 6
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 9,
+                    "pontos_ganhos": 2
+                }
+            ]
+        },
+        {
+            "nome": "Antonio Giovinazzi",
+            "#": 99,
+            "equipe": "Alfa Romeo",
+            "podios": 0,
+            "pontos_ganhos": 0,
+            "gps_disputados": 3,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 12,
+                "quantidade": 1
+            },
+            "data_nascimento": "14/12/1993",
+            "naturalidade": {
+                "cidade": "Martina Franca",
+                "pais": "Itália"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 15,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 11,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 15,
+                    "pontos_ganhos": 0
+                }
+            ]
+        },
+        {
+            "nome": "Sergio Perez",
+            "#": 11,
+            "equipe": "Racing Point",
+            "podios": 8,
+            "pontos_ganhos": 529,
+            "gps_disputados": 158,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 2,
+                "quantidade": 2
+            },
+            "data_nascimento": "26/01/1990",
+            "naturalidade": {
+                "cidade": "Guadalajara",
+                "pais": "México"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 13,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 10,
+                    "pontos_ganhos": 1
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 8,
+                    "pontos_ganhos": 4
+                }
+            ]
+        },
+        {
+            "nome": "Lance Stroll",
+            "#": 18,
+            "equipe": "Racing Point",
+            "podios": 1,
+            "pontos_ganhos": 48,
+            "gps_disputados": 42,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 3,
+                "quantidade": 1
+            },
+            "data_nascimento": "29/10/1998",
+            "naturalidade": {
+                "cidade": "Montreal",
+                "pais": "Canadá"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 9,
+                    "pontos_ganhos": 2
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 14,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 12,
+                    "pontos_ganhos": 0
+                }
+            ]
+        },
+        {
+            "nome": "Carlos Sainz",
+            "#": 55,
+            "equipe": "McLaren",
+            "podios": 0,
+            "pontos_ganhos": 171,
+            "gps_disputados": 82,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 4,
+                "quantidade": 1
+            },
+            "data_nascimento": "01/09/1994",
+            "naturalidade": {
+                "cidade": "Madri",
+                "pais": "Espanha"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 0,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 0,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 14,
+                    "pontos_ganhos": 0
+                }
+            ]
+        },
+        {
+            "nome": "Lando Norris",
+            "#": 4,
+            "equipe": "McLaren",
+            "podios": 0,
+            "pontos_ganhos": 0,
+            "gps_disputados": 1,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 12,
+                "quantidade": 1
+            },
+            "data_nascimento": "13/11/1999",
+            "naturalidade": {
+                "cidade": "Bristol",
+                "pais": "Inglaterra"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 12,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 6,
+                    "pontos_ganhos": 8
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 0,
+                    "pontos_ganhos": 0
+                }
+            ]
+        },
+        {
+            "nome": "Robert Kubica",
+            "#": 88,
+            "equipe": "Williams",
+            "podios": 12,
+            "pontos_ganhos": 273,
+            "gps_disputados": 77,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 1,
+                "quantidade": 1
+            },
+            "data_nascimento": "07/12/1984",
+            "naturalidade": {
+                "cidade": "Cracóvia",
+                "pais": "Polônia"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 17,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 16,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 17,
+                    "pontos_ganhos": 0
+                }
+            ]
+        },
+        {
+            "nome": "George Russell",
+            "#": 63,
+            "equipe": "Williams",
+            "podios": 0,
+            "pontos_ganhos": 0,
+            "gps_disputados": 1,
+            "titulos_mundiais": {
+                "nr_titulos": 0,
+                "titulos": []
+            },
+            "melhor_colocacao": {
+                "posicao": 16,
+                "quantidade": 1
+            },
+            "data_nascimento": "15/02/1998",
+            "naturalidade": {
+                "cidade": "King's Lynn",
+                "pais": "Inglaterra"
+            },
+            "resultados": [
+                {
+                    "grande_premio": "Austrália",
+                    "posicao": 16,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "Bahrein",
+                    "posicao": 15,
+                    "pontos_ganhos": 0
+                },
+                {
+                    "grande_premio": "China",
+                    "posicao": 16,
+                    "pontos_ganhos": 0
                 }
             ]
         }

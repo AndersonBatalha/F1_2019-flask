@@ -9,6 +9,13 @@
     <div class="container-fluid">
         <div class="row justify-content-center my-4">
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+
+                {% for message in get_flashed_messages() %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
                 <img src="{{ url_for('static', filename='img/f1-logo-red-on-white.png') }}"
                      alt="Logo F1" class="img-thumbnail mb-3" width="100%">
                 <form method="POST" role="form">
@@ -27,8 +34,8 @@
                     {% endif %}
 
                     <div class="form-group">
-                            {{ wtf.form_field(form.email, form_type='inline',
-                            class='form-control', placeholder=form.email.label.text ) }}
+                        {{ wtf.form_field(form.nome_usuario, form_type='inline',
+                        class='form-control', placeholder=form.nome_usuario.label.text ) }}
                     </div>
                     <div class="form-group">
                         {{ wtf.form_field(form.senha, form_type='inline', class='form-control',

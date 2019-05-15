@@ -42,15 +42,22 @@
                             <a class="dropdown-toggle text-white" href="#" role="button"
                              id="link" data-toggle="dropdown" aria-haspopup="true"
                              aria-expanded="false">
-                                <ion-icon name="person" class="mr-2"></ion-icon>{{ current_user.nome_usuario }}
+                                <ion-icon name="person" class="mr-2"></ion-icon>{{ current_user
+                                .nome_usuario }}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="link">
                                 <a class="dropdown-item" href="/logout">Logout</a>
                             </div>
                         </div>
                     {% else %}
-                        <a class="mr-3 text-white" href='/cadastro'>Cadastre-se</a>
-                        <a class="mr-3 text-white" href='/login'>Login</a>
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class='nav-item mr-4'>
+                                <a class="text-white" href='/cadastro'>Cadastre-se</a>
+                            </li>
+                            <li class='nav-item mr-4'>
+                                <a class="text-white" href='/login'>Login</a>
+                            </li>
+                        </ul>
                     {% endif %}
                 </div>
             </nav>

@@ -5,6 +5,7 @@ class Evento(db.Model):
     __tablename__ = 'evento'
     id_evento = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nome_evento = db.Column(db.String, nullable=True, unique=True)
+    local = db.Column(db.String)
     data_inicio = db.Column(db.Date)
     data_termino = db.Column(db.Date)
 
@@ -12,5 +13,5 @@ class Evento(db.Model):
     circuito = db.relationship(Circuito, backref=db.backref('evento', lazy=True))
 
     def __repr__(self):
-        return "<Evento: %r>" % self.nome_evento
+        return "%s" % self.nome_evento
 

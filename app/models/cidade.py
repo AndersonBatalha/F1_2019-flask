@@ -10,4 +10,4 @@ class Cidade(db.Model):
     pais = db.relationship(Pais, backref=db.backref('cidade', lazy=True))
 
     def __repr__(self):
-        return "<Cidade: %r>" % (self.nome_cidade)
+        return "%s" % (self.nome_cidade)

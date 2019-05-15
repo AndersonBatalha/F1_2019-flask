@@ -1,5 +1,4 @@
 import requests, json, os, datetime
-from sqlalchemy.exc import IntegrityError
 
 from config import Config, BASE_DIR
 from app.models import *
@@ -8,7 +7,7 @@ from app import db
 
 class Populate_DB():
     def __init__(self):
-        self.url_data = 'https://api.myjson.com/bins/131uha'
+        self.url_data = 'https://api.myjson.com/bins/i6wlu'
         self.app = create_app()
         self.arquivos = os.listdir(BASE_DIR)
 
@@ -90,11 +89,12 @@ flask db downgrade""")
         print(r)
         return r
 
-    def evento(self, **kwargs):
-        r = Evento.query.filter_by(nome_evento=kwargs['nome_oficial_evento']).first()
+    def evento(self, key, **kwargs):
+        r = Evento.query.filter_by(local=kwargs[key]).first()
         if r is None:
             r = Evento()
             r.nome_evento = kwargs['nome_oficial_evento']
+            r.local = kwargs['local']
             d, M, A = kwargs['data_inicio'][0:2], kwargs['data_inicio'][3:5], \
                       kwargs['data_inicio'][6:]
             r.data_inicio = self.str_to_date(d, M, A)
@@ -149,6 +149,35 @@ flask db downgrade""")
             r.cidade = self.cidade(**kwargs)
             r.equipe = self.equipe(**kwargs)
 
+        db.session.add(r)
+        db.session.commit()
+
+        print(r)
+        return r
+
+
+    def resultados(self, pos, pontos):
+        r = Pontuacao.query.filter_by(posicao=pos).first()
+        if r is None:
+            r = Pontuacao()
+            r.posicao = pos
+            r.pontuacao_corrida = pontos
+
+        db.session.add(r)
+        db.session.commit()
+
+        print(r)
+        return r
+
+    def resultados_pilotos(self, **kwargs):
+        r = Resultado_Piloto()
+        r.resultado = self.resultados(kwargs['posicao'], kwargs['pontos_ganhos'])
+        r.piloto = self.piloto(**kwargs)
+        r.evento = self.evento('grande_premio', **kwargs)
+
+        db.session.add(r)
+        db.session.commit()
+
         print(r)
         return r
 
@@ -164,6 +193,8 @@ if __name__ == '__main__':
     corridas = data.get('calendario_temporada')
     equipes = data.get('equipes')
     pilotos = data.get('pilotos')
+    pontuacao_corrida = data.get('pontuação')
+    resultados = data.get('resultados')
 
     kwargs = {}
 
@@ -178,9 +209,9 @@ if __name__ == '__main__':
         a.pais(**kwargs)
         a.cidade(**kwargs)
         a.circuito(**kwargs)
-        a.evento(**kwargs)
+        a.evento('nome_oficial_evento', **kwargs)
 
-    kwargs = {}
+    kwargs.clear()
 
     print("\n\nEquipes")
     for equipe in equipes:
@@ -194,7 +225,7 @@ if __name__ == '__main__':
         a.cidade(**kwargs)
         a.equipe(**kwargs)
 
-    kwargs = {}
+    kwargs.clear()
 
     print("\n\nPilotos")
     for piloto in pilotos:
@@ -202,9 +233,27 @@ if __name__ == '__main__':
             if type(piloto[i]).__name__ == 'dict':
                 for j in piloto[i]:
                     kwargs[j] = piloto[i][j]
+            elif type(piloto[i]).__name__ == 'list':
+                print(piloto[i])
             else:
                 kwargs[i] = piloto[i]
         a.pais(**kwargs)
         a.cidade(**kwargs)
         a.equipe(**kwargs)
         a.piloto(**kwargs)
+
+    print("\n\nPontuação")
+    for (chave, valor) in pontuacao_corrida.items():
+        a.resultados(int(chave), valor)
+
+    kwargs.clear()
+
+    print("\n\nResultados")
+    for (chave, valor) in resultados.items():
+        kwargs['nome'] = chave
+        for dict in valor:
+            for (k, v) in dict.items():
+                kwargs[k] = v
+            a.resultados_pilotos(**kwargs)
+
+

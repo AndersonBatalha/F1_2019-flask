@@ -738,24 +738,7 @@
             "naturalidade": {
                 "cidade": "Stevenage",
                 "pais": "Reino Unido"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 2,
-                    "pontos_ganhos": 18
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 1,
-                    "pontos_ganhos": 25
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 1,
-                    "pontos_ganhos": 25
-                }
-            ]
+            }
         },
         {
             "nome": "Valtteri Bottas",
@@ -776,24 +759,7 @@
             "naturalidade": {
                 "cidade": "Nastola",
                 "pais": "Finlândia"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 1,
-                    "pontos_ganhos": 26
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 2,
-                    "pontos_ganhos": 18
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 2,
-                    "pontos_ganhos": 18
-                }
-            ]
+            }
         },
         {
             "nome": "Sebastian Vettel",
@@ -814,24 +780,7 @@
             "naturalidade": {
                 "cidade": "Heppenheim",
                 "pais": "Alemanha"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 4,
-                    "pontos_ganhos": 12
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 5,
-                    "pontos_ganhos": 10
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 3,
-                    "pontos_ganhos": 15
-                }
-            ]
+            }
         },
         {
             "nome": "Charles Leclerc",
@@ -852,24 +801,7 @@
             "naturalidade": {
                 "cidade": "Monte Carlo",
                 "pais": "Mônaco"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 5,
-                    "pontos_ganhos": 10
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 3,
-                    "pontos_ganhos": 16
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 5,
-                    "pontos_ganhos": 10
-                }
-            ]
+            }
         },
         {
             "nome": "Max Verstappen",
@@ -890,24 +822,7 @@
             "naturalidade": {
                 "cidade": "Hasselt",
                 "pais": "Bélgica"
-            }, 
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 3,
-                    "pontos_ganhos": 15
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 4,
-                    "pontos_ganhos": 12
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 4,
-                    "pontos_ganhos": 12
-                }
-            ]
+            }
         },
         {
             "nome": "Pierre Gasly",
@@ -928,24 +843,7 @@
             "naturalidade": {
                 "cidade": "Rouen",
                 "pais": "França"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 11,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 8,
-                    "pontos_ganhos": 4
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 6,
-                    "pontos_ganhos": 9
-                }
-            ]
+            }
         },
         {
             "nome": "Kevin Magnussen",
@@ -966,24 +864,7 @@
             "naturalidade": {
                 "cidade": "Roskilde",
                 "pais": "Dinamarca"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 6,
-                    "pontos_ganhos": 8
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 13,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 13,
-                    "pontos_ganhos": 0
-                }
-            ]
+            }
         },
         {
             "nome": "Romain Grosjean",
@@ -1004,24 +885,7 @@
             "naturalidade": {
                 "cidade": "Genebra",
                 "pais": "Suíça"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 0,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 0,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 11,
-                    "pontos_ganhos": 0
-                }
-            ]
+            }
         },
         {
             "nome": "Daniil Kvyat",
@@ -1042,24 +906,7 @@
             "naturalidade": {
                 "cidade": "Ufa",
                 "pais": "Rússia"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 10,
-                    "pontos_ganhos": 1
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 12,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 0,
-                    "pontos_ganhos": 0
-                }
-            ]
+            }
         },
         {
             "nome": "Alexander Albon",
@@ -1080,24 +927,7 @@
             "naturalidade": {
                 "cidade": "Londres",
                 "pais": "Inglaterra"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 14,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 9,
-                    "pontos_ganhos": 2
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 10,
-                    "pontos_ganhos": 1
-                }
-            ]
+            }
         },
         {
             "nome": "Nico Hulkenberg",
@@ -1118,24 +948,7 @@
             "naturalidade": {
                 "cidade": "Emmerich am Rhein",
                 "pais": "Alemanha"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 7,
-                    "pontos_ganhos": 6
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 0,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 0,
-                    "pontos_ganhos": 0
-                }
-            ]
+            }
         },
         {
             "nome": "Daniel Ricciardo",
@@ -1156,24 +969,7 @@
             "naturalidade": {
                 "cidade": "Perth",
                 "pais": "Austrália"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 0,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 0,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 7,
-                    "pontos_ganhos": 6
-                }
-            ]
+            }
         },
         {
             "nome": "Kimi Räikkönen",
@@ -1194,24 +990,7 @@
             "naturalidade": {
                 "cidade": "Espoo",
                 "pais": "Finlândia"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 8,
-                    "pontos_ganhos": 4
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 7,
-                    "pontos_ganhos": 6
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 9,
-                    "pontos_ganhos": 2
-                }
-            ]
+            }
         },
         {
             "nome": "Antonio Giovinazzi",
@@ -1232,24 +1011,7 @@
             "naturalidade": {
                 "cidade": "Martina Franca",
                 "pais": "Itália"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 15,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 11,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 15,
-                    "pontos_ganhos": 0
-                }
-            ]
+            }
         },
         {
             "nome": "Sergio Perez",
@@ -1270,24 +1032,7 @@
             "naturalidade": {
                 "cidade": "Guadalajara",
                 "pais": "México"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 13,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 10,
-                    "pontos_ganhos": 1
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 8,
-                    "pontos_ganhos": 4
-                }
-            ]
+            }
         },
         {
             "nome": "Lance Stroll",
@@ -1308,24 +1053,7 @@
             "naturalidade": {
                 "cidade": "Montreal",
                 "pais": "Canadá"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 9,
-                    "pontos_ganhos": 2
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 14,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 12,
-                    "pontos_ganhos": 0
-                }
-            ]
+            }
         },
         {
             "nome": "Carlos Sainz",
@@ -1346,24 +1074,7 @@
             "naturalidade": {
                 "cidade": "Madri",
                 "pais": "Espanha"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 0,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 0,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 14,
-                    "pontos_ganhos": 0
-                }
-            ]
+            }
         },
         {
             "nome": "Lando Norris",
@@ -1384,24 +1095,7 @@
             "naturalidade": {
                 "cidade": "Bristol",
                 "pais": "Inglaterra"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 12,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 6,
-                    "pontos_ganhos": 8
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 0,
-                    "pontos_ganhos": 0
-                }
-            ]
+            }
         },
         {
             "nome": "Robert Kubica",
@@ -1422,24 +1116,7 @@
             "naturalidade": {
                 "cidade": "Cracóvia",
                 "pais": "Polônia"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 17,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 16,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 17,
-                    "pontos_ganhos": 0
-                }
-            ]
+            }
         },
         {
             "nome": "George Russell",
@@ -1460,24 +1137,129 @@
             "naturalidade": {
                 "cidade": "King's Lynn",
                 "pais": "Inglaterra"
-            },
-            "resultados": [
-                {
-                    "grande_premio": "Austrália",
-                    "posicao": 16,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "Bahrein",
-                    "posicao": 15,
-                    "pontos_ganhos": 0
-                },
-                {
-                    "grande_premio": "China",
-                    "posicao": 16,
-                    "pontos_ganhos": 0
-                }
-            ]
+            }
         }
-    ]
+    ],
+    "pontuação": {
+        "1": 25,
+        "2": 18,
+        "3": 15,
+        "4": 12,
+        "5": 10,
+        "6": 8,
+        "7": 6,
+        "8": 4,
+        "9": 2,
+        "10": 1,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0,
+        "16": 0,
+        "17": 0,
+        "18": 0,
+        "19": 0,
+        "20": 0
+    },
+    "resultados": {
+        "Lewis Hamilton": [
+            {"grande_premio": "Austrália", "posicao": 2, "pontos_ganhos": 18}, 
+            {"grande_premio": "Bahrein", "posicao": 1, "pontos_ganhos": 25}, 
+            {"grande_premio": "China", "posicao": 1, "pontos_ganhos": 25}
+        ], 
+        "Valtteri Bottas": [
+            {"grande_premio": "Austrália", "posicao": 1, "pontos_ganhos": 26}, 
+            {"grande_premio": "Bahrein", "posicao": 2, "pontos_ganhos": 18}, 
+            {"grande_premio": "China", "posicao": 2, "pontos_ganhos": 18}
+        ],
+        "Sebastian Vettel": [
+            {"grande_premio": "Austrália", "posicao": 4, "pontos_ganhos": 12}, 
+            {"grande_premio": "Bahrein", "posicao": 5, "pontos_ganhos": 10}, 
+            {"grande_premio": "China", "posicao": 3, "pontos_ganhos": 15}
+        ],
+        "Charles Leclerc": [
+            {"grande_premio": "Austrália", "posicao": 5, "pontos_ganhos": 10}, 
+            {"grande_premio": "Bahrein", "posicao": 3, "pontos_ganhos": 16}, 
+            {"grande_premio": "China", "posicao": 5, "pontos_ganhos": 10}
+        ], 
+        "Max Verstappen": [
+            {"grande_premio": "Austrália", "posicao": 3, "pontos_ganhos": 15}, 
+            {"grande_premio": "Bahrein", "posicao": 4, "pontos_ganhos": 12}, 
+            {"grande_premio": "China", "posicao": 4, "pontos_ganhos": 12}
+        ], 
+        "Pierre Gasly": [
+            {"grande_premio": "Austrália", "posicao": 11, "pontos_ganhos": 0}, 
+            {"grande_premio": "Bahrein", "posicao": 8, "pontos_ganhos": 4}, 
+            {"grande_premio": "China", "posicao": 6, "pontos_ganhos": 9}
+        ], 
+        "Kevin Magnussen": [
+            {"grande_premio": "Austrália", "posicao": 6, "pontos_ganhos": 8}, 
+            {"grande_premio": "Bahrein", "posicao": 13, "pontos_ganhos": 0}, 
+            {"grande_premio": "China", "posicao": 13, "pontos_ganhos": 0}], 
+        "Romain Grosjean": [
+            {"grande_premio": "Austrália", "posicao": 0, "pontos_ganhos": 0}, 
+            {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0}, 
+            {"grande_premio": "China", "posicao": 11, "pontos_ganhos": 0}], 
+        "Daniil Kvyat": [
+            {"grande_premio": "Austrália", "posicao": 10, "pontos_ganhos": 1}, 
+            {"grande_premio": "Bahrein", "posicao": 12, "pontos_ganhos": 0}, 
+            {"grande_premio": "China", "posicao": 0, "pontos_ganhos": 0}
+        ], 
+        "Alexander Albon": [
+            {"grande_premio": "Austrália", "posicao": 14, "pontos_ganhos": 0}, 
+            {"grande_premio": "Bahrein", "posicao": 9, "pontos_ganhos": 2}, 
+            {"grande_premio": "China", "posicao": 10, "pontos_ganhos": 1}
+        ], 
+        "Nico Hulkenberg": [
+            {"grande_premio": "Austrália", "posicao": 7, "pontos_ganhos": 6}, 
+            {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0}, 
+            {"grande_premio": "China", "posicao": 0, "pontos_ganhos": 0}
+        ], 
+        "Daniel Ricciardo": [
+            {"grande_premio": "Austrália", "posicao": 0, "pontos_ganhos": 0}, 
+            {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0}, 
+            {"grande_premio": "China", "posicao": 7, "pontos_ganhos": 6}
+        ], 
+        "Kimi Räikkönen": [
+            {"grande_premio": "Austrália", "posicao": 8, "pontos_ganhos": 4},
+            {"grande_premio": "Bahrein", "posicao": 7, "pontos_ganhos": 6},
+            {"grande_premio": "China", "posicao": 9, "pontos_ganhos": 2}
+        ],
+        "Antonio Giovinazzi": [
+            {"grande_premio": "Austrália", "posicao": 15, "pontos_ganhos": 0},
+            {"grande_premio": "Bahrein", "posicao": 11, "pontos_ganhos": 0},
+            {"grande_premio": "China", "posicao": 15, "pontos_ganhos": 0}
+        ],
+        "Sergio Perez": [
+            {"grande_premio": "Austrália", "posicao": 13, "pontos_ganhos": 0},
+            {"grande_premio": "Bahrein", "posicao": 10, "pontos_ganhos": 1},
+            {"grande_premio": "China", "posicao": 8, "pontos_ganhos": 4}
+        ],
+        "Lance Stroll": [
+            {"grande_premio": "Austrália", "posicao": 9, "pontos_ganhos": 2},
+            {"grande_premio": "Bahrein", "posicao": 14, "pontos_ganhos": 0},
+            {"grande_premio": "China", "posicao": 12, "pontos_ganhos": 0}
+        ],
+        "Carlos Sainz": [
+            {"grande_premio": "Austrália", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "China", "posicao": 14, "pontos_ganhos": 0}
+        ],
+        "Lando Norris": [
+            {"grande_premio": "Austrália", "posicao": 12, "pontos_ganhos": 0},
+            {"grande_premio": "Bahrein", "posicao": 6, "pontos_ganhos": 8},
+            {"grande_premio": "China", "posicao": 0, "pontos_ganhos": 0}
+        ],
+        "Robert Kubica": [
+            {"grande_premio": "Austrália", "posicao": 17, "pontos_ganhos": 0},
+            {"grande_premio": "Bahrein", "posicao": 16, "pontos_ganhos": 0},
+            {"grande_premio": "China", "posicao": 17, "pontos_ganhos": 0}
+        ],
+        "George Russell": [
+            {"grande_premio": "Austrália", "posicao": 16, "pontos_ganhos": 0},
+            {"grande_premio": "Bahrein", "posicao": 15, "pontos_ganhos": 0},
+            {"grande_premio": "China", "posicao": 16, "pontos_ganhos": 0}
+        ]
+    }
 }

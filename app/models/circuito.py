@@ -17,4 +17,4 @@ class Circuito(db.Model):
     cidade = db.relationship(Cidade, backref=db.backref('circuito', lazy=True))
 
     def __repr__(self):
-        return "<Circuito: %r>" % self.nome_circuito
+        return "%s" % self.nome_circuito

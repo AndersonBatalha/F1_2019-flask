@@ -738,7 +738,9 @@
             "naturalidade": {
                 "cidade": "Stevenage",
                 "pais": "Reino Unido"
-            }
+            },
+            "img_file": "img/pilotos/hamilton",
+            "flag-icon": "gb"
         },
         {
             "nome": "Valtteri Bottas",
@@ -759,7 +761,9 @@
             "naturalidade": {
                 "cidade": "Nastola",
                 "pais": "Finlândia"
-            }
+            },
+            "img_file": "img/pilotos/valtteri-bottas",
+            "flag-icon": "fi"
         },
         {
             "nome": "Sebastian Vettel",
@@ -780,7 +784,9 @@
             "naturalidade": {
                 "cidade": "Heppenheim",
                 "pais": "Alemanha"
-            }
+            },
+            "img_file": "img/pilotos/vettel",
+            "flag-icon": "de"
         },
         {
             "nome": "Charles Leclerc",
@@ -801,7 +807,9 @@
             "naturalidade": {
                 "cidade": "Monte Carlo",
                 "pais": "Mônaco"
-            }
+            },
+            "img_file": "img/pilotos/leclerc",
+            "flag-icon": "mc"
         },
         {
             "nome": "Max Verstappen",
@@ -822,7 +830,9 @@
             "naturalidade": {
                 "cidade": "Hasselt",
                 "pais": "Bélgica"
-            }
+            },
+            "img_file": "img/pilotos/verstappen",
+            "flag-icon": "nl"
         },
         {
             "nome": "Pierre Gasly",
@@ -843,7 +853,9 @@
             "naturalidade": {
                 "cidade": "Rouen",
                 "pais": "França"
-            }
+            },
+            "img_file": "img/pilotos/gasly",
+            "flag-icon": "fr"
         },
         {
             "nome": "Kevin Magnussen",
@@ -864,7 +876,9 @@
             "naturalidade": {
                 "cidade": "Roskilde",
                 "pais": "Dinamarca"
-            }
+            },
+            "img_file": "img/pilotos/magnussen",
+            "flag-icon": "dk"
         },
         {
             "nome": "Romain Grosjean",
@@ -885,7 +899,9 @@
             "naturalidade": {
                 "cidade": "Genebra",
                 "pais": "Suíça"
-            }
+            },
+            "img_file": "img/pilotos/grosjean",
+            "flag-icon": "fr"
         },
         {
             "nome": "Daniil Kvyat",
@@ -906,7 +922,9 @@
             "naturalidade": {
                 "cidade": "Ufa",
                 "pais": "Rússia"
-            }
+            },
+            "img_file": "img/pilotos/kvyat",
+            "flag-icon": "ru"
         },
         {
             "nome": "Alexander Albon",
@@ -927,7 +945,9 @@
             "naturalidade": {
                 "cidade": "Londres",
                 "pais": "Inglaterra"
-            }
+            },
+            "img_file": "img/pilotos/albon",
+            "flag-icon": "gb"
         },
         {
             "nome": "Nico Hulkenberg",
@@ -948,7 +968,9 @@
             "naturalidade": {
                 "cidade": "Emmerich am Rhein",
                 "pais": "Alemanha"
-            }
+            },
+            "img_file": "img/pilotos/hulkenberg",
+            "flag-icon": "de"
         },
         {
             "nome": "Daniel Ricciardo",
@@ -969,7 +991,9 @@
             "naturalidade": {
                 "cidade": "Perth",
                 "pais": "Austrália"
-            }
+            },
+            "img_file": "img/pilotos/ricciardo",
+            "flag-icon": "au"
         },
         {
             "nome": "Kimi Räikkönen",
@@ -990,7 +1014,9 @@
             "naturalidade": {
                 "cidade": "Espoo",
                 "pais": "Finlândia"
-            }
+            },
+            "img_file": "img/pilotos/raikkonen",
+            "flag-icon": "fi"
         },
         {
             "nome": "Antonio Giovinazzi",
@@ -1011,7 +1037,9 @@
             "naturalidade": {
                 "cidade": "Martina Franca",
                 "pais": "Itália"
-            }
+            },
+            "img_file": "img/pilotos/giovinazzi",
+            "flag-icon": "it"
         },
         {
             "nome": "Sergio Perez",
@@ -1032,7 +1060,9 @@
             "naturalidade": {
                 "cidade": "Guadalajara",
                 "pais": "México"
-            }
+            },
+            "img_file": "img/pilotos/perez",
+            "flag-icon": "mx"
         },
         {
             "nome": "Lance Stroll",
@@ -1053,7 +1083,9 @@
             "naturalidade": {
                 "cidade": "Montreal",
                 "pais": "Canadá"
-            }
+            },
+            "img_file": "img/pilotos/stroll",
+            "flag-icon": "ca"
         },
         {
             "nome": "Carlos Sainz",
@@ -1074,7 +1106,9 @@
             "naturalidade": {
                 "cidade": "Madri",
                 "pais": "Espanha"
-            }
+            },
+            "img_file": "img/pilotos/sainz",
+            "flag-icon": "es"
         },
         {
             "nome": "Lando Norris",
@@ -1095,7 +1129,9 @@
             "naturalidade": {
                 "cidade": "Bristol",
                 "pais": "Inglaterra"
-            }
+            },
+            "img_file": "img/pilotos/norris",
+            "flag-icon": "gb"
         },
         {
             "nome": "Robert Kubica",
@@ -1116,7 +1152,9 @@
             "naturalidade": {
                 "cidade": "Cracóvia",
                 "pais": "Polônia"
-            }
+            },
+            "img_file": "img/pilotos/kubica",
+            "flag-icon": "pl"
         },
         {
             "nome": "George Russell",
@@ -1137,7 +1175,9 @@
             "naturalidade": {
                 "cidade": "King's Lynn",
                 "pais": "Inglaterra"
-            }
+            },
+            "img_file": "img/pilotos/russell",
+            "flag-icon": "gb"
         }
     ],
     "pontuação": {

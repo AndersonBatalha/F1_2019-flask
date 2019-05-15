@@ -7,15 +7,12 @@ from app import db
 
 class Populate_DB():
     def __init__(self):
-        self.url_data = 'https://api.myjson.com/bins/i6wlu'
+        self.url_data = 'http://api.myjson.com/bins/ieg7m'
         self.app = create_app()
         self.arquivos = os.listdir(BASE_DIR)
 
-    def json_request(self):
-        return requests.get(url=self.url_data).content
-
     def load_json(self):
-        return json.loads(self.json_request(), encoding='utf-8')
+        return requests.get(self.url_data).json()
 
     def app_config(self):
         self.app.app_context().push()
@@ -145,6 +142,8 @@ flask db downgrade""")
             r.numero_titulos = kwargs['nr_titulos']
             r.pos_melhor_resultado = kwargs['posicao']
             r.nr_melhor_resultado = kwargs['quantidade']
+            r.img = kwargs['img_file']
+            r.icon = kwargs['flag-icon']
 
             r.cidade = self.cidade(**kwargs)
             r.equipe = self.equipe(**kwargs)

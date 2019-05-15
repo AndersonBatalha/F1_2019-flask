@@ -13,6 +13,8 @@ class Piloto(db.Model):
     numero_titulos = db.Column(db.Integer, default=0)
     pos_melhor_resultado = db.Column(db.Integer)
     nr_melhor_resultado = db.Column(db.Integer)
+    img = db.Column(db.String(30))
+    icon = db.Column(db.String(5))
 
     id_cidade = db.Column(db.Integer, db.ForeignKey('cidade.id_cidade'), nullable=False)
     cidade = db.relationship(Cidade, backref=db.backref('piloto', lazy=True))

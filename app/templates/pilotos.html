@@ -6,6 +6,26 @@
 
 {% block content %}
     <div class="container-fluid">
-        <h1 class="p-4 m-2">Pilotos</h1>
+
+        <div class="row">
+            <div class="col-12 my-4">
+                <h2 class="text-center display-6">Pilotos</h2>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                {% if pilotos %}
+                    {% for piloto in pilotos %}
+                        <div class="card border-0">
+                            <img src="{{ url_for('static', filename=piloto.img+'.jpg') }}" alt="{{ piloto.nome_piloto }}" class="card-img-top mb-3 img-fluid img-thumbnail">
+                            <h3 class="display-3">{{ piloto.numero_piloto }}</h3>
+                            <h5 class="card-text"><span class="flag-icon flag-icon-{{ piloto.icon }} mr-2"></span>{{ piloto.nome_piloto }}</h5>
+                            <small class="card-subtitle mb-4">{{ piloto.equipe.nome_equipe | upper }}</small>
+                            <button class="btn" type="button" data-toggle="collapse" data-target="#{{ piloto.nome_piloto }}" aria-expanded="false" aria-controls="collapseExample">DETALHES</button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
     </div>
 {% endblock content %}

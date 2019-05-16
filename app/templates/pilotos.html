@@ -6,26 +6,67 @@
 
 {% block content %}
     <div class="container-fluid">
-
         <div class="row">
-            <div class="col-12 my-4">
-                <h2 class="text-center display-6">Pilotos</h2>
+
+            <div class="col-12 mt-4 mb-2">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Pilotos</li>
+                    </ol>
+                </nav>
             </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-                {% if pilotos %}
-                    {% for piloto in pilotos %}
+            {% if pilotos %}
+                {% for piloto in pilotos %}
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
                         <div class="card border-0">
-                            <img src="{{ url_for('static', filename=piloto.img+'.jpg') }}" alt="{{ piloto.nome_piloto }}" class="card-img-top mb-3 img-fluid img-thumbnail">
+                            <img src="{{ url_for('static', filename=piloto.img) }}"
+                                 alt="{{ piloto.nome_piloto }}"
+                                 class="card-img-top mb-3 img-fluid img-thumbnail">
                             <h3 class="display-3">{{ piloto.numero_piloto }}</h3>
-                            <h5 class="card-text"><span class="flag-icon flag-icon-{{ piloto.icon }} mr-2"></span>{{ piloto.nome_piloto }}</h5>
+                            <h5 class="card-text">
+                                <span class="flag-icon flag-icon-{{ piloto.flag_icon }}
+                                mr-2"></span>
+                                {{ piloto.nome_piloto }}
+                            </h5>
                             <small class="card-subtitle mb-4">{{ piloto.equipe.nome_equipe | upper }}</small>
                             <button class="btn" type="button" data-toggle="collapse" data-target="#{{ piloto.nome_piloto }}" aria-expanded="false" aria-controls="collapseExample">DETALHES</button>
                         </div>
-                    {% endfor %}
-                {% endif %}
-            </div>
-        </div>
 
+                        <div class="collapse" id="{{ piloto.nome_piloto }}">
+                            <div class="card card-body mt-2">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="font-weight-bold">Equipe</h6>
+                                        <p>{{ piloto.equipe.nome_equipe }}</p>
+                                        <h6 class="font-weight-bold">Pódios</h6>
+                                        <p>{{ piloto.numero_podios }}</p>
+                                        <h6 class="font-weight-bold">Pontos ganhos</h6>
+                                        <p>{{ piloto.pontos_ganhos }}</p>
+                                        <h6 class="font-weight-bold">Grandes Prêmios</h6>
+                                        <p>{{ piloto.corridas_disputadas}}</p>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="font-weight-bold">Títulos mundiais</h6>
+                                        <p>{{ piloto.numero_titulos }}</p>
+                                        <h6 class="font-weight-bold">Melhor colocação</h6>
+                                        <p>{{ piloto.pos_melhor_resultado }}º ({{ piloto.nr_melhor_resultado }}x)</p>
+                                        <h6 class="font-weight-bold">Data de nascimento</h6>
+                                        <p>
+                                            {{ piloto.data_nasc.day }}/{{ piloto.data_nasc.month }}/{{ piloto.data_nasc.year }}
+                                        </p>
+                                        <h6 class="font-weight-bold">Naturalidade</h6>
+                                        <p>{{ piloto.cidade.nome_cidade }} ({{ piloto.cidade.pais
+                                        .nome_pais }})</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
 {% endblock content %}

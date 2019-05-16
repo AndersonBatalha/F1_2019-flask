@@ -1,4 +1,4 @@
-import requests, json, os, datetime
+import requests, os, datetime
 
 from config import Config, BASE_DIR
 from app.models import *
@@ -7,7 +7,7 @@ from app import db
 
 class Populate_DB():
     def __init__(self):
-        self.url_data = 'http://api.myjson.com/bins/ieg7m'
+        self.url_data = 'http://api.myjson.com/bins/151zs2'
         self.app = create_app()
         self.arquivos = os.listdir(BASE_DIR)
 
@@ -98,6 +98,9 @@ flask db downgrade""")
             d, M, A = kwargs['data_termino'][0:2], kwargs['data_termino'][3:5], \
                       kwargs['data_termino'][6:]
             r.data_termino = self.str_to_date(d, M, A)
+            r.url = kwargs['url']
+            r.img_evento = kwargs['img_file']
+            r.flag_icon = kwargs['flag-icon']
 
             r.circuito = self.circuito(**kwargs)
 
@@ -117,8 +120,13 @@ flask db downgrade""")
             r.nr_pole_positions = kwargs['pole_positions']
             r.unidade_potencia = kwargs['unidade_potencia']
             r.chassi = kwargs['chassis']
+            r.primeiro_campeonato = kwargs['primeiro_campeonato']
             r.posicao_melhor_resultado = kwargs['posicao']
             r.nr_melhor_resultado = kwargs['quantidade']
+            r.img = kwargs['img_file']
+            r.logo = kwargs['img_logo']
+            r.flag_icon = kwargs['flag-icon']
+            r.url = kwargs['url']
 
             r.cidade = self.cidade(**kwargs)
 
@@ -143,7 +151,7 @@ flask db downgrade""")
             r.pos_melhor_resultado = kwargs['posicao']
             r.nr_melhor_resultado = kwargs['quantidade']
             r.img = kwargs['img_file']
-            r.icon = kwargs['flag-icon']
+            r.flag_icon = kwargs['flag-icon']
 
             r.cidade = self.cidade(**kwargs)
             r.equipe = self.equipe(**kwargs)

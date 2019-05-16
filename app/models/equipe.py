@@ -11,8 +11,13 @@ class Equipe(db.Model):
     nr_pole_positions = db.Column(db.Integer)
     unidade_potencia = db.Column(db.String(75))
     chassi = db.Column(db.String(15))
+    primeiro_campeonato = db.Column(db.Integer)
     posicao_melhor_resultado = db.Column(db.Integer)
     nr_melhor_resultado = db.Column(db.Integer)
+    url = db.Column(db.String(75))
+    img = db.Column(db.String(100))
+    logo = db.Column(db.String(100))
+    flag_icon = db.Column(db.String(5))
 
     id_cidade = db.Column(db.Integer, db.ForeignKey('cidade.id_cidade'), nullable=False)
     cidade = db.relationship(Cidade, backref=db.backref('equipe', lazy=True))

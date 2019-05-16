@@ -23,7 +23,8 @@
             "numero_voltas": 58,
             "distancia_total": 305574,
             "url": "https://www.formula1.com/en/racing/2019/Australia.html",
-            "flag_icon": "au"
+            "img_file": "img/corridas/australia.jpg",
+            "flag-icon": "au"
         },
         {
             "id": 2,
@@ -48,7 +49,8 @@
             "numero_voltas": 57,
             "distancia_total": 308238,
             "url": "https://www.formula1.com/en/racing/2019/Bahrain.html",
-            "flag_icon": "bh"
+            "img_file": "img/corridas/bahrein.jpg",
+            "flag-icon": "bh"
         },
         {
             "id": 3,
@@ -73,7 +75,8 @@
             "numero_voltas": 57,
             "distancia_total": 308238,
             "url": "https://www.formula1.com/en/racing/2019/China.html",
-            "flag_icon": "cn"
+            "img_file": "img/corridas/china.jpg",
+            "flag-icon": "cn"
         },
         {
             "id": 4,
@@ -98,7 +101,8 @@
             "numero_voltas": 51,
             "distancia_total": 306049,
             "url": "https://www.formula1.com/en/racing/2019/Azerbaijan.html",
-            "flag_icon": "az"
+            "img_file": "img/corridas/azerbaijao.jpg",
+            "flag-icon": "az"
         },
         {
             "id": 5,
@@ -123,7 +127,8 @@
             "numero_voltas": 66,
             "distancia_total": 307104,
             "url": "https://www.formula1.com/en/racing/2019/Spain.html",
-            "flag_icon": "es"
+            "img_file": "img/corridas/espanha.jpg",
+            "flag-icon": "es"
         },
         {
             "id": 6,
@@ -148,7 +153,8 @@
             "numero_voltas": 78,
             "distancia_total": 260286,
             "url": "https://www.formula1.com/en/racing/2019/Monaco.html",
-            "flag_icon": "mc"
+            "img_file": "img/corridas/monaco.jpg",
+            "flag-icon": "mc"
         },
         {
             "id": 7,
@@ -173,7 +179,8 @@
             "numero_voltas": 57,
             "distancia_total": 305270,
             "url": "https://www.formula1.com/en/racing/2019/Canada.html",
-            "flag_icon": "ca"
+            "img_file": "img/corridas/canada.jpg",
+            "flag-icon": "ca"
         },
         {
             "id": 8,
@@ -198,7 +205,8 @@
             "numero_voltas": 53,
             "distancia_total": 309690,
             "url": "https://www.formula1.com/en/racing/2019/france.html",
-            "flag_icon": "fr"
+            "img_file": "img/corridas/franca.jpg",
+            "flag-icon": "fr"
         },
         {
             "id": 9,
@@ -223,7 +231,8 @@
             "numero_voltas": 71,
             "distancia_total": 306452,
             "url": "https://www.formula1.com/en/racing/2019/Austria.html",
-            "flag_icon": "at"
+            "img_file": "img/corridas/austria.jpg",
+            "flag-icon": "at"
         },
         {
             "id": 10,
@@ -248,7 +257,8 @@
             "numero_voltas": 52,
             "distancia_total": 306198,
             "url": "https://www.formula1.com/en/racing/2019/Great_Britain.html",
-            "flag_icon": "gb"
+            "img_file": "img/corridas/inglaterra.jpg",
+            "flag-icon": "gb"
         },
         {
             "id": 11,
@@ -273,7 +283,8 @@
             "numero_voltas": 67,
             "distancia_total": 306458,
             "url": "https://www.formula1.com/en/racing/2019/Germany.html",
-            "flag_icon": "de"
+            "img_file": "img/corridas/alemanha.jpg",
+            "flag-icon": "de"
         },
         {
             "id": 12,
@@ -298,7 +309,8 @@
             "numero_voltas": 70,
             "distancia_total": 306630,
             "url": "https://www.formula1.com/en/racing/2019/Hungary.html",
-            "flag_icon": "hu"
+            "img_file": "img/corridas/hungria.jpg",
+            "flag-icon": "hu"
         },
         {
             "id": 13,
@@ -323,7 +335,8 @@
             "numero_voltas": 44,
             "distancia_total": 308052,
             "url": "https://www.formula1.com/en/racing/2019/Belgium.html",
-            "flag_icon": "be"
+            "img_file": "img/corridas/belgica.jpg",
+            "flag-icon": "be"
         },
         {
             "id": 14,
@@ -348,7 +361,8 @@
             "numero_voltas": 53,
             "distancia_total": 306720,
             "url": "https://www.formula1.com/en/racing/2019/Italy.html",
-            "flag_icon": "it"
+            "img_file": "img/corridas/italia.jpg",
+            "flag-icon": "it"
         },
         {
             "id": 15,
@@ -373,7 +387,8 @@
             "numero_voltas": 61,
             "distancia_total": 308706,
             "url": "https://www.formula1.com/en/racing/2019/Singapore.html",
-            "flag_icon": "sg"
+            "img_file": "img/corridas/singapura.jpg",
+            "flag-icon": "sg"
         },
         {
             "id": 16,
@@ -398,7 +413,8 @@
             "numero_voltas": 53,
             "distancia_total": 309745,
             "url": "https://www.formula1.com/en/racing/2019/Russia.html",
-            "flag_icon": "ru"
+            "img_file": "img/corridas/russia.jpg",
+            "flag-icon": "ru"
         },
         {
             "id": 17,
@@ -423,7 +439,8 @@
             "numero_voltas": 53,
             "distancia_total": 307471,
             "url": "https://www.formula1.com/en/racing/2019/Japan.html",
-            "flag_icon": "jp"
+            "img_file": "img/corridas/japao.jpg",
+            "flag-icon": "jp"
         },
         {
             "id": 18,
@@ -448,7 +465,8 @@
             "numero_voltas": 71,
             "distancia_total": 305354,
             "url": "https://www.formula1.com/en/racing/2019/Mexico.html",
-            "flag_icon": "mx"
+            "img_file": "img/corridas/mexico.jpg",
+            "flag-icon": "mx"
         },
         {
             "id": 19,
@@ -473,7 +491,8 @@
             "numero_voltas": 56,
             "distancia_total": 308405,
             "url": "https://www.formula1.com/en/racing/2019/United_States.html",
-            "flag_icon": "us"
+            "img_file": "img/corridas/eua.jpg",
+            "flag-icon": "us"
         },
         {
             "id": 20,
@@ -498,7 +517,7 @@
             "numero_voltas": 71,
             "distancia_total": 305909,
             "url": "https://www.formula1.com/en/racing/2019/Brazil.html",
-            "flag_icon": "br"
+            "flag-icon": "br"
         },
         {
             "id": 21,
@@ -523,7 +542,8 @@
             "numero_voltas": 55,
             "distancia_total": 305355,
             "url": "https://www.formula1.com/en/racing/2019/Abu_Dhabi.html",
-            "flag_icon": "ae"
+            "img_file": "img/corridas/emirados_arabes.jpg",
+            "flag-icon": "ae"
         }
     ],
     "equipes": [
@@ -544,7 +564,10 @@
             },
             "pole_positions": 94,
             "voltas_mais_rapidas": 58,
-            "url": "https://www.formula1.com/en/teams/Mercedes.html"
+            "url": "https://www.formula1.com/en/teams/Mercedes.html",
+            "img_file": "img/carros/mercedes.jpg",
+            "img_logo": "img/equipes/mercedes.jpg",
+            "flag-icon": "de"
         },
         {
             "equipe": "Ferrari",
@@ -563,14 +586,17 @@
             },
             "pole_positions": 215,
             "voltas_mais_rapidas": 247,
-            "url": "https://www.formula1.com/en/teams/Ferrari.html"
+            "url": "https://www.formula1.com/en/teams/Ferrari.html",
+            "img_file": "img/carros/ferrari.jpg",
+            "img_logo": "img/equipes/ferrari.jpg",
+            "flag-icon": "it"
         },
         {
             "equipe": "Red Bull",
             "nome_oficial": "Aston Martin Red Bull Racing",
             "sede": {
                 "cidade": "Milton Keynes",
-                "pais": "Reino Unido"    
+                "pais": "Reino Unido"
             },
             "chassis": "RB15",
             "primeiro_campeonato": 1997,
@@ -582,14 +608,17 @@
             },
             "pole_positions": 60,
             "voltas_mais_rapidas": 60,
-            "url": "https://www.formula1.com/en/teams/Red-Bull.html"
+            "url": "https://www.formula1.com/en/teams/Red-Bull.html",
+            "img_file": "img/carros/red_bull.jpg",
+            "img_logo": "img/equipes/red_bull.jpg",
+            "flag-icon": "at"
         },
         {       
             "equipe": "Haas",
             "nome_oficial": "Rich Energy Haas F1 Team",
             "sede": {
                 "cidade": "Kannapolis",
-                "pais": "Estados Unidos"    
+                "pais": "Estados Unidos"
             },
             "chassis": "VF-19",
             "primeiro_campeonato": 2016,
@@ -601,18 +630,21 @@
             },
             "pole_positions": 0,
             "voltas_mais_rapidas": 1,
-            "url": "https://www.formula1.com/en/teams/Haas.html"
+            "url": "https://www.formula1.com/en/teams/Haas.html",
+            "img_file": "img/carros/haas.jpg",
+            "img_logo": "img/equipes/haas.png",
+            "flag-icon": "us"
         },
         {
             "equipe": "Renault",
             "nome_oficial": "Renault F1 Team",
             "sede": {
                 "cidade": "Enstone",
-                "pais": "Reino Unido"    
+                "pais": "Reino Unido"
             },
             "chassis": "R.S.19",
             "primeiro_campeonato": 1986,
-            "unidade_potencia": "Mercedes",
+            "unidade_potencia": "Renault",
             "titulos_mundiais": 2,
             "melhor_resultado": {
                 "posicao": 1,
@@ -620,14 +652,17 @@
             },
             "pole_positions": 20,
             "voltas_mais_rapidas": 13,
-            "url": "https://www.formula1.com/en/teams/Renault.html"
+            "url": "https://www.formula1.com/en/teams/Renault.html",
+            "img_file": "img/carros/renault.jpg",
+            "img_logo": "img/equipes/renault.jpg",
+            "flag-icon": "fr"
         },
         {
             "equipe": "Alfa Romeo",
             "nome_oficial": "Alfa Romeo Racing",
             "sede": {
                 "cidade": "Hinwil",
-                "pais": "Suíça"    
+                "pais": "Suíça"
             },
             "chassis": "C38",
             "primeiro_campeonato": 1993,
@@ -639,14 +674,17 @@
             },
             "pole_positions": 1,
             "voltas_mais_rapidas": 5,
-            "url": "https://www.formula1.com/en/teams/Alfa-Romeo.html"
+            "url": "https://www.formula1.com/en/teams/Alfa-Romeo.html",
+            "img_file": "img/carros/alfa_romeo.jpg",
+            "img_logo": "img/equipes/alfa_romeo.png",
+            "flag-icon": "ch"
         },
         {
             "equipe": "Racing Point",
             "nome_oficial": "SportPesa Racing Point F1 Team",
             "sede": {
                 "cidade": "Silverstone",
-                "pais": "Reino Unido"    
+                "pais": "Reino Unido"
             },
             "chassis": "RP19",
             "primeiro_campeonato": 2019,
@@ -658,14 +696,17 @@
             },
             "pole_positions": 0,
             "voltas_mais_rapidas": 0,
-            "url": "https://www.formula1.com/en/teams/Racing-Point.html"
+            "url": "https://www.formula1.com/en/teams/Racing-Point.html",
+            "img_file": "img/carros/racing_point.jpg",
+            "img_logo": "img/equipes/racing_point.jpg",
+            "flag-icon": "gb"
         },
         {
             "equipe": "Toro Rosso",
             "nome_oficial": "Red Bull Toro Rosso Honda",
             "sede": {
                 "cidade": "Faenza",
-                "pais": "Itália"    
+                "pais": "Itália"
             },
             "chassis": "STR14",
             "primeiro_campeonato": 1985,
@@ -677,14 +718,17 @@
             },
             "pole_positions": 1,
             "voltas_mais_rapidas": 1,
-            "url": "https://www.formula1.com/en/teams/Toro-Rosso.html"
+            "url": "https://www.formula1.com/en/teams/Toro-Rosso.html",
+            "img_file": "img/carros/toro_rosso.jpg",
+            "img_logo": "img/equipes/toro_rosso.jpg",
+            "flag-icon": "it"
         },
         {
             "equipe": "McLaren",
             "nome_oficial": "McLaren F1 Team",
             "sede": {
                 "cidade": "Woking",
-                "pais": "Reino Unido"    
+                "pais": "Reino Unido"
             },
             "chassis": "MCL34",
             "primeiro_campeonato": 1970,
@@ -696,14 +740,17 @@
             },
             "pole_positions": 155,
             "voltas_mais_rapidas": 155,
-            "url": "https://www.formula1.com/en/teams/McLaren.html"
+            "url": "https://www.formula1.com/en/teams/McLaren.html",
+            "img_file": "img/carros/mclaren.jpg",
+            "img_logo": "img/equipes/mclaren.jpg",
+            "flag-icon": "gb"
         },
         {
             "equipe": "Williams",
             "nome_oficial": "ROKiT Williams Racing",
             "sede": {
                 "cidade": "Grove",
-                "pais": "Reino Unido"    
+                "pais": "Reino Unido"
             },
             "chassis": "FW42",
             "primeiro_campeonato": 1978,
@@ -715,7 +762,10 @@
             },
             "pole_positions": 129,
             "voltas_mais_rapidas": 133,
-            "url": "https://www.formula1.com/en/teams/Williams.html"
+            "url": "https://www.formula1.com/en/teams/Williams.html",
+            "img_file": "img/carros/williams.jpg",
+            "img_logo": "img/equipes/williams.png",
+            "flag-icon": "gb"
         }
     ],
     "pilotos": [
@@ -739,7 +789,7 @@
                 "cidade": "Stevenage",
                 "pais": "Reino Unido"
             },
-            "img_file": "img/pilotos/hamilton",
+            "img_file": "img/pilotos/hamilton.jpg",
             "flag-icon": "gb"
         },
         {
@@ -762,7 +812,7 @@
                 "cidade": "Nastola",
                 "pais": "Finlândia"
             },
-            "img_file": "img/pilotos/valtteri-bottas",
+            "img_file": "img/pilotos/valtteri-bottas.jpg",
             "flag-icon": "fi"
         },
         {
@@ -785,7 +835,7 @@
                 "cidade": "Heppenheim",
                 "pais": "Alemanha"
             },
-            "img_file": "img/pilotos/vettel",
+            "img_file": "img/pilotos/vettel.jpg",
             "flag-icon": "de"
         },
         {
@@ -808,7 +858,7 @@
                 "cidade": "Monte Carlo",
                 "pais": "Mônaco"
             },
-            "img_file": "img/pilotos/leclerc",
+            "img_file": "img/pilotos/leclerc.jpg",
             "flag-icon": "mc"
         },
         {
@@ -831,7 +881,7 @@
                 "cidade": "Hasselt",
                 "pais": "Bélgica"
             },
-            "img_file": "img/pilotos/verstappen",
+            "img_file": "img/pilotos/verstappen.jpg",
             "flag-icon": "nl"
         },
         {
@@ -854,7 +904,7 @@
                 "cidade": "Rouen",
                 "pais": "França"
             },
-            "img_file": "img/pilotos/gasly",
+            "img_file": "img/pilotos/gasly.jpg",
             "flag-icon": "fr"
         },
         {
@@ -877,7 +927,7 @@
                 "cidade": "Roskilde",
                 "pais": "Dinamarca"
             },
-            "img_file": "img/pilotos/magnussen",
+            "img_file": "img/pilotos/magnussen.jpg",
             "flag-icon": "dk"
         },
         {
@@ -900,7 +950,7 @@
                 "cidade": "Genebra",
                 "pais": "Suíça"
             },
-            "img_file": "img/pilotos/grosjean",
+            "img_file": "img/pilotos/grosjean.jpg",
             "flag-icon": "fr"
         },
         {
@@ -923,7 +973,7 @@
                 "cidade": "Ufa",
                 "pais": "Rússia"
             },
-            "img_file": "img/pilotos/kvyat",
+            "img_file": "img/pilotos/kvyat.jpg",
             "flag-icon": "ru"
         },
         {
@@ -946,8 +996,8 @@
                 "cidade": "Londres",
                 "pais": "Inglaterra"
             },
-            "img_file": "img/pilotos/albon",
-            "flag-icon": "gb"
+            "img_file": "img/pilotos/albon.jpg",
+            "flag-icon": "th"
         },
         {
             "nome": "Nico Hulkenberg",
@@ -969,7 +1019,7 @@
                 "cidade": "Emmerich am Rhein",
                 "pais": "Alemanha"
             },
-            "img_file": "img/pilotos/hulkenberg",
+            "img_file": "img/pilotos/hulkenberg.jpg",
             "flag-icon": "de"
         },
         {
@@ -992,7 +1042,7 @@
                 "cidade": "Perth",
                 "pais": "Austrália"
             },
-            "img_file": "img/pilotos/ricciardo",
+            "img_file": "img/pilotos/ricciardo.jpg",
             "flag-icon": "au"
         },
         {
@@ -1015,7 +1065,7 @@
                 "cidade": "Espoo",
                 "pais": "Finlândia"
             },
-            "img_file": "img/pilotos/raikkonen",
+            "img_file": "img/pilotos/raikkonen.jpg",
             "flag-icon": "fi"
         },
         {
@@ -1038,7 +1088,7 @@
                 "cidade": "Martina Franca",
                 "pais": "Itália"
             },
-            "img_file": "img/pilotos/giovinazzi",
+            "img_file": "img/pilotos/giovinazzi.jpg",
             "flag-icon": "it"
         },
         {
@@ -1061,7 +1111,7 @@
                 "cidade": "Guadalajara",
                 "pais": "México"
             },
-            "img_file": "img/pilotos/perez",
+            "img_file": "img/pilotos/perez.jpg",
             "flag-icon": "mx"
         },
         {
@@ -1084,7 +1134,7 @@
                 "cidade": "Montreal",
                 "pais": "Canadá"
             },
-            "img_file": "img/pilotos/stroll",
+            "img_file": "img/pilotos/stroll.jpg",
             "flag-icon": "ca"
         },
         {
@@ -1107,7 +1157,7 @@
                 "cidade": "Madri",
                 "pais": "Espanha"
             },
-            "img_file": "img/pilotos/sainz",
+            "img_file": "img/pilotos/sainz.jpg",
             "flag-icon": "es"
         },
         {
@@ -1130,7 +1180,7 @@
                 "cidade": "Bristol",
                 "pais": "Inglaterra"
             },
-            "img_file": "img/pilotos/norris",
+            "img_file": "img/pilotos/norris.jpg",
             "flag-icon": "gb"
         },
         {
@@ -1153,7 +1203,7 @@
                 "cidade": "Cracóvia",
                 "pais": "Polônia"
             },
-            "img_file": "img/pilotos/kubica",
+            "img_file": "img/pilotos/kubica.jpg",
             "flag-icon": "pl"
         },
         {
@@ -1176,7 +1226,7 @@
                 "cidade": "King's Lynn",
                 "pais": "Inglaterra"
             },
-            "img_file": "img/pilotos/russell",
+            "img_file": "img/pilotos/russell.jpg",
             "flag-icon": "gb"
         }
     ],

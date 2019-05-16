@@ -6,6 +6,120 @@
 
 {% block content %}
     <div class="container-fluid">
-        <h1 class="p-4 m-2">Equipes</h1>
+
+        <div class="row justify-content-center mx-4 my-4">
+            <div class="col-sm-12 col-md-8 col-lg-10 col-xl-10">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Equipes</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-10 col-xl-10">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for equipe in equipes %}
+
+                            {% if equipe.id_equipe == 1 %}
+
+                                <div class="carousel-item active">
+                                    <a type="button" data-toggle="modal"  data-target="#{{ equipe
+                                    .nome_equipe | lower }}">
+                                        <img src="{{ url_for('static', filename=equipe.img) }}"
+                                             class="d-block w-100"
+                                             alt="{{ equipe.nome_equipe }}">
+                                    </a>
+                                </div>
+
+                            {% else %}
+
+                                <div class="carousel-item">
+                                    <a type="button" data-toggle="modal" data-target="#{{ equipe
+                                    .nome_equipe | lower }}">
+                                        <img src="{{ url_for('static', filename=equipe.img) }}"
+                                             class="d-block w-100"
+                                             alt="{{ equipe.nome_equipe }}">
+                                    </a>
+                                </div>
+
+                           {% endif %}
+
+                            <div class="modal fade" id="{{ equipe.nome_equipe | lower }}" tabindex="-1" role="dialog" aria-labelledby="{{ equipe.nome_equipe | lower }}" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-uppercase" id="titulo">
+                                                <span class="flag-icon flag-icon-{{ equipe.flag_icon
+                                                        }}
+                                                m-3"></span>{{ equipe.nome_equipe }}
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="{{ url_for('static', filename=equipe.logo) }}"
+                                                 alt="{{ equipe.nome_equipe }}" class="img-fluid
+                                                 rounded mx-auto d-block
+                                                  mb-2 h-50 w-50">
+                                            <h4 class="display-5 pb-3">{{ equipe.nome_oficial
+                                                    }}</h4>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h6 class="font-weight-bold">Sede</h6>
+                                                    <p>{{ equipe.cidade.nome_cidade }} ({{ equipe
+                                                    .cidade.pais.nome_pais }})
+                                                    </p>
+                                                    <h6 class="font-weight-bold">Chassis</h6>
+                                                    <p>{{ equipe.chassi }}</p>
+                                                    <h6 class="font-weight-bold">Unidade de potência</h6>
+                                                    <p>{{ equipe.unidade_potencia }}</p>
+                                                    <h6 class="font-weight-bold">Primeiro campeonato</h6>
+                                                    <p>{{ equipe.primeiro_campeonato }}</p>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="font-weight-bold">Títulos mundiais</h6>
+                                                    <p>{{ equipe.numero_titulos }}</p>
+                                                    <h6 class="font-weight-bold">Melhor resultado</h6>
+                                                    <p>{{ equipe.posicao_melhor_resultado }}º
+                                                        ({{ equipe.nr_melhor_resultado }}x)</p>
+                                                    <h6 class="font-weight-bold">Pole positions</h6>
+                                                    <p>{{ equipe.nr_pole_positions }}</p>
+                                                    <h6 class="font-weight-bold">Voltas mais rápidas</h6>
+                                                    <p>{{ equipe.nr_voltas_mais_rapidas }}</p>
+                                                </div>
+                                            </div>
+
+                                            <small><a href="{{ equipe.url }}" target="_blank">Ver
+                                                mais informações</a></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        {% endfor %}
+
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
+
 {% endblock content %}

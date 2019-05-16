@@ -6,6 +6,77 @@
 
 {% block content %}
     <div class="container-fluid">
-        <h1 class="p-4 m-2">Calendário</h1>
+        <div class="row justify-content-center">
+
+            <div class="col-12 mt-4 mb-2">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Calendário</li>
+                    </ol>
+                </nav>
+            </div>
+
+            {% for evento in eventos %}
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 px-2">
+                    <div class="card border-0 evento">
+                        <img src={{ url_for('static', filename=evento.img_evento) }} alt="{{ evento.circuito.cidade.pais
+                        .nome_pais }}" class="card-img-top mb-3 img-fluid img-thumbnail">
+                        <small class="card-subtitle">
+                            {{ evento.data_inicio.day }}/{{ evento.data_inicio.month }} - {{
+                                evento.data_termino.day }}/{{ evento.data_termino.month }}
+                        </small>
+                        <div class='mb-2'>
+                            <p class="card-text">
+                                <strong>{{ evento.nome_evento }}</strong>
+                            </p>
+                        </div>
+                        <button type="button" class="btn" data-toggle="modal"
+                                data-target="#{{ evento.id_evento }}">DETALHES</button>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="{{ evento.id_evento }}" tabindex="-1" role="dialog" aria-labelledby="gp-australia" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="titulo">
+                                    <span class="flag-icon flag-icon-{{ evento.flag_icon }}
+                                    m-3"></span>{{ evento.circuito.cidade.pais.nome_pais | upper }}
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h4 class="display-5 pb-3">{{ evento.circuito.nome_circuito }}</h4>
+                                <h6 class="font-weight-bold">Localização</h6>
+                                <p>{{ evento.circuito.cidade.nome_cidade }} ({{ evento.circuito
+                                .cidade.pais.nome_pais}})</p>
+                                <h6 class="font-weight-bold">Primeira corrida</h6>
+                                <p>{{ evento.circuito.primeira_corrida }}</p>
+                                <h6 class="font-weight-bold">Recorde da pista</h6>
+                                <p>
+                                    {{ evento.circuito.tempo_recorde_pista.minute }}:{{ evento.circuito.tempo_recorde_pista.second }}.{{ evento.circuito.tempo_recorde_pista.microsecond }}
+                                    ({{ evento.circuito.piloto_recorde_pista }}, {{ evento.circuito.ano_recorde_pista }})
+                                </p>
+
+                                <h6 class="font-weight-bold">Percurso</h6>
+                                <p>{{ evento.circuito.percurso }} km</p>
+                                <h6 class="font-weight-bold">Número de voltas</h6>
+                                <p>{{ evento.circuito.numero_voltas }}</p>
+                                <h6 class="font-weight-bold">Distância total</h6>
+                                <p>{{ evento.circuito.distancia_total }}</p>
+
+                                <small><a href={{ evento.url }} target="_blank">Ver mais
+                                    informações</a></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
     </div>
 {% endblock content %}

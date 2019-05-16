@@ -8,6 +8,9 @@ class Evento(db.Model):
     local = db.Column(db.String)
     data_inicio = db.Column(db.Date)
     data_termino = db.Column(db.Date)
+    url = db.Column(db.String)
+    img_evento = db.Column(db.String)
+    flag_icon = db.Column(db.String(5))
 
     id_circuito = db.Column(db.Integer, db.ForeignKey('circuito.id_circuito'), nullable=False)
     circuito = db.relationship(Circuito, backref=db.backref('evento', lazy=True))

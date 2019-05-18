@@ -49,7 +49,17 @@
                                     </div>
                                     <div class="col">
                                         <h6 class="font-weight-bold">Títulos mundiais</h6>
-                                        <p>{{ piloto.numero_titulos }}</p>
+                                            {{ piloto.numero_titulos }}<br>
+                                            <ul>
+                                            {% for titulo in titulos %}
+
+                                                {% if piloto.id_piloto == titulo.id_piloto %}
+                                                    <li>{{ titulo.ano_titulo }}</li>
+                                                {% endif %}
+
+                                            {% endfor %}
+                                            </ul>
+                                        </p>
                                         <h6 class="font-weight-bold">Melhor colocação</h6>
                                         <p>{{ piloto.pos_melhor_resultado }}º ({{ piloto.nr_melhor_resultado }}x)</p>
                                         <h6 class="font-weight-bold">Data de nascimento</h6>

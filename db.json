@@ -245,7 +245,7 @@
             "nome_circuito": "Circuito de Silverstone",
             "localização": {
                 "cidade": "Silverstone",
-                "pais": "Inglaterrra"
+                "pais": "Inglaterra"
             },
             "primeira_corrida": 1950,
             "recorde_pista": {
@@ -517,6 +517,7 @@
             "numero_voltas": 71,
             "distancia_total": 305909,
             "url": "https://www.formula1.com/en/racing/2019/Brazil.html",
+            "img_file": "img/corridas/brasil.jpg",
             "flag-icon": "br"
         },
         {

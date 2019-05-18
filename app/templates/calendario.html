@@ -22,10 +22,10 @@
                     <div class="card border-0 evento">
                         <img src={{ url_for('static', filename=evento.img_evento) }} alt="{{ evento.circuito.cidade.pais
                         .nome_pais }}" class="card-img-top mb-3 img-fluid img-thumbnail">
-                        <small class="card-subtitle">
+                        <p class="card-subtitle">
                             {{ evento.data_inicio.day }}/{{ evento.data_inicio.month }} - {{
                                 evento.data_termino.day }}/{{ evento.data_termino.month }}
-                        </small>
+                        </p>
                         <div class='mb-2'>
                             <p class="card-text">
                                 <strong>{{ evento.nome_evento }}</strong>
@@ -51,8 +51,7 @@
                             <div class="modal-body">
                                 <h4 class="display-5 pb-3">{{ evento.circuito.nome_circuito }}</h4>
                                 <h6 class="font-weight-bold">Localização</h6>
-                                <p>{{ evento.circuito.cidade.nome_cidade }} ({{ evento.circuito
-                                .cidade.pais.nome_pais}})</p>
+                                <p>{{ evento.circuito.cidade.nome_cidade }}</p>
                                 <h6 class="font-weight-bold">Primeira corrida</h6>
                                 <p>{{ evento.circuito.primeira_corrida }}</p>
                                 <h6 class="font-weight-bold">Recorde da pista</h6>
@@ -66,7 +65,7 @@
                                 <h6 class="font-weight-bold">Número de voltas</h6>
                                 <p>{{ evento.circuito.numero_voltas }}</p>
                                 <h6 class="font-weight-bold">Distância total</h6>
-                                <p>{{ evento.circuito.distancia_total }}</p>
+                                <p>{{ evento.circuito.distancia_total }} km</p>
 
                                 <small><a href={{ evento.url }} target="_blank">Ver mais
                                     informações</a></small>

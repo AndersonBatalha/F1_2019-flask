@@ -17,7 +17,64 @@
                     </ol>
                 </nav>
             </div>
+        </div>
+
+        <div class="row justify-content-center my-4">
+            <div class="col-sm-12 col-md-12 col-xl-7 col-lg-7">
+                <table class="table table-striped table-hover classificacao_pilotos">
+                    <div class="col-12 my-4">
+                        <h2 class="text-center display-6">Campeonato de pilotos</h2>
+                    </div>
+                    <thead class='p-4'>
+                        <th scope='col'>#</th>
+                        <th scope='col' colspan="2">Piloto</th>
+                        <th scope='col'>Equipe</th>
+                        <th scope='col'>Pontuação</th>
+                    </thead>
+                    <tbody class='table-sm'>
+                        {% for piloto, equipe, icone, pontuacao in classificacao %}
+                            <tr>
+                                <td class='align-middle pl-3'>{{ loop.index }}</td>
+                                <td class='align-middle pl-3 nome-piloto'>{{ piloto
+                                        }}</td>
+                                <td class='align-left'>
+                                    <span class="flag-icon flag-icon-{{icone }} m-3"></span>
+                                </td>
+                                <td class='align-middle pl-3'>{{ equipe }}</td>
+                                <td class='align-middle pl-3'>{{ pontuacao }}</td>
+                            </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xl-5 col-lg-5">
+                <table class="table table-striped table-hover">
+                    <div class="col-12 my-4">
+                        <h2 class="text-center display-6">Campeonato de construtores</h2>
+                    </div>
+                    <thead>
+                        <th scope='col'>#</th>
+                        <th scope='col' colspan="2">Equipe</th>
+                        <th scope='col'>Pontuação</th>
+                    </thead>
+                    <tbody class='table-sm'>
+                        {% for equipe, icone, pontuacao in classificacao_ %}
+                            <tr>
+                                <td class='align-middle pl-3'>{{ loop.index }}</td>
+                                <td class='align-middle pl-3 nome-piloto'>{{ equipe }}</td>
+                                <td class='align-left'>
+                                    <span class="flag-icon flag-icon-{{ icone }} m-3"></span>
+                                </td>
+                                <td class='align-middle pl-3'>{{ pontuacao }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
 
         </div>
+    
     </div>
 {% endblock content %}

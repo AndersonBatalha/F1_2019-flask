@@ -7,7 +7,7 @@ from app import db
 
 class Populate_DB():
     def __init__(self):
-        self.url_data = 'http://api.myjson.com/bins/151zs2'
+        self.url_data = 'http://api.myjson.com/bins/1g30am'
         self.app = create_app()
         self.arquivos = os.listdir(BASE_DIR)
 
@@ -50,9 +50,9 @@ flask db downgrade""")
         if r is None:
             r = Pais()
             r.nome_pais = kwargs['pais']
+            print(r)
         db.session.add(r)
         db.session.commit()
-        print(r)
         return r
 
     def cidade(self, **kwargs):
@@ -61,9 +61,9 @@ flask db downgrade""")
             r = Cidade()
             r.nome_cidade = kwargs['cidade']
             r.pais = self.pais(**kwargs)
+            print(r)
         db.session.add(r)
         db.session.commit()
-        print(r)
         return r
 
     def circuito(self, **kwargs):
@@ -81,9 +81,9 @@ flask db downgrade""")
                        int(kwargs['tempo_recorde'][5:8])
             r.tempo_recorde_pista = self.str_to_time(0, m, s, ms)
             r.cidade = self.cidade(**kwargs)
+            print(r)
         db.session.add(r)
         db.session.commit()
-        print(r)
         return r
 
     def evento(self, key, **kwargs):
@@ -103,10 +103,10 @@ flask db downgrade""")
             r.flag_icon = kwargs['flag-icon']
 
             r.circuito = self.circuito(**kwargs)
+            print(r)
 
         db.session.add(r)
         db.session.commit()
-        print(r)
         return r
 
     def equipe(self, **kwargs):
@@ -130,9 +130,9 @@ flask db downgrade""")
 
             r.cidade = self.cidade(**kwargs)
 
+            print(r)
         db.session.add(r)
         db.session.commit()
-        print(r)
         return r
 
     def piloto(self, **kwargs):
@@ -142,8 +142,7 @@ flask db downgrade""")
             r.nome_piloto = kwargs['nome']
             r.numero_piloto = kwargs['#']
             r.pontos_ganhos = kwargs['pontos_ganhos']
-            dia, mes, ano = kwargs['data_nascimento'][0:2], kwargs['data_nascimento'][3:5], \
-                      kwargs['data_nascimento'][6:]
+            dia, mes, ano = kwargs['data_nascimento'][0:2], kwargs['data_nascimento'][3:5], kwargs['data_nascimento'][6:]
             r.data_nasc = self.str_to_date(dia, mes, ano)
             r.corridas_disputadas = kwargs['gps_disputados']
             r.numero_podios = kwargs['podios']
@@ -156,12 +155,24 @@ flask db downgrade""")
             r.cidade = self.cidade(**kwargs)
             r.equipe = self.equipe(**kwargs)
 
+            print(r)
         db.session.add(r)
         db.session.commit()
 
-        print(r)
         return r
 
+    def titulos(self, ano, **kwargs):
+        r = Titulo.query.filter_by(ano_titulo=ano).first()
+        if r is None:
+            r = Titulo()
+            r.ano_titulo = ano
+            r.piloto = self.piloto(**kwargs)
+
+            print(r)
+        db.session.add(r)
+        db.session.commit()
+
+        return r
 
     def resultados(self, pos, pontos):
         r = Pontuacao.query.filter_by(posicao=pos).first()
@@ -170,10 +181,11 @@ flask db downgrade""")
             r.posicao = pos
             r.pontuacao_corrida = pontos
 
+            print(r)
+
         db.session.add(r)
         db.session.commit()
 
-        print(r)
         return r
 
     def resultados_pilotos(self, **kwargs):
@@ -236,18 +248,19 @@ if __name__ == '__main__':
 
     print("\n\nPilotos")
     for piloto in pilotos:
-        for i in piloto:
-            if type(piloto[i]).__name__ == 'dict':
-                for j in piloto[i]:
-                    kwargs[j] = piloto[i][j]
-            elif type(piloto[i]).__name__ == 'list':
-                print(piloto[i])
+        print('\n')
+        for (chave, valor) in piloto.items():
+            if type(valor).__name__ == 'dict':
+                for (c, v) in valor.items():
+                    kwargs[c] = v
             else:
-                kwargs[i] = piloto[i]
+                kwargs[chave] = valor
         a.pais(**kwargs)
         a.cidade(**kwargs)
         a.equipe(**kwargs)
         a.piloto(**kwargs)
+        for item in kwargs['titulos']:
+            a.titulos(item, **kwargs)
 
     print("\n\nPontuação")
     for (chave, valor) in pontuacao_corrida.items():
@@ -262,5 +275,3 @@ if __name__ == '__main__':
             for (k, v) in dict.items():
                 kwargs[k] = v
             a.resultados_pilotos(**kwargs)
-
-

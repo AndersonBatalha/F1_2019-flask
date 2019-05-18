@@ -52,14 +52,16 @@
                             </div>
                         </div>
                     {% else %}
-                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                            <li class='nav-item mr-4'>
-                                <a class="text-white" href='/cadastro'>Cadastre-se</a>
-                            </li>
-                            <li class='nav-item mr-4'>
-                                <a class="text-white" href='/login'>Login</a>
-                            </li>
-                        </ul>
+                        <div class="justify-content-end">
+                            <ul class="navbar-nav dropdown-menu-right mr-auto mt-2 mt-lg-0">
+                                <li class='nav-item mr-4'>
+                                    <a class="text-white" href='/cadastro'>Cadastre-se</a>
+                                </li>
+                                <li class='nav-item mr-4'>
+                                    <a class="text-white" href='/login'>Login</a>
+                                </li>
+                            </ul>
+                        </div>
                     {% endif %}
                 </div>
             </nav>

@@ -10,7 +10,10 @@ def login():
     if form.validate_on_submit():
         usuario = Usuario.query.filter_by(nome_usuario=form.nome_usuario.data).first()
         if usuario and usuario.check_password(form.senha.data):
-            login_user(usuario)
+            if form.sessao.data == True:
+                login_user(usuario, remember=True)
+            else:
+                login_user(usuario)
             next = request.args.get('next')
             if next is None or not next.startswith('/'):
                 next = url_for('main.index')

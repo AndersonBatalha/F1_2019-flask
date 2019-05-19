@@ -19,12 +19,6 @@
                     </ol>
                 </nav>
 
-                {% for message in get_flashed_messages() %}
-                    <div class="alert alert-danger" role="alert">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-
                 <img src="{{ url_for('static', filename='img/f1-logo-red-on-white.png') }}"
                      alt="Logo F1" class="img-thumbnail mb-3" width="100%">
                 <form method="POST" role="form">

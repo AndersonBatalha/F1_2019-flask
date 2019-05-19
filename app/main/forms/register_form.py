@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, DateField, IntegerField
+from wtforms import StringField, PasswordField, SubmitField, DateField, IntegerField, SelectField
 from wtforms.validators import DataRequired, Length, EqualTo
+from app.models import Funcao
 
 class RegisterForm(FlaskForm):
     nome = StringField('Nome completo', validators=[
@@ -27,9 +28,16 @@ class RegisterForm(FlaskForm):
         DataRequired(),
         Length(min=5, max=25)
     ])
+    funcao = SelectField("Selecione uma função", coerce=int)
     confirmacao_senha = PasswordField("Confirme a senha", validators=[
         DataRequired(),
         Length(min=5, max=25),
         EqualTo('senha'),
     ])
     cadastrar = SubmitField('Inscreva-se')
+
+    def __init__(self, *args, **kwargs):
+        super(RegisterForm, self).__init__(*args, **kwargs)
+        self.choices = [(f.id_funcao, f.nome_funcao) for f in Funcao.query.all()]
+
+        self.funcao.choices = self.choices

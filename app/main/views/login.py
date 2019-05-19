@@ -19,6 +19,6 @@ def login():
                 next = url_for('main.index')
             return redirect(next)
         else:
-            flash("Usuário ou senha inválido!")
+            flash("Usuário ou senha inválido!", category='warning')
     return render_template('login.html', form=form)
 

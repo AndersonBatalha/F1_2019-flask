@@ -6,5 +6,5 @@ from flask_login import logout_user, login_required
 @login_required
 def logout():
     logout_user()
-    flash("A sessão atual foi encerrada")
+    flash("A sessão atual foi encerrada", category='info')
     return redirect(url_for('main.index'))

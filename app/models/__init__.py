@@ -7,4 +7,5 @@ from .piloto import Piloto
 from .resultado_piloto import Resultado_Piloto
 from .pontuacao import Pontuacao
 from .usuario import Usuario
-from .campeonato import Titulo
+from .titulo import Titulo
+from .funcao import Funcao

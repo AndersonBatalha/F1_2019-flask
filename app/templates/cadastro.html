@@ -36,8 +36,8 @@
                     {% endif %}
 
                     <div class="form-group my-1">
-                        <div class="form-row">
-                            <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6 my-1">
+                        <div class="form-row mt-2">
+                            <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6">
                                 {{ wtf.form_field(form.nome) }}
                             </div>
                             <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6">
@@ -83,6 +83,9 @@
                                 {{ wtf.form_field(form.pais) }}
                             </div>
                         </div>
+                    </div>
+                    <div class="form-group">
+                        {{ wtf.form_field(form.funcao) }}
                     </div>
                     <div class="form-group">
                         <div class="form-row">

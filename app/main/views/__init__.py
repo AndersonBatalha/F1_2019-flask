@@ -6,3 +6,5 @@ from .index import index
 from .login import login
 from .pilotos import pilotos
 from .logout import logout
+from .criar_funcao import criar_funcao
+from .listar_usuarios import listar_usuarios

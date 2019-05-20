@@ -10,7 +10,6 @@ def editar_usuario(u):
     usuario = Usuario.query.filter_by(nome_usuario=u).first()
     form = EditUserForm(usuario=usuario)
     if form.validate_on_submit():
-        print(request.form)
         if request.method == 'POST' and (
                 form.nome.data != request.form['nome'] or \
                 form.nome.data != request.form['nome'] or \
@@ -43,7 +42,7 @@ def editar_usuario(u):
                 usuario.estado = form.estado.data = request.form['estado']
                 usuario.pais = form.pais.data = request.form['pais']
                 usuario.id_funcao = form.funcao.data = int(request.form['funcao'])
-                usuario.funcao = Funcao.query.get(usuario.id_funcao)
+                usuario.funcao = Funcao.query.get(form.itemSelecionado(form.funcao.data))
 
                 db.session.commit()
 
@@ -51,5 +50,7 @@ def editar_usuario(u):
                       category='info')
 
                 return redirect(url_for('main.listar_usuarios'))
+    elif form.errors:
+        flash('Verifique as informações inseridas!', category='warning')
 
     return render_template('editar_usuario.html', form=form)

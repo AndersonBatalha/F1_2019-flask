@@ -24,7 +24,7 @@ class EditUserForm(FlaskForm):
     cidade = StringField("Cidade", validators=[ DataRequired() ])
     estado = StringField("Estado", validators=[ DataRequired() ])
     pais = StringField("País", validators=[ DataRequired() ])
-    funcao = SelectField("Selecione uma função", coerce=int)
+    funcao = SelectField("Selecione uma função", coerce=int, validators=[ DataRequired() ])
     alterar = SubmitField('OK')
 
     def __init__(self, usuario, *args, **kwargs):
@@ -45,3 +45,6 @@ class EditUserForm(FlaskForm):
         self.pais.data = self.usuario.pais
         self.funcao.data = self.usuario.id_funcao
         self.funcao.choices = self.choices
+
+    def itemSelecionado(self, id):
+        return int([tupla[0] for tupla in self.choices if tupla[0]==id][0])

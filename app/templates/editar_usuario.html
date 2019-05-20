@@ -3,6 +3,9 @@
 
 {% block title %}
     Editar usuário
+    {% if current_user.is_authenticated %}
+        - {{ current_user.nome_usuario }}
+    {% endif %}
 {% endblock %}
 
 {% block content %}

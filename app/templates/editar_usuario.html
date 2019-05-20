@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}
+    Editar usuário
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+
+        <div class="row justify-content-center my-4">
+            <h1 class="py-3">Editar usuário</h1>
+        </div>
+
+        <div class="row justify-content-center my-4">
+
+            <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                <form method="POST" role="form">
+                    {{ form.csrf_token }}
+
+                    {% if form.errors %}
+                        {% for field in form %}
+                            {% if field.errors %}
+                                {% for error in field.errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ field.label }}: {{ error }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="form-group my-1">
+                        <div class="form-row mt-2">
+                            <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6">
+                                {{ wtf.form_field(form.nome) }}
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6">
+                               {{ wtf.form_field(form.nome_usuario) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group my-1">
+                        {{ wtf.form_field(form.email) }}
+                    </div>
+                    <div class="form-group my-1">
+                        {{ wtf.form_field(form.data_nasc, type='date', placeholder="DD/MM/AAAA") }}
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-sm-12 col-md-6 col-xl-4 col-lg-4 my-1">
+                                {{ wtf.form_field(form.endereco) }}
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-4 col-lg-4 my-1">
+                                {{ wtf.form_field(form.numero, type='number') }}
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-xl-4 col-lg-4 mt-1">
+                                {{ wtf.form_field(form.complemento) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6">
+                                {{ wtf.form_field(form.bairro) }}
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6 mt-1">
+                                {{ wtf.form_field(form.cidade) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6 mt-1">
+                                {{ wtf.form_field(form.estado) }}
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-6 col-lg-6 mt-1">
+                                {{ wtf.form_field(form.pais) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ wtf.form_field(form.funcao) }}
+                    </div>
+                    {{ wtf.form_field(form.alterar, type="submit", class="btn btn-block btn-lg",
+                            placeholder=form.alterar.label.text) }}
+                </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}

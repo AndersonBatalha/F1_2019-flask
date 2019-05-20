@@ -2,7 +2,7 @@ from app.main import main
 from ..forms import RegisterForm
 from flask import redirect, url_for, render_template, flash
 from app import db
-from app.models import Usuario, Funcao
+from app.models import Usuario
 
 @main.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
@@ -31,4 +31,7 @@ def cadastro():
         flash('Usuário registrado!', category='success')
 
         return redirect(url_for('main.login'))
+    elif form.errors:
+        flash('Verifique as informações inseridas!', category='warning')
+
     return render_template('cadastro.html', form=form)

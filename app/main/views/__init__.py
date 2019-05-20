@@ -8,3 +8,5 @@ from .pilotos import pilotos
 from .logout import logout
 from .criar_funcao import criar_funcao
 from .listar_usuarios import listar_usuarios
+from .editar_usuario import editar_usuario
+from .remover_funcao import remover_funcao

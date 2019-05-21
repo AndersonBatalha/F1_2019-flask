@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
@@ -9,9 +9,6 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 config = Config()
 login_manager = LoginManager()
-login_manager.login_view = 'main.login'
-login_manager.login_message = "É preciso fazer login para continuar"
-login_manager.login_message_category = 'warning'
 
 def create_app():
     app = Flask(__name__)
@@ -24,13 +21,16 @@ def create_app():
     db.init_app(app)
 
     login_manager.init_app(app)
+    login_manager.login_view = 'main.login'
+    login_manager.login_message = "É preciso fazer login para continuar"
+    login_manager.login_message_category = 'warning'
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
     from .main.views.errors import not_authorized, page_not_found
     app.register_error_handler(404, page_not_found)
-    app.register_error_handler(405, not_authorized)
+    app.register_error_handler(500, not_authorized)
 
     return app
 

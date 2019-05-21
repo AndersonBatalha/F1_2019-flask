@@ -28,7 +28,7 @@ class RegisterForm(FlaskForm):
         DataRequired(),
         Length(min=5, max=25)
     ])
-    funcao = SelectField("Selecione uma função", coerce=int, validators=[ DataRequired() ])
+    funcao = SelectField("Selecione uma função", coerce=int)
     confirmacao_senha = PasswordField("Confirme a senha", validators=[
         DataRequired(),
         Length(min=5, max=25),
@@ -41,7 +41,6 @@ class RegisterForm(FlaskForm):
         self.choices = [(f.id_funcao, f.nome_funcao) for f in Funcao.query.all()]
 
         self.funcao.choices = self.choices
-        print(self.choices)
 
     def itemSelecionado(self, id):
         return int([tupla[0] for tupla in self.choices if tupla[0]==id][0])

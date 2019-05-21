@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, DateField, IntegerField, SelectField
-from wtforms.validators import DataRequired, Length, EqualTo
+from wtforms import StringField, SubmitField, DateField, IntegerField, SelectField
+from wtforms.validators import DataRequired, Length
 from app.models import Funcao
 
 class EditUserForm(FlaskForm):
@@ -24,7 +24,7 @@ class EditUserForm(FlaskForm):
     cidade = StringField("Cidade", validators=[ DataRequired() ])
     estado = StringField("Estado", validators=[ DataRequired() ])
     pais = StringField("País", validators=[ DataRequired() ])
-    funcao = SelectField("Selecione uma função", coerce=int, validators=[ DataRequired() ])
+    funcao = SelectField("Selecione uma função", coerce=int)
     alterar = SubmitField('OK')
 
     def __init__(self, usuario, *args, **kwargs):

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Aviso
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row justify-content-center mx-4 my-4">
+            <div class="col-sm-12 col-md-10 col-lg-6 col-xl-6 text-center">
+                <div class="card py-lg-5 py-xl-5 my-lg-4 my-xl-4">
+                    <h1 class='display-1'>
+                        <ion-icon style="color: red;" name="alert"></ion-icon>
+                    </h1>
+                    <h4>Apenas administradores podem editar usuários e
+                        criar papéis</h4>
+                    <p>Código do erro: {{ status_code }}</p>
+                    <p>{{ error }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -37,6 +37,8 @@ class Usuario(db.Model, UserMixin):
     def check_password(self, senha):
         return check_password_hash(self.hash_senha, senha)
 
+    def get_user_by_token(self):
+        pass
 
 @login_manager.user_loader
 def load_user(user_id):

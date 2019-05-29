@@ -1,6 +1,7 @@
 from app import db
 from .pais import Pais
 
+
 class Cidade(db.Model):
     __tablename__ = 'cidade'
     id_cidade = db.Column(db.Integer, primary_key=True)

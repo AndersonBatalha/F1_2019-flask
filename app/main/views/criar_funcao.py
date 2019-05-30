@@ -1,20 +1,15 @@
 from app.main import main
-# from .errors import not_authorized
+from app.main.decorators import admin_required
 from ..forms import FuncaoForm
 from app.models import Funcao
 from app import db
 from flask import render_template, flash, redirect, url_for
 from flask_login import login_required
-from flask_user import roles_required
-# from werkzeug.exceptions import HTTP_STATUS_CODES
 
 @main.route('/nova_funcao', methods=['GET', 'POST'])
 @login_required
-@roles_required(['Admin', 'Administrador', 'Adm', 'admin', 'administrador', 'adm', 'ADMIN'])
+@admin_required
 def criar_funcao():
-    # if current_user.is_authenticated and not current_user.nome_usuario.startswith('adm'):
-    #     return not_authorized(HTTP_STATUS_CODES[401])
-    # else:
     funcoes = Funcao.query.all()
     form = FuncaoForm()
     if form.validate_on_submit():
@@ -29,4 +24,3 @@ def criar_funcao():
         else:
             flash('A função %s já existe!' %(form.nome_funcao.data), category='danger')
     return render_template('criar_funcao.html', form=form, funcoes=funcoes)
-

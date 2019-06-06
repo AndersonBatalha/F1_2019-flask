@@ -57,4 +57,4 @@ def editar_usuario(u):
     elif form.errors:
         flash('Verifique as informações inseridas!', category='warning')
 
-    return render_template('editar_usuario.html', form=form)
+    return render_template('forms/editar_usuario.html', form=form)

@@ -32,4 +32,4 @@ def cadastro():
     elif form.errors:
         flash('Verifique as informações inseridas!', category='warning')
 
-    return render_template('cadastro.html', form=form)
+    return render_template('forms/cadastro.html', form=form)

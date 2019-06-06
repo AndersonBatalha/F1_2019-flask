@@ -16,34 +16,22 @@
                     </ol>
                 </nav>
             </div>
+
             <div class="col-sm-12 col-md-8 col-lg-10 col-xl-10">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         {% for equipe in equipes %}
 
-                            {% if equipe.id_equipe == 1 %}
+                            <div class="carousel-item {% if equipe.id_equipe == 1 %} active
+{% endif %}">
+                                <a type="button" data-toggle="modal"  data-target="#{{ equipe
+                                .nome_equipe | lower }}">
+                                    <img src="{{ url_for('static', filename=equipe.img) }}"
+                                         class="d-block w-100"
+                                         alt="{{ equipe.nome_equipe }}">
+                                </a>
+                            </div>
 
-                                <div class="carousel-item active">
-                                    <a type="button" data-toggle="modal"  data-target="#{{ equipe
-                                    .nome_equipe | lower }}">
-                                        <img src="{{ url_for('static', filename=equipe.img) }}"
-                                             class="d-block w-100"
-                                             alt="{{ equipe.nome_equipe }}">
-                                    </a>
-                                </div>
-
-                            {% else %}
-
-                                <div class="carousel-item">
-                                    <a type="button" data-toggle="modal" data-target="#{{ equipe
-                                    .nome_equipe | lower }}">
-                                        <img src="{{ url_for('static', filename=equipe.img) }}"
-                                             class="d-block w-100"
-                                             alt="{{ equipe.nome_equipe }}">
-                                    </a>
-                                </div>
-
-                           {% endif %}
 
                             <div class="modal fade" id="{{ equipe.nome_equipe | lower }}" tabindex="-1" role="dialog" aria-labelledby="{{ equipe.nome_equipe | lower }}" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -98,9 +86,6 @@
                                 </div>
                             </div>
 
-
-
-
                         {% endfor %}
 
                     </div>
@@ -113,7 +98,6 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                </div>
 
                 </div>
             </div>

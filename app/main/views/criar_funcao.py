@@ -23,4 +23,4 @@ def criar_funcao():
             return redirect(url_for('.criar_funcao'))
         else:
             flash('A função %s já existe!' %(form.nome_funcao.data), category='danger')
-    return render_template('criar_funcao.html', form=form, funcoes=funcoes)
+    return render_template('forms/criar_funcao.html', form=form, funcoes=funcoes)

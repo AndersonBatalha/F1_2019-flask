@@ -17,5 +17,5 @@ def login():
             return redirect(next)
         else:
             flash("Usuário ou senha inválido!", category='warning')
-    return render_template('login.html', form=form)
+    return render_template('forms/login.html', form=form)
 

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}
+    Nova postagem
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row justify-content-center my-4">
+
+            <div class="col-sm-12 col-md-10 col-lg-8 col-xl-8">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Adicionar
+                            postagem</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-sm-12 col-md-10 col-lg-8 col-xl-8">
+                <h1>Adicionar postagem</h1>
+                <form action="/add_post" method="POST" role="form" enctype="multipart/form-data">
+                    {{ form.csrf_token }}
+                    {{ wtf.quick_form(form) }}
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

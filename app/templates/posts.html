@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Posts
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+
+            <div class="col-12 mt-4 mb-2">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Posts</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                {% if posts.length == 0 %}
+                    <div class="alert alert-info">
+                        <h3>Não existem posts</h3>
+                    </div>
+                {% else %}
+
+                    <ul class="list-group">
+                        {% for post in posts %}
+                            <li class="list-group-item d-flex justify-content-between
+                            align-items-center">
+                                <h5>
+                                    <a class="text-muted" href="/post/{{ post.slug }}">
+                                        {{ post.titulo | default }}
+                                    </a>
+                                </h5>
+                                <h3>
+                                    <a class="text-muted" href="/delete_post/{{ post.slug }}">
+                                        <ion-icon class="text-dark" name="trash"></ion-icon>
+                                    </a>
+                                    <a class="text-muted" href="/edit_post/{{ post.slug }}">
+                                        <ion-icon class="text-dark" name="create"></ion-icon>
+                                    </a>
+                                </h3>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+{% endblock content %}

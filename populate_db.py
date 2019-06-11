@@ -200,6 +200,15 @@ flask db downgrade""")
         print(r)
         return r
 
+    def adicionar_papeis(self):
+        papeis = ['Usuário', 'Administrador', 'Moderador', 'Membro']
+
+        for papel in papeis:
+            p = Funcao(nome_funcao=papel)
+            db.session.add(p)
+            print(p)
+        db.session.commit()
+
 if __name__ == '__main__':
 
     os.system("rm -rf migrations/ data.sqlite")
@@ -275,3 +284,6 @@ if __name__ == '__main__':
             for (k, v) in dict.items():
                 kwargs[k] = v
             a.resultados_pilotos(**kwargs)
+
+    print("\n\nPapéis")
+    a.adicionar_papeis()

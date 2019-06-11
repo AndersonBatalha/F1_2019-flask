@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ post.titulo }}
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-4">
+            <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10">
+                <h2 class="py-3 text-center">{{ post.titulo }}</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10">
+                <div class="row p-4">
+                    <div class="col text-justify" style="white-space: pre-wrap; font-size:
+                    20px;">
+                        {{ post.texto }}
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img width="75%" height="85%" src="{{ url_for('static', filename=post.imagem) }}"
+                         class="img-fluid m-5 text-center"><br>
+                </div>
+                <p style="font-size: 14px">Postado por <strong>{{ post.autor }}</strong></p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

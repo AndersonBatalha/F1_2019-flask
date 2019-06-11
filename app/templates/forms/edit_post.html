@@ -2,22 +2,33 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block title %}
-    Nova postagem
+    Editar post - {{ post.titulo }}
 {% endblock %}
 
 {% block content %}
-
     <div class="container-fluid">
 
         <div class="row justify-content-center my-4">
-            <h1 class="py-3">Adicionar postagem</h1>
+            <h1 class="py-3">Editar post</h1>
         </div>
 
         <div class="row justify-content-center my-4">
 
-            <div class="col-sm-12 col-md-10 col-lg-8 col-xl-8">
-                <form action="/add_post" method="POST" role="form" enctype="multipart/form-data">
+            <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                <form action="/edit_post/{{ post.slug }}" method="POST" role="form" enctype="multipart/form-data">
                     {{ form.csrf_token }}
+
+                    {% if form.errors %}
+                        {% for field in form %}
+                            {% if field.errors %}
+                                {% for error in field.errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ field.label }}: {{ error }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
 
                     <div class="form-group my-1">
                         {{ wtf.form_field(form.titulo) }}
@@ -34,6 +45,6 @@
                 </form>
             </div>
         </div>
-    </div>
 
+    </div>
 {% endblock content %}

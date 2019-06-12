@@ -12,6 +12,7 @@ from populate_db import Populate_DB
 @admin_required
 def editar_usuario(u):
     usuario = Usuario.query.filter_by(nome_usuario=u).first()
+    print(usuario)
     form = EditUserForm(usuario=usuario)
     if form.validate_on_submit():
         if request.method == 'POST' and (

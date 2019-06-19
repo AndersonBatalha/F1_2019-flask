@@ -8,8 +8,8 @@ from app.models import Funcao
 from app import db
 
 @main.route('/remover/<funcao>')
-@login_required
 @admin_required
+@login_required
 def remover_funcao(funcao):
     f = Funcao.query.filter_by(nome_funcao=funcao).first()
     db.session.delete(f)

@@ -8,6 +8,7 @@ class Post(db.Model):
     texto = db.Column(db.String)
     imagem = db.Column(db.String)
     slug = db.Column(db.String)
+    data = db.Column(db.DateTime)
 
     id_autor = db.Column(db.Integer, db.ForeignKey('usuario.id'))
     autor = db.relationship(Usuario, backref=db.backref('post', lazy=True))

@@ -68,9 +68,6 @@ a:hover, a:link, a:active, a:visited, small a:hover, small a:link, small a:activ
         width: 80%;
         height: 60%;
     }
-    .classificacao_pilotos {
-        max-width: 400px;
-    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -164,8 +161,10 @@ footer {
     width: 100%;
 }
 
-.nome-piloto {
-    max-width: 125px;
+@media (min-width: 650px) {
+    .nome-piloto {
+        max-width: 125px;
+    }
 }
 .icon {
     max-width: 2px;

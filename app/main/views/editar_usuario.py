@@ -8,11 +8,10 @@ from flask_login import login_required
 from populate_db import Populate_DB
 
 @main.route('/editar/<u>', methods=['GET', 'POST'])
-@login_required
 @admin_required
+@login_required
 def editar_usuario(u):
     usuario = Usuario.query.filter_by(nome_usuario=u).first()
-    print(usuario)
     form = EditUserForm(usuario=usuario)
     if form.validate_on_submit():
         if request.method == 'POST' and (

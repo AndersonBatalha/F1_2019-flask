@@ -3,6 +3,7 @@ from app.models import Post, Usuario
 from app.main import main
 from app import db
 from slugify import slugify
+from datetime import datetime
 
 from flask import render_template, request, flash, redirect, url_for
 from flask_login import login_required, current_user
@@ -22,6 +23,7 @@ def add_post():
                     slug=slugify(form.titulo.data),
 
                     id_autor=current_user.id,
+                    data=datetime.now(),
                     autor=Usuario.query.get(current_user.id)
                 )
                 db.session.add(post)

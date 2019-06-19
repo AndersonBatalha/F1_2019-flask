@@ -55,15 +55,20 @@
                                 <a class="dropdown-item" href="/logout">Logout</a>
                                 <div class="dropdown-divider"></div>
 
-                                <a class="dropdown-toggle dropdown-item text-dark" href="#"
-                                   role="button" id="link" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">
-                                    Postagens
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="link">
-                                    <a class="dropdown-item" href="/posts">Posts</a>
-                                    <a class="dropdown-item" href="/add_post">Adicionar post</a>
+                                <div class="btn-group dropleft" role="group">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle
+                                        dropdown-toggle-split text-dark" href="
+                                        .dropdown-menu"
+                                           role="button"
+                                           id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="/add_post">Adicionar postagem</a>
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item"
+                                            href="{{ url_for('main.posts') }}">Posts</a>
                                 </div>
 
                             </div>

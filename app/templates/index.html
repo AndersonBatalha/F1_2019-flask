@@ -7,95 +7,42 @@
 {% block content %}
     <div class="container-fluid h-100 w-100">
 
-            <div class="row text-center my-4">
-                <div class="col">
-                    <a href="http://bit.ly/2ueWt6C" target="_blank">
-                        <img src="{{ url_for('static', filename='img/banner.jpeg') }}" alt="banner" class="img-fluid">
-                    </a>
-                </div>
+        <div class="row m-1 justify-content-center my-4">
+
+            <div class="{% if posts | length < 2 %}col-xl-8 col-lg-8 col-md-10
+                {% else %}col-xl-10 col-lg-10 {% endif %}col-sm-12">
+                <ul class="list-group">
+                    {% for post in posts %}
+                        <a href="{{ url_for('.post_detail', slug=post.slug) }}" class="text-dark">
+                            <li class="list-group-item my-2">
+
+                                <div class="row align-items-center">
+                                    <div class="col-xl-4 col-lg-4 my-sm-4">
+                                         <img src="{{ url_for('static', filename=post.imagem) }}"
+                                              class="card-img-top float-left w-100"
+                                              alt="{{ post.slug }}">
+                                    </div>
+
+                                    <div class="col-xl-8 col-lg-8">
+                                        <h3 class="flex-wrap">{{ post.titulo | wordwrap }}</h3>
+                                        <p>Autor: <strong>{{ post.autor.nome_usuario }}</strong></p>
+                                        {% if post.data %}
+                                            <p>
+                                                Postado em {{ post.data.day }}/{{ post.data.month }}/{{
+                                                    post.data
+                                            .year }} às {{ post.data.hour }}:{{ post.data.minute }}:{{
+                                                    post.data.second }}
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                            </li>
+                        </a>
+                    {% endfor %}
+                </ul>
             </div>
-
-            <div class="row m-1 justify-content-center">
-                <div class="col-xl-6 col-lg-6 col-md-9 col-sm-12">
-                    <a href="https://grandepremium.com.br/gpstats/materias/as-voltas-por-cima-e-as-zicas" target="_blank">
-                        <div class="card mb-3">
-                            <img src="{{ url_for('static', filename='img/destaque.jpg') }}" class="card-img-top" alt="noticia1">
-                            <div class="card-body">
-                                <h6 class="card-subtitle mb-2 text-muted">F1</h6>
-                                <h5 class="card-title">Confirmações, negações e tendências vistas no GP da Austrália</h5>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://f1mania.lance.com.br/formula-1/pirelli-divulga-os-compostos-selecionados-para-o-gp-do-bahrein/" target="_blank">
-                        <div class="card mb-3">
-                            <img src="{{ url_for('static', filename='img/pneus.jpg') }}" class="card-img-top" alt="pneus">
-                            <div class="card-body">
-                                <h6 class="card-subtitle mb-2 text-muted">F1</h6>
-                                <h5 class="card-title">Pirelli divulga os compostos selecionados para o GP do Bahrein</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-xl-6 col-lg-6 col-md-9 col-sm-12">
-                    <div class="row justify-content-center">
-
-                        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 mb-2">
-                            <a href="https://www.grandepremio.com.br/f1/noticias/gp-as-10-volta-mais-rapida-faz-favor-ao-fim-das-corridas-da-f1-por-tirar-lideres-da-zona-de-conforto" target="_blank">
-                                <div class="card noticia">
-                                    <img src="{{ url_for('static', filename='img/gp-australia.jpg') }}" class="card-img-top" alt="pneus">
-                                    <div class="card-body">
-                                        <h6 class="card-subtitle mb-2 text-muted">F1</h6>
-                                        <h5 class="card-title">Volta mais rápida faz favor ao fim das corridas da F1 por tirar líderes da zona de conforto</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 mb-2">
-                            <a href="https://globoesporte.globo.com/motor/formula-1/noticia/mercedes-acredita-que-corrida-fraca-da-ferrari-na-australia-foi-causada-por-acerto-errado-do-carro.ghtml" target="_blank">
-                                <div class="card noticia">
-                                    <img src="{{ url_for('static', filename='img/ferrari.jpg') }}" class="card-img-top" alt="pneus">
-                                    <div class="card-body">
-                                        <h6 class="card-subtitle mb-2 text-muted">F1</h6>
-                                        <h5 class="card-title">Mercedes crê que corrida fraca da Ferrari na Austrália foi causada por ajuste errado do carro</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="row my-4 justify-content-center">
-
-                        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 mb-2">
-                            <a href="https://globoesporte.globo.com/motor/formula-1/noticia/debriefing-os-dados-do-gp-da-australia-a-primeira-etapa-da-temporada-2019-de-formula-1.ghtml" target="_blank">
-                                <div class="card noticia">
-                                    <img src="{{ url_for('static', filename='img/gp-australia2.jpg') }}" class="card-img-top" alt="pneus">
-                                    <div class="card-body">
-                                        <h6 class="card-subtitle mb-2 text-muted">F1</h6>
-                                        <h5 class="card-title">Dados do GP da Austrália revelam que ultrapassagens quase triplicaram em relação a 2018</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 mb-2">
-                            <a href="https://motorsport.uol.com.br/f1/news/perdeu-pro-sono-veja-destaques-do-gp-da-australia-de-formula1/4354915/" target="_blank">
-                                <div class="card noticia">
-                                    <img src="{{ url_for('static', filename='img/valtteri-bottas-mercedes-amg-f.jpg') }}" class="card-img-top" alt="pneus">
-                                    <div class="card-body">
-                                        <h6 class="card-subtitle mb-2 text-muted">F1</h6>
-                                        <h5 class="card-title">Destaques do GP da Austrália de Fórmula 1</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
+        </div>
 
     </div>
 {% endblock content %}

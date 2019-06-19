@@ -15,7 +15,7 @@
         <div class="row justify-content-center">
 
             <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10">
-                <div class="row p-4">
+                <div class="row">
                     <div class="col text-justify" style="white-space: pre-wrap; font-size:
                     20px;">
                         {{ post.texto }}
@@ -25,7 +25,8 @@
                     <img width="75%" height="85%" src="{{ url_for('static', filename=post.imagem) }}"
                          class="img-fluid m-5 text-center"><br>
                 </div>
-                <p style="font-size: 14px">Postado por <strong>{{ post.autor }}</strong></p>
+                <p style="font-size: 14px">Postado por <strong>{{ post.autor }}</strong> às {{
+                        post.data.hour }}:{{ post.data.minute }}:{{ post.data.second }}</p>
             </div>
         </div>
     </div>

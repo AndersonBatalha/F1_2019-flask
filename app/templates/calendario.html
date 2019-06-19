@@ -19,7 +19,7 @@
 
             {% for evento in eventos %}
                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 px-2">
-                    <div class="card border-0 evento">
+                    <div class="card border-0">
                         <img src={{ url_for('static', filename=evento.img_evento) }} alt="{{ evento.circuito.cidade.pais
                         .nome_pais }}" class="card-img-top mb-3 img-fluid img-thumbnail">
                         <p class="card-subtitle">

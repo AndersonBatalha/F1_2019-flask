@@ -214,12 +214,12 @@ flask db downgrade""")
                 usuario.nome_usuario = self.fake.user_name()
                 usuario.email = self.fake.email()
                 usuario.data_nasc = self.fake.date_of_birth(tzinfo=None, minimum_age=15, maximum_age=90)
-                usuario.endereco = self.fake.address()
+                usuario.endereco = self.fake.street_address()
                 usuario.numero = self.fake.building_number()
                 usuario.complemento = self.fake.neighborhood()
                 usuario.bairro = self.fake.bairro()
                 usuario.cidade = self.fake.city()
-                usuario.estado = self.fake.estado_nome()
+                usuario.estado = self.fake.state()
                 usuario.pais = self.fake.country()
                 usuario.funcao = random.choice(Funcao.query.all())
                 usuario.senha = 'password'
@@ -255,64 +255,64 @@ if __name__ == '__main__':
 
     kwargs = {}
 
-    # print("\n\nCorridas")
-    # for corrida in corridas:
-    #     for i in corrida:
-    #         if type(corrida[i]).__name__ == 'dict':
-    #             for j in corrida[i]:
-    #                 kwargs[j] = corrida[i][j]
-    #         else:
-    #             kwargs[i] = corrida[i]
-    #     a.pais(**kwargs)
-    #     a.cidade(**kwargs)
-    #     a.circuito(**kwargs)
-    #     a.evento('nome_oficial_evento', **kwargs)
-    #
-    # kwargs.clear()
-    #
-    # print("\n\nEquipes")
-    # for equipe in equipes:
-    #     for i in equipe:
-    #         if type(equipe[i]).__name__ == 'dict':
-    #             for j in equipe[i]:
-    #                 kwargs[j] = equipe[i][j]
-    #         else:
-    #             kwargs[i] = equipe[i]
-    #     a.pais(**kwargs)
-    #     a.cidade(**kwargs)
-    #     a.equipe(**kwargs)
-    #
-    # kwargs.clear()
-    #
-    # print("\n\nPilotos")
-    # for piloto in pilotos:
-    #     print('\n')
-    #     for (chave, valor) in piloto.items():
-    #         if type(valor).__name__ == 'dict':
-    #             for (c, v) in valor.items():
-    #                 kwargs[c] = v
-    #         else:
-    #             kwargs[chave] = valor
-    #     a.pais(**kwargs)
-    #     a.cidade(**kwargs)
-    #     a.equipe(**kwargs)
-    #     a.piloto(**kwargs)
-    #     for item in kwargs['titulos']:
-    #         a.titulos(item, **kwargs)
-    #
-    # print("\n\nPontuação")
-    # for (chave, valor) in pontuacao_corrida.items():
-    #     a.resultados(int(chave), valor)
-    #
-    # kwargs.clear()
-    #
-    # print("\n\nResultados")
-    # for (chave, valor) in resultados.items():
-    #     kwargs['nome'] = chave
-    #     for dict in valor:
-    #         for (k, v) in dict.items():
-    #             kwargs[k] = v
-    #         a.resultados_pilotos(**kwargs)
+    print("\n\nCorridas")
+    for corrida in corridas:
+        for i in corrida:
+            if type(corrida[i]).__name__ == 'dict':
+                for j in corrida[i]:
+                    kwargs[j] = corrida[i][j]
+            else:
+                kwargs[i] = corrida[i]
+        a.pais(**kwargs)
+        a.cidade(**kwargs)
+        a.circuito(**kwargs)
+        a.evento('nome_oficial_evento', **kwargs)
+
+    kwargs.clear()
+
+    print("\n\nEquipes")
+    for equipe in equipes:
+        for i in equipe:
+            if type(equipe[i]).__name__ == 'dict':
+                for j in equipe[i]:
+                    kwargs[j] = equipe[i][j]
+            else:
+                kwargs[i] = equipe[i]
+        a.pais(**kwargs)
+        a.cidade(**kwargs)
+        a.equipe(**kwargs)
+
+    kwargs.clear()
+
+    print("\n\nPilotos")
+    for piloto in pilotos:
+        print('\n')
+        for (chave, valor) in piloto.items():
+            if type(valor).__name__ == 'dict':
+                for (c, v) in valor.items():
+                    kwargs[c] = v
+            else:
+                kwargs[chave] = valor
+        a.pais(**kwargs)
+        a.cidade(**kwargs)
+        a.equipe(**kwargs)
+        a.piloto(**kwargs)
+        for item in kwargs['titulos']:
+            a.titulos(item, **kwargs)
+
+    print("\n\nPontuação")
+    for (chave, valor) in pontuacao_corrida.items():
+        a.resultados(int(chave), valor)
+
+    kwargs.clear()
+
+    print("\n\nResultados")
+    for (chave, valor) in resultados.items():
+        kwargs['nome'] = chave
+        for dict in valor:
+            for (k, v) in dict.items():
+                kwargs[k] = v
+            a.resultados_pilotos(**kwargs)
 
     print("\n\nPapéis")
     a.adicionar_papeis()

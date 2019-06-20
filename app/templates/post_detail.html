@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
 {% block title %}
     {{ post.titulo }}
@@ -26,8 +27,62 @@
                          class="img-fluid m-5 text-center"><br>
                 </div>
                 <p style="font-size: 14px">Postado por <strong>{{ post.autor }}</strong> às {{
-                        post.data.hour }}:{{ post.data.minute }}:{{ post.data.second }}</p>
+                        post.data.hour }}:{{ post.data.minute }}:{{
+                        post.data.second }}</p>
+
+                <div class="mt-5">
+
+                    <form method="POST" role="form">
+                        {{ form.csrf_token }}
+
+                        {% if form.errors %}
+                            {% for field in form %}
+                                {% if field.errors %}
+                                    {% for error in field.errors %}
+                                        <div class="alert alert-danger" role="alert">
+                                            {{ field.label }}: {{ error }}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+
+                        {{ wtf.form_field(form.comment, rows="4", cols="10", autocomplete="on",
+                            spellcheck="true", wrap="hard") }}
+                        {{ wtf.form_field(form.submit, type="submit", class="btn btn-block btn-lg",
+                                placeholder=form.submit.label.text) }}
+                    </form>
+                </div>
+
+                <div class="mt-5">
+                    <h3>
+                        {% if comentarios | length == 0 %}
+                            Nenhum
+                        {% else %}
+                            {{ comentarios | length }}
+                        {% endif %}
+
+                        {% if comentarios | length == 0 or comentarios | length == 1 %}
+                            comentário
+                        {% else %}
+                            comentários
+                        {% endif %}
+                    </h3>
+
+                    <ul class="list-group">
+                        {% for comentario in comentarios %}
+                            <li class="list-group-item border-0 ">
+                                <p class="font-weight-bold font-italic autor-comentario">
+                                    {{ comentario.autor.nome_usuario }}</p>
+                                <p class="comentario">{{ comentario.texto }}</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                </div>
+
             </div>
+
         </div>
     </div>
 {% endblock content %}

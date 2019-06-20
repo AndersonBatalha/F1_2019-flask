@@ -171,3 +171,15 @@ footer {
     margin: 0;
     padding: 0;
 }
+
+.autor-comentario {
+    font-size: 20px;
+}
+
+.comentario {
+    font-size: 15px;
+}
+
+textarea {
+    word-wrap: break-word;
+}

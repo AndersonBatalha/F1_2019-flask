@@ -8,7 +8,7 @@ class Comentario(db.Model):
     data = db.Column(db.DateTime)
 
     id_post = db.Column(db.Integer, db.ForeignKey('post.id_post'), nullable=False)
-    post = db.relationship(Post, backref=db.backref('comentario', lazy=True))
+    post = db.relationship(Post, backref=db.backref('comentario', lazy=True, cascade='all,delete'))
 
     id_usuario = db.Column(db.Integer, db.ForeignKey('usuario.id'), nullable=False)
     autor = db.relationship(Usuario, backref=db.backref('comentario', lazy=True))

@@ -17,8 +17,14 @@
                 <ul class="list-group">
                     {% for usuario in usuarios %}
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <h5>{{ usuario.nome_usuario }} {% if usuario.funcao %}({{ usuario
-                            .funcao }}){% endif %}</h5>
+                            <h5>
+                                <a class="text-dark" href='/usuario/{{ usuario.nome_usuario }}'>
+                                    {{ usuario.nome_usuario }}
+                                </a>
+                                {% if usuario.funcao %}
+                                    ({{ usuario.funcao }})
+                                {% endif %}
+                            </h5>
                             <a href="/editar/{{ usuario.nome_usuario }}">
                                 <h3><ion-icon class="text-dark" name="create"></ion-icon></h3>
                             </a>

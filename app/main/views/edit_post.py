@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 from ..forms import EditPostForm
 from app.models import Post, Usuario
@@ -17,13 +18,15 @@ def edit_post(slug):
     if form.validate_on_submit():
         if request.method == "POST" and (
             form.titulo.data != request.form['titulo'] or \
-            form.texto.data != request.form['texto']
+            form.texto.data != request.form['texto'] or \
+            post.data != datetime.now()
         ):
             post.titulo = form.titulo.data = request.form['titulo']
             post.texto = form.texto.data = request.form['texto']
             post.slug = slugify(form.titulo.data)
             post.id_autor = current_user.id
             post.autor = Usuario.query.get(current_user.id)
+            post.data = datetime.now()
             if request.files['imagem']:
                 if (allowed_extension(request.files['imagem'].filename)):
                     img = request.files['imagem'].filename

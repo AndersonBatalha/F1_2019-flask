@@ -62,7 +62,7 @@
                             {{ comentarios | length }}
                         {% endif %}
 
-                        {% if comentarios | length == 0 or comentarios | length == 1 %}
+                        {% if comentarios | length <= 1 %}
                             comentário
                         {% else %}
                             comentários

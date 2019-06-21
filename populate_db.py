@@ -213,9 +213,10 @@ flask db downgrade""")
                 usuario.nome = self.fake.name()
                 usuario.nome_usuario = self.fake.user_name()
                 usuario.email = self.fake.email()
-                usuario.data_nasc = self.fake.date_of_birth(tzinfo=None, minimum_age=15, maximum_age=90)
-                usuario.endereco = self.fake.street_address()
-                usuario.numero = self.fake.building_number()
+                usuario.data_nasc = self.fake.date_of_birth(tzinfo=None, minimum_age=18,
+                                                            maximum_age=60)
+                usuario.endereco = self.fake.street_name()
+                usuario.numero = self.fake.random_int(min=100, max=9999)
                 usuario.complemento = self.fake.neighborhood()
                 usuario.bairro = self.fake.bairro()
                 usuario.cidade = self.fake.city()
@@ -236,7 +237,6 @@ flask db downgrade""")
             db.session.add(p)
             print(p)
         db.session.commit()
-
 
 if __name__ == '__main__':
 

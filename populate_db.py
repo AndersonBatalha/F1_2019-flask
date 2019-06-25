@@ -6,6 +6,7 @@ from main import create_app
 from app import db
 from faker import Faker
 from slugify import slugify
+from sqlalchemy.exc import IntegrityError
 
 class Populate_DB():
     def __init__(self):
@@ -226,9 +227,12 @@ flask db downgrade""")
                 usuario.funcao = random.choice(Funcao.query.all())
                 usuario.senha = 'password'
 
-                print(usuario.nome_usuario)
+                print(i, usuario.nome_usuario)
             db.session.add(usuario)
-            db.session.commit()
+            try:
+                db.session.commit()
+            except IntegrityError:
+                db.session.rollback()
 
     def adicionar_papeis(self):
         papeis = ['Usuário', 'Administrador', 'Moderador', 'Membro']
@@ -238,6 +242,28 @@ flask db downgrade""")
             db.session.add(p)
             print(p)
         db.session.commit()
+
+    def posts(self):
+        for i in range(100):
+            self.titulo = self.fake.sentence(nb_words=random.randint(1, 12))
+            self.t = self.fake.paragraphs(nb=random.randint(1, 8))
+
+            texto = ""
+
+            for paragrafo in self.t:
+                texto += " " + paragrafo
+
+
+            p = Post(
+                titulo=self.titulo,
+                texto=texto,
+                slug=slugify(self.titulo),
+                data=datetime.datetime.now(),
+                autor=random.choice(Usuario.query.all())
+            )
+            db.session.add(p)
+            db.session.commit()
+            print(i, p.titulo)
 
 if __name__ == '__main__':
 
@@ -320,4 +346,8 @@ if __name__ == '__main__':
 
     print("\n\nUsuários")
     a.usuarios()
+
+    print("\n\nPosts")
+    a.posts()
+
 

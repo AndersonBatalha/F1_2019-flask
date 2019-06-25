@@ -3,7 +3,6 @@ from app.main import main
 from flask import render_template
 from flask_login import login_required, current_user
 from .errors import page_not_found
-from app.models import Relacionamento
 
 @main.route('/usuario/<nome>')
 @login_required

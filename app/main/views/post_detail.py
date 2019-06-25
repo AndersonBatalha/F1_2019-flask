@@ -9,11 +9,12 @@ from flask_login import login_required, current_user
 from werkzeug.http import HTTP_STATUS_CODES
 from datetime import datetime
 
-@main.route('/post/<slug>', methods=['GET', 'POST'])
+@main.route('/post/<autor>/<slug>', methods=['GET', 'POST'])
 @login_required
-def post_detail(slug):
+def post_detail(autor, slug):
     form = CommentForm()
-    p = Post.query.filter_by(slug=slug).first()
+    autor_post = Usuario.query.filter_by(nome_usuario=autor).first()
+    p = Post.query.filter_by(slug=slug, autor=autor_post).first()
     comentarios = Comentario.query.filter_by(post=p).all()
     u = Usuario.query.get(current_user.id)
 

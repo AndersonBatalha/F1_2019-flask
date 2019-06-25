@@ -29,15 +29,15 @@
                             <li class="list-group-item d-flex justify-content-between
                             align-items-center">
                                 <h5>
-                                    <a class="text-muted" href="/post/{{ post.slug }}">
-                                        {{ post.titulo | default }}
+                                    <a class="text-muted" href="{{ url_for('main.post_detail', autor=post.autor.nome_usuario, slug=post.slug) }}">
+                                        {{ post.titulo }}
                                     </a>
                                 </h5>
                                 <h3>
-                                    <a class="text-muted" href="/delete_post/{{ post.slug }}">
+                                    <a class="text-muted" href="{{ url_for('main.delete_post', slug=post.slug) }}">
                                         <ion-icon class="text-dark" name="trash"></ion-icon>
                                     </a>
-                                    <a class="text-muted" href="/edit_post/{{ post.slug }}">
+                                    <a class="text-muted" href="{{ url_for('main.edit_post', slug=post.slug) }}">
                                         <ion-icon class="text-dark" name="create"></ion-icon>
                                     </a>
                                 </h3>

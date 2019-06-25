@@ -1,6 +1,6 @@
 # TODO
 ## Permitir que o usuário adicione e edite notícias, que serão exibidas na página inicial (X)
-## Permitir que usuários possam seguir outros usuários
+## Permitir que usuários possam seguir outros usuários (X)
 ## Permitir que usuários comentem nas postagens de outros usuários (X)
 
 from app import create_app, db

@@ -22,15 +22,24 @@
                         {{ post.texto }}
                     </div>
                 </div>
-                <div class="text-center">
-                    <img width="75%" height="85%" src="{{ url_for('static', filename=post.imagem) }}"
-                         class="img-fluid m-5 text-center"><br>
-                </div>
-                <p style="font-size: 14px">Postado por <strong>{{ post.autor }}</strong> às {{
-                        post.data.hour }}:{{ post.data.minute }}:{{
-                        post.data.second }}</p>
 
-                <div class="mt-5">
+                {% if post.imagem %}
+
+                    <div class="text-center">
+                        <img width="75%" height="85%" src="{{ url_for('static', filename=post.imagem) }}"
+                             class="img-fluid m-5 text-center"><br>
+                    </div>
+
+                {% endif %}
+
+                <p style="font-size: 14px">
+                    Postado por
+                    <a class="text-dark" href="{{ url_for('main.perfil_usuario', nome=post.autor.nome_usuario) }}">
+                        <strong>{{ post.autor.nome }}</strong>
+                    </a> às {{ post.data.hour }}:{{ post.data.minute }}:{{ post.data.second }}
+                </p>
+
+                <div class="my-5">
 
                     <form method="POST" role="form">
                         {{ form.csrf_token }}
@@ -54,7 +63,7 @@
                     </form>
                 </div>
 
-                <div class="mt-5">
+                <div class="mt-5 mb-3">
                     <h3>
                         {% if comentarios | length == 0 %}
                             Nenhum
@@ -73,7 +82,10 @@
                         {% for comentario in comentarios %}
                             <li class="list-group-item border-0 ">
                                 <p class="font-weight-bold font-italic autor-comentario">
-                                    {{ comentario.autor.nome_usuario }}</p>
+                                    <a class="text-dark" href="{{ url_for('main.perfil_usuario', nome=comentario.autor.nome_usuario) }}">
+                                        {{ comentario.autor.nome_usuario }}
+                                    </a>
+                                </p>
                                 <p class="comentario">{{ comentario.texto }}</p>
                             </li>
                         {% endfor %}

@@ -5,7 +5,7 @@ from app.models import *
 from main import create_app
 from app import db
 from faker import Faker
-
+from slugify import slugify
 
 class Populate_DB():
     def __init__(self):
@@ -142,6 +142,7 @@ flask db downgrade""")
         if r is None:
             r = Piloto()
             r.nome_piloto = kwargs['nome']
+            r.slug = slugify(kwargs['nome'])
             r.numero_piloto = kwargs['#']
             r.pontos_ganhos = kwargs['pontos_ganhos']
             dia, mes, ano = kwargs['data_nascimento'][0:2], kwargs['data_nascimento'][3:5], kwargs['data_nascimento'][

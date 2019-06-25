@@ -30,7 +30,7 @@ nav {
     text-decoration: none;
 }
 
-a:hover, a:link, a:active, a:visited, small a:hover, small a:link, small a:active, small a:visited {
+a, a:hover, a:link, a:active, a:visited, small a:hover, small a:link, small a:active, small a:visited {
     text-decoration: none;
 }
 
@@ -48,7 +48,7 @@ a:hover, a:link, a:active, a:visited, small a:hover, small a:link, small a:activ
 
 @media (min-width: 1200px) and (min-width: 992px) {
     .noticia {
-        height: 400px; 
+        height: 400px;
     }     
 }
 

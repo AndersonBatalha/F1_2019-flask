@@ -19,3 +19,4 @@ from .delete_post import delete_post
 from .edit_post import edit_post
 from .perfil_usuario import perfil_usuario
 from .seguir import seguir
+from .info_piloto import info_piloto

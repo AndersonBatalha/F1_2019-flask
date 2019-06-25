@@ -5,6 +5,7 @@ class Piloto(db.Model):
     __tablename__ = 'piloto'
     id_piloto = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nome_piloto = db.Column(db.String(100), unique=True, nullable=False)
+    slug = db.Column(db.String)
     numero_piloto = db.Column(db.Integer)
     pontos_ganhos = db.Column(db.Integer, default=0)
     data_nasc = db.Column(db.Date)

@@ -2,9 +2,10 @@ from app import db
 
 class Permissoes:
     ADMINISTRADOR = 0
-    MODERADOR = 1
+    MODERAR = 1
     COMENTAR = 2
     SEGUIR = 3
+    POSTAR = 4
 
 class Funcao(db.Model):
     __tablename__= 'funcao'
@@ -33,31 +34,40 @@ class Funcao(db.Model):
         return self.permissoes
 
     def inserir_funcoes(self):
-        f = {
+        funcoes = {
             "Usuário": [
                 Permissoes.COMENTAR,
-                Permissoes.SEGUIR
+                Permissoes.SEGUIR,
+                Permissoes.POSTAR
             ],
             "Moderador": [
-                Permissoes.MODERADOR,
+                Permissoes.MODERAR,
                 Permissoes.COMENTAR,
-                Permissoes.SEGUIR
+                Permissoes.SEGUIR,
+                Permissoes.POSTAR
             ],
             "Administrador": [
                 Permissoes.ADMINISTRADOR,
-                Permissoes.MODERADOR,
+                Permissoes.MODERAR,
                 Permissoes.COMENTAR,
-                Permissoes.SEGUIR
+                Permissoes.SEGUIR,
+                Permissoes.POSTAR
             ]
         }
-        for (funcao, permissoes) in f.items():
-            funcao = Funcao.query.filter_by(nome_funcao=funcao).first()
-            if not funcao:
-                funcao = Funcao(nome_funcao=funcao)
+        for (f, permissoes) in funcoes.items():
+            funcao = Funcao.query.filter_by(nome_funcao=f).first()
+            if funcao == None:
+                funcao = Funcao()
+                funcao.nome_funcao = f
             funcao.apagar_permissoes()
+
             for p in permissoes:
                 funcao.adicionar_permissao(p)
-
             db.session.add(funcao)
             db.session.commit()
+            print(funcao, funcao.permissoes)
 
+    def remover_funcoes(self):
+        for item in Funcao.query.all():
+            db.session.delete(item)
+            db.session.commit()

@@ -55,7 +55,10 @@ flask db downgrade""")
             r.nome_pais = kwargs['pais']
             print(r)
         db.session.add(r)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
         return r
 
     def cidade(self, **kwargs):
@@ -66,7 +69,10 @@ flask db downgrade""")
             r.pais = self.pais(**kwargs)
             print(r)
         db.session.add(r)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
         return r
 
     def circuito(self, **kwargs):
@@ -86,7 +92,10 @@ flask db downgrade""")
             r.cidade = self.cidade(**kwargs)
             print(r)
         db.session.add(r)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
         return r
 
     def evento(self, key, **kwargs):
@@ -109,7 +118,10 @@ flask db downgrade""")
             print(r)
 
         db.session.add(r)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
         return r
 
     def equipe(self, **kwargs):
@@ -135,7 +147,10 @@ flask db downgrade""")
 
             print(r)
         db.session.add(r)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
         return r
 
     def piloto(self, **kwargs):
@@ -162,7 +177,10 @@ flask db downgrade""")
 
             print(r)
         db.session.add(r)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
 
         return r
 
@@ -175,7 +193,10 @@ flask db downgrade""")
 
             print(r)
         db.session.add(r)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
 
         return r
 
@@ -189,7 +210,10 @@ flask db downgrade""")
             print(r)
 
         db.session.add(r)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
 
         return r
 
@@ -204,7 +228,10 @@ flask db downgrade""")
             r.melhor_volta = 0
 
         db.session.add(r)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
 
         print(r)
         return r
@@ -239,13 +266,10 @@ flask db downgrade""")
                 db.session.rollback()
 
     def adicionar_papeis(self):
-        papeis = ['Usuário', 'Administrador', 'Moderador', 'Membro']
+        if len(Funcao.query.all()) == 0:
+            print("\n\nPapéis")
+            Funcao().inserir_funcoes()
 
-        for papel in papeis:
-            p = Funcao(nome_funcao=papel)
-            db.session.add(p)
-            print(p)
-        db.session.commit()
 
     def posts(self):
         for i in range(100):
@@ -267,6 +291,13 @@ flask db downgrade""")
             db.session.add(p)
             db.session.commit()
             print(i, p.titulo)
+
+"""
+from app.models import *
+Funcao.query.all()
+f = Funcao.query.get(1)
+"""
+
 
 if __name__ == '__main__':
 
@@ -345,7 +376,6 @@ if __name__ == '__main__':
             a.resultados_pilotos(**kwargs)
         kwargs.clear()
 
-    print("\n\nPapéis")
     a.adicionar_papeis()
 
     print("\n\nUsuários")

@@ -8,7 +8,7 @@ $(document).ready(function () {
 })
 
 $('#popover').popover({
-  trigger: 'hover'
+  trigger: 'click'
 })
 
 

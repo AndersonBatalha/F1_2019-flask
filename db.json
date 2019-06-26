@@ -1255,102 +1255,204 @@
     },
     "resultados": {
         "Lewis Hamilton": [
-            {"grande_premio": "Austrália", "posicao": 2, "pontos_ganhos": 18}, 
-            {"grande_premio": "Bahrein", "posicao": 1, "pontos_ganhos": 25}, 
-            {"grande_premio": "China", "posicao": 1, "pontos_ganhos": 25}
-        ], 
+            {"grande_premio": "Austrália", "posicao": 2, "pontos_ganhos": 18},
+            {"grande_premio": "Bahrein", "posicao": 1, "pontos_ganhos": 25},
+            {"grande_premio": "China", "posicao": 1, "pontos_ganhos": 25},
+            {"grande_premio": "Azerbaijão", "posicao": 2, "pontos_ganhos": 18},
+            {"grande_premio": "Espanha", "posicao": 1, "pontos_ganhos": 25, "melhor_volta": 1},
+            {"grande_premio": "Mônaco", "posicao": 1, "pontos_ganhos": 25},
+            {"grande_premio": "Canadá", "posicao": 1, "pontos_ganhos": 25},
+            {"grande_premio": "França", "posicao": 1, "pontos_ganhos": 25}
+        ],
         "Valtteri Bottas": [
-            {"grande_premio": "Austrália", "posicao": 1, "pontos_ganhos": 26}, 
-            {"grande_premio": "Bahrein", "posicao": 2, "pontos_ganhos": 18}, 
-            {"grande_premio": "China", "posicao": 2, "pontos_ganhos": 18}
+            {"grande_premio": "Austrália", "posicao": 1, "pontos_ganhos": 25, "melhor_volta": 1},
+            {"grande_premio": "Bahrein", "posicao": 2, "pontos_ganhos": 18},
+            {"grande_premio": "China", "posicao": 2, "pontos_ganhos": 18},
+            {"grande_premio": "Azerbaijão", "posicao": 1, "pontos_ganhos": 25},
+            {"grande_premio": "Espanha", "posicao": 2, "pontos_ganhos": 18},
+            {"grande_premio": "Mônaco", "posicao": 3, "pontos_ganhos": 15},
+            {"grande_premio": "Canadá", "posicao": 4, "pontos_ganhos": 12, "melhor_volta": 1},
+            {"grande_premio": "França", "posicao": 2, "pontos_ganhos": 18}
         ],
         "Sebastian Vettel": [
-            {"grande_premio": "Austrália", "posicao": 4, "pontos_ganhos": 12}, 
-            {"grande_premio": "Bahrein", "posicao": 5, "pontos_ganhos": 10}, 
-            {"grande_premio": "China", "posicao": 3, "pontos_ganhos": 15}
+            {"grande_premio": "Austrália", "posicao": 4, "pontos_ganhos": 12},
+            {"grande_premio": "Bahrein", "posicao": 5, "pontos_ganhos": 10},
+            {"grande_premio": "China", "posicao": 3, "pontos_ganhos": 15},
+            {"grande_premio": "Azerbaijão", "posicao": 3, "pontos_ganhos": 15},
+            {"grande_premio": "Espanha", "posicao": 4, "pontos_ganhos": 12},
+            {"grande_premio": "Mônaco", "posicao": 2, "pontos_ganhos": 18},
+            {"grande_premio": "Canadá", "posicao": 2, "pontos_ganhos": 18},
+            {"grande_premio": "França", "posicao": 5, "pontos_ganhos": 10, "melhor_volta": 1}
         ],
         "Charles Leclerc": [
-            {"grande_premio": "Austrália", "posicao": 5, "pontos_ganhos": 10}, 
-            {"grande_premio": "Bahrein", "posicao": 3, "pontos_ganhos": 16}, 
-            {"grande_premio": "China", "posicao": 5, "pontos_ganhos": 10}
-        ], 
+            {"grande_premio": "Austrália", "posicao": 5, "pontos_ganhos": 10},
+            {"grande_premio": "Bahrein", "posicao": 3, "pontos_ganhos": 16, "melhor_volta": 1},
+            {"grande_premio": "China", "posicao": 5, "pontos_ganhos": 10},
+            {"grande_premio": "Azerbaijão", "posicao": 5, "pontos_ganhos": 10, "melhor_volta": 1},
+            {"grande_premio": "Espanha", "posicao": 5, "pontos_ganhos": 10},
+            {"grande_premio": "Mônaco", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Canadá", "posicao": 3, "pontos_ganhos": 15},
+            {"grande_premio": "França", "posicao": 3, "pontos_ganhos": 15}
+        ],
         "Max Verstappen": [
-            {"grande_premio": "Austrália", "posicao": 3, "pontos_ganhos": 15}, 
-            {"grande_premio": "Bahrein", "posicao": 4, "pontos_ganhos": 12}, 
-            {"grande_premio": "China", "posicao": 4, "pontos_ganhos": 12}
-        ], 
+            {"grande_premio": "Austrália", "posicao": 3, "pontos_ganhos": 15},
+            {"grande_premio": "Bahrein", "posicao": 4, "pontos_ganhos": 12},
+            {"grande_premio": "China", "posicao": 4, "pontos_ganhos": 12},
+            {"grande_premio": "Azerbaijão", "posicao": 4, "pontos_ganhos": 12},
+            {"grande_premio": "Espanha", "posicao": 3, "pontos_ganhos": 15},
+            {"grande_premio": "Mônaco", "posicao": 4, "pontos_ganhos": 12},
+            {"grande_premio": "Canadá", "posicao": 5, "pontos_ganhos": 10},
+            {"grande_premio": "França", "posicao": 4, "pontos_ganhos": 12}
+        ],
         "Pierre Gasly": [
-            {"grande_premio": "Austrália", "posicao": 11, "pontos_ganhos": 0}, 
-            {"grande_premio": "Bahrein", "posicao": 8, "pontos_ganhos": 4}, 
-            {"grande_premio": "China", "posicao": 6, "pontos_ganhos": 9}
-        ], 
+            {"grande_premio": "Austrália", "posicao": 11, "pontos_ganhos": 0},
+            {"grande_premio": "Bahrein", "posicao": 8, "pontos_ganhos": 4},
+            {"grande_premio": "China", "posicao": 6, "pontos_ganhos": 9, "melhor_volta": 1},
+            {"grande_premio": "Azerbaijão", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Espanha", "posicao": 6, "pontos_ganhos": 8},
+            {"grande_premio": "Mônaco", "posicao": 5, "pontos_ganhos": 10, "melhor_volta": 1},
+            {"grande_premio": "Canadá", "posicao": 8, "pontos_ganhos": 4},
+            {"grande_premio": "França", "posicao": 10, "pontos_ganhos": 1}
+        ],
         "Kevin Magnussen": [
-            {"grande_premio": "Austrália", "posicao": 6, "pontos_ganhos": 8}, 
-            {"grande_premio": "Bahrein", "posicao": 13, "pontos_ganhos": 0}, 
-            {"grande_premio": "China", "posicao": 13, "pontos_ganhos": 0}], 
+            {"grande_premio": "Austrália", "posicao": 6, "pontos_ganhos": 8},
+            {"grande_premio": "Bahrein", "posicao": 13, "pontos_ganhos": 0},
+            {"grande_premio": "China", "posicao": 13, "pontos_ganhos": 0},
+            {"grande_premio": "Azerbaijão", "posicao": 13, "pontos_ganhos": 0},
+            {"grande_premio": "Espanha", "posicao": 7, "pontos_ganhos": 6},
+            {"grande_premio": "Mônaco", "posicao": 14, "pontos_ganhos": 0},
+            {"grande_premio": "Canadá", "posicao": 17, "pontos_ganhos": 0},
+            {"grande_premio": "França", "posicao": 17, "pontos_ganhos": 0}
+        ],
         "Romain Grosjean": [
-            {"grande_premio": "Austrália", "posicao": 0, "pontos_ganhos": 0}, 
-            {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0}, 
-            {"grande_premio": "China", "posicao": 11, "pontos_ganhos": 0}], 
+            {"grande_premio": "Austrália", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "China", "posicao": 11, "pontos_ganhos": 0},
+            {"grande_premio": "Azerbaijão", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Espanha", "posicao": 10, "pontos_ganhos": 1},
+            {"grande_premio": "Mônaco", "posicao": 10, "pontos_ganhos": 1},
+            {"grande_premio": "Canadá", "posicao": 14, "pontos_ganhos": 0},
+            {"grande_premio": "França", "posicao": 0, "pontos_ganhos": 0}
+        ],
         "Daniil Kvyat": [
-            {"grande_premio": "Austrália", "posicao": 10, "pontos_ganhos": 1}, 
-            {"grande_premio": "Bahrein", "posicao": 12, "pontos_ganhos": 0}, 
-            {"grande_premio": "China", "posicao": 0, "pontos_ganhos": 0}
+            {"grande_premio": "Austrália", "posicao": 10, "pontos_ganhos": 1},
+            {"grande_premio": "Bahrein", "posicao": 12, "pontos_ganhos": 0},
+            {"grande_premio": "China", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Azerbaijão", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Espanha", "posicao": 9, "pontos_ganhos": 2},
+            {"grande_premio": "Mônaco", "posicao": 7, "pontos_ganhos": 6},
+            {"grande_premio": "Canadá", "posicao": 10, "pontos_ganhos": 1},
+            {"grande_premio": "França", "posicao": 14, "pontos_ganhos": 0}
         ], 
         "Alexander Albon": [
-            {"grande_premio": "Austrália", "posicao": 14, "pontos_ganhos": 0}, 
-            {"grande_premio": "Bahrein", "posicao": 9, "pontos_ganhos": 2}, 
-            {"grande_premio": "China", "posicao": 10, "pontos_ganhos": 1}
-        ], 
+            {"grande_premio": "Austrália", "posicao": 14, "pontos_ganhos": 0},
+            {"grande_premio": "Bahrein", "posicao": 9, "pontos_ganhos": 2},
+            {"grande_premio": "China", "posicao": 10, "pontos_ganhos": 1},
+            {"grande_premio": "Azerbaijão", "posicao": 11, "pontos_ganhos": 0},
+            {"grande_premio": "Espanha", "posicao": 11, "pontos_ganhos": 0},
+            {"grande_premio": "Mônaco", "posicao": 8, "pontos_ganhos": 4},
+            {"grande_premio": "Canadá", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "França", "posicao": 15, "pontos_ganhos": 0}
+        ],
         "Nico Hulkenberg": [
-            {"grande_premio": "Austrália", "posicao": 7, "pontos_ganhos": 6}, 
-            {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0}, 
-            {"grande_premio": "China", "posicao": 0, "pontos_ganhos": 0}
-        ], 
+            {"grande_premio": "Austrália", "posicao": 7, "pontos_ganhos": 6},
+            {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "China", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Azerbaijão", "posicao": 14, "pontos_ganhos": 0},
+            {"grande_premio": "Espanha", "posicao": 13, "pontos_ganhos": 0},
+            {"grande_premio": "Mônaco", "posicao": 13, "pontos_ganhos": 0},
+            {"grande_premio": "Canadá", "posicao": 7, "pontos_ganhos": 6},
+            {"grande_premio": "França", "posicao": 8, "pontos_ganhos": 4}
+        ],
         "Daniel Ricciardo": [
-            {"grande_premio": "Austrália", "posicao": 0, "pontos_ganhos": 0}, 
-            {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0}, 
-            {"grande_premio": "China", "posicao": 7, "pontos_ganhos": 6}
-        ], 
+            {"grande_premio": "Austrália", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "China", "posicao": 7, "pontos_ganhos": 6},
+            {"grande_premio": "Azerbaijão", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Espanha", "posicao": 12, "pontos_ganhos": 0},
+            {"grande_premio": "Mônaco", "posicao": 9, "pontos_ganhos": 2},
+            {"grande_premio": "Canadá", "posicao": 6, "pontos_ganhos": 8},
+            {"grande_premio": "França", "posicao": 11, "pontos_ganhos": 0}
+        ],
         "Kimi Räikkönen": [
             {"grande_premio": "Austrália", "posicao": 8, "pontos_ganhos": 4},
             {"grande_premio": "Bahrein", "posicao": 7, "pontos_ganhos": 6},
-            {"grande_premio": "China", "posicao": 9, "pontos_ganhos": 2}
+            {"grande_premio": "China", "posicao": 9, "pontos_ganhos": 2},
+            {"grande_premio": "Azerbaijão", "posicao": 10, "pontos_ganhos": 1},
+            {"grande_premio": "Espanha", "posicao": 14, "pontos_ganhos": 0},
+            {"grande_premio": "Mônaco", "posicao": 17, "pontos_ganhos": 0},
+            {"grande_premio": "Canadá", "posicao": 15, "pontos_ganhos": 0},
+            {"grande_premio": "França", "posicao": 7, "pontos_ganhos": 6}
         ],
         "Antonio Giovinazzi": [
             {"grande_premio": "Austrália", "posicao": 15, "pontos_ganhos": 0},
             {"grande_premio": "Bahrein", "posicao": 11, "pontos_ganhos": 0},
-            {"grande_premio": "China", "posicao": 15, "pontos_ganhos": 0}
+            {"grande_premio": "China", "posicao": 15, "pontos_ganhos": 0},
+            {"grande_premio": "Azerbaijão", "posicao": 12, "pontos_ganhos": 0},
+            {"grande_premio": "Espanha", "posicao": 16, "pontos_ganhos": 0},
+            {"grande_premio": "Mônaco", "posicao": 19, "pontos_ganhos": 0},
+            {"grande_premio": "Canadá", "posicao": 13, "pontos_ganhos": 0},
+            {"grande_premio": "França", "posicao": 16, "pontos_ganhos": 0}
         ],
         "Sergio Perez": [
             {"grande_premio": "Austrália", "posicao": 13, "pontos_ganhos": 0},
             {"grande_premio": "Bahrein", "posicao": 10, "pontos_ganhos": 1},
-            {"grande_premio": "China", "posicao": 8, "pontos_ganhos": 4}
+            {"grande_premio": "China", "posicao": 8, "pontos_ganhos": 4},
+            {"grande_premio": "Azerbaijão", "posicao": 6, "pontos_ganhos": 8},
+            {"grande_premio": "Espanha", "posicao": 15, "pontos_ganhos": 0},
+            {"grande_premio": "Mônaco", "posicao": 12, "pontos_ganhos": 0},
+            {"grande_premio": "Canadá", "posicao": 12, "pontos_ganhos": 0},
+            {"grande_premio": "França", "posicao": 12, "pontos_ganhos": 0}
         ],
         "Lance Stroll": [
             {"grande_premio": "Austrália", "posicao": 9, "pontos_ganhos": 2},
             {"grande_premio": "Bahrein", "posicao": 14, "pontos_ganhos": 0},
-            {"grande_premio": "China", "posicao": 12, "pontos_ganhos": 0}
+            {"grande_premio": "China", "posicao": 12, "pontos_ganhos": 0},
+            {"grande_premio": "Azerbaijão", "posicao": 9, "pontos_ganhos": 2},
+            {"grande_premio": "Espanha", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Mônaco", "posicao": 16, "pontos_ganhos": 0},
+            {"grande_premio": "Canadá", "posicao": 9, "pontos_ganhos": 2},
+            {"grande_premio": "França", "posicao": 13, "pontos_ganhos": 0}
         ],
         "Carlos Sainz": [
             {"grande_premio": "Austrália", "posicao": 0, "pontos_ganhos": 0},
             {"grande_premio": "Bahrein", "posicao": 0, "pontos_ganhos": 0},
-            {"grande_premio": "China", "posicao": 14, "pontos_ganhos": 0}
+            {"grande_premio": "China", "posicao": 14, "pontos_ganhos": 0},
+            {"grande_premio": "Azerbaijão", "posicao": 7, "pontos_ganhos": 6},
+            {"grande_premio": "Espanha", "posicao": 8, "pontos_ganhos": 4},
+            {"grande_premio": "Mônaco", "posicao": 6, "pontos_ganhos": 8},
+            {"grande_premio": "Canadá", "posicao": 11, "pontos_ganhos": 0},
+            {"grande_premio": "França", "posicao": 6, "pontos_ganhos": 8}
         ],
         "Lando Norris": [
             {"grande_premio": "Austrália", "posicao": 12, "pontos_ganhos": 0},
             {"grande_premio": "Bahrein", "posicao": 6, "pontos_ganhos": 8},
-            {"grande_premio": "China", "posicao": 0, "pontos_ganhos": 0}
+            {"grande_premio": "China", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Azerbaijão", "posicao": 8, "pontos_ganhos": 4},
+            {"grande_premio": "Espanha", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "Mônaco", "posicao": 11, "pontos_ganhos": 0},
+            {"grande_premio": "Canadá", "posicao": 0, "pontos_ganhos": 0},
+            {"grande_premio": "França", "posicao": 9, "pontos_ganhos": 2}
         ],
         "Robert Kubica": [
             {"grande_premio": "Austrália", "posicao": 17, "pontos_ganhos": 0},
             {"grande_premio": "Bahrein", "posicao": 16, "pontos_ganhos": 0},
-            {"grande_premio": "China", "posicao": 17, "pontos_ganhos": 0}
+            {"grande_premio": "China", "posicao": 17, "pontos_ganhos": 0},
+            {"grande_premio": "Azerbaijão", "posicao": 16, "pontos_ganhos": 18},
+            {"grande_premio": "Espanha", "posicao": 18, "pontos_ganhos": 0},
+            {"grande_premio": "Mônaco", "posicao": 18, "pontos_ganhos": 0},
+            {"grande_premio": "Canadá", "posicao": 18, "pontos_ganhos": 0},
+            {"grande_premio": "França", "posicao": 18, "pontos_ganhos": 0}
         ],
         "George Russell": [
             {"grande_premio": "Austrália", "posicao": 16, "pontos_ganhos": 0},
             {"grande_premio": "Bahrein", "posicao": 15, "pontos_ganhos": 0},
-            {"grande_premio": "China", "posicao": 16, "pontos_ganhos": 0}
+            {"grande_premio": "China", "posicao": 16, "pontos_ganhos": 0},
+            {"grande_premio": "Azerbaijão", "posicao": 15, "pontos_ganhos": 0},
+            {"grande_premio": "Espanha", "posicao": 17, "pontos_ganhos": 0},
+            {"grande_premio": "Mônaco", "posicao": 15, "pontos_ganhos": 0},
+            {"grande_premio": "Canadá", "posicao": 16, "pontos_ganhos": 0},
+            {"grande_premio": "França", "posicao": 19, "pontos_ganhos": 0}
         ]
     }
 }

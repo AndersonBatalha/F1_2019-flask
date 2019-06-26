@@ -15,7 +15,7 @@ def classificacao():
                     Piloto.id_equipe == Equipe.id_equipe)) \
         .group_by(Piloto.nome_piloto) \
         .order_by(func.sum(Pontuacao.pontuacao_corrida).desc())
-    res = conn.execute(query).fetchall()
+    r = conn.execute(query).fetchall()
 
     q = select([Equipe.nome_equipe, Equipe.flag_icon,
                 func.sum(Pontuacao.pontuacao_corrida).label('total_pontos')]) \
@@ -25,6 +25,6 @@ def classificacao():
                     Piloto.id_equipe == Equipe.id_equipe)) \
         .group_by(Equipe.nome_equipe) \
         .order_by(func.sum(Pontuacao.pontuacao_corrida).desc())
-    r = conn.execute(q).fetchall()
+    r_ = conn.execute(q).fetchall()
 
-    return render_template('classificacao.html', classificacao=res, classificacao_=r)
+    return render_template('classificacao.html', classificacao=r, classificacao_=r_)

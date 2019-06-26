@@ -179,3 +179,9 @@ footer {
 .comentario {
     font-size: 15px;
 }
+
+.desabilitado {
+    background-color: lightgray;
+    color: black;
+    cursor: not-allowed;
+}

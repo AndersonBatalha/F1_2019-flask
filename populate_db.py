@@ -10,7 +10,7 @@ from sqlalchemy.exc import IntegrityError
 
 class Populate_DB():
     def __init__(self):
-        self.url_data = 'http://api.myjson.com/bins/1g30am'
+        self.url_data = 'http://api.myjson.com/bins/jza81'
         self.app = create_app()
         self.arquivos = os.listdir(BASE_DIR)
         self.fake = Faker('pt_BR')
@@ -198,6 +198,10 @@ flask db downgrade""")
         r.resultado = self.resultados(kwargs['posicao'], kwargs['pontos_ganhos'])
         r.piloto = self.piloto(**kwargs)
         r.evento = self.evento('grande_premio', **kwargs)
+        if 'melhor_volta' in kwargs:
+            r.melhor_volta = kwargs['melhor_volta']
+        else:
+            r.melhor_volta = 0
 
         db.session.add(r)
         db.session.commit()
@@ -252,7 +256,6 @@ flask db downgrade""")
 
             for paragrafo in self.t:
                 texto += " " + paragrafo
-
 
             p = Post(
                 titulo=self.titulo,
@@ -340,6 +343,7 @@ if __name__ == '__main__':
             for (k, v) in dict.items():
                 kwargs[k] = v
             a.resultados_pilotos(**kwargs)
+        kwargs.clear()
 
     print("\n\nPapéis")
     a.adicionar_papeis()
@@ -349,5 +353,3 @@ if __name__ == '__main__':
 
     print("\n\nPosts")
     a.posts()
-
-

@@ -14,6 +14,8 @@ class Resultado_Piloto(db.Model):
     piloto = db.relationship(Piloto, backref=db.backref('resultado_piloto', lazy=True))
     evento = db.relationship(Evento, backref=db.backref('resultado_piloto', lazy=True))
 
+    melhor_volta = db.Column(db.Integer)
+
     def __repr__(self):
         return "\n%s\n%d - %d pontos\nGrande Prêmio: %s" %(self.piloto.nome_piloto,
                                                     self.resultado.posicao,

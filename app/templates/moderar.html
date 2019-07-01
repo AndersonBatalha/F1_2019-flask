@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Moderador
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid h-100 w-100">
+
+        <div class="row m-1 justify-content-center my-4">
+
+            <h1>Moderador</h1>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="{{ url_for('main.listar_usuarios') }}">Usuários</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="{{ url_for('main.posts') }}">Posts</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="{{ url_for('main.criar_funcao') }}">Papéis</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}

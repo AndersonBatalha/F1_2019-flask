@@ -27,19 +27,22 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class='nav-item'>
-                            <a class="nav-link mr-3" href='/equipes'>Equipes</a>
+                            <a class="nav-link mr-3" href='{{ url_for('main.equipes')
+                                    }}'>Equipes</a>
                         </li>
                         <li class='nav-item'>
-                            <a class="nav-link mr-3" href='/pilotos'>Pilotos</a>
+                            <a class="nav-link mr-3" href='{{ url_for('main.pilotos') }}'>Pilotos</a>
                         </li>
                         <li class='nav-item'>
-                            <a class="nav-link mr-3" href='/calendario'>Calendário</a>
+                            <a class="nav-link mr-3" href='{{ url_for('main.calendario')
+                                    }}'>Calendário</a>
                         </li>
                         <li class='nav-item'>
-                            <a class="nav-link mr-3" href='/classificacao'>Classificação</a>
+                            <a class="nav-link mr-3" href='{{ url_for('main.classificacao')
+                                    }}'>Classificação</a>
                         </li>
                     </ul>
-                    {% if current_user.is_authenticated %}
+                    {% if current_user and current_user.is_authenticated %}
                         <div class="dropdown">
                             <a class="dropdown-toggle text-white" href="#" role="button"
                              id="link" data-toggle="dropdown" aria-haspopup="true"
@@ -50,28 +53,38 @@
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="link">
-                                <a class="dropdown-item" href="/usuarios">Usuários</a>
-                                <a class="dropdown-item" href="/nova_funcao">Adicionar papel</a>
-                                <a class="dropdown-item" href="/logout">Logout</a>
-                                <div class="dropdown-divider"></div>
-
-                                <div class="btn-group dropleft" role="group">
-                                    <div class="dropdown">
-                                        <a class="dropdown-toggle
-                                        dropdown-toggle-split text-dark" href="
-                                        .dropdown-menu"
-                                           role="button"
-                                           id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <a class="dropdown-item" href="/add_post">Adicionar postagem</a>
-                                        </div>
-                                    </div>
+                                {% if current_user.funcao.tem_permissao(64) %}
                                     <a class="dropdown-item"
-                                            href="{{ url_for('main.posts') }}">Posts</a>
-                                </div>
-
-                            </div>
+                                       href="{{ url_for('main.admin_page') }}">Admin</a>
+                                {% elif current_user.funcao.tem_permissao(32) %}
+                                    <a class="dropdown-item"
+                                       href="{{ url_for('main.moderator_page')}}">Moderador</a>
+                                {% endif %}
+                                <a class="dropdown-item"
+                                   href="{{ url_for('main.add_post')}}">Adicionar postagem</a>
+                                <a class="dropdown-item"
+                                   href="{{ url_for('main.posts')}}">Posts</a>
+                                <a class="dropdown-item"
+                                   href="{{ url_for('main.logout') }}">Logout</a>
+{#                                <div class="dropdown-divider"></div>#}
+{##}
+{#                                <div class="btn-group dropleft" role="group">#}
+{#                                    <div class="dropdown">#}
+{#                                        <a class="dropdown-toggle#}
+{#                                        dropdown-toggle-split text-dark" href="#}
+{#                                        .dropdown-menu"#}
+{#                                           role="button"#}
+{#                                           id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                                        </a>#}
+{#                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">#}
+{#                                            <a class="dropdown-item" href="/add_post">Adicionar postagem</a>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <a class="dropdown-item"#}
+{#                                            href="{{ url_for('main.posts') }}">Posts</a>#}
+{#                                </div>#}
+{##}
+{#                            </div>#}
 
                         </div>
                     {% else %}

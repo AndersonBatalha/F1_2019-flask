@@ -39,29 +39,33 @@
                     </a> às {{ post.data.hour }}:{{ post.data.minute }}:{{ post.data.second }}
                 </p>
 
-                <div class="my-5">
+                {% if current_user.funcao.tem_permissao(2) %}
 
-                    <form method="POST" role="form">
-                        {{ form.csrf_token }}
+                    <div class="my-5">
 
-                        {% if form.errors %}
-                            {% for field in form %}
-                                {% if field.errors %}
-                                    {% for error in field.errors %}
-                                        <div class="alert alert-danger" role="alert">
-                                            {{ field.label }}: {{ error }}
-                                        </div>
-                                    {% endfor %}
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
+                        <form method="POST" role="form">
+                            {{ form.csrf_token }}
 
-                        {{ wtf.form_field(form.comment, rows="4", cols="10", autocomplete="on",
-                            spellcheck="true", wrap="hard") }}
-                        {{ wtf.form_field(form.submit, type="submit", class="btn btn-block btn-lg",
-                                placeholder=form.submit.label.text) }}
-                    </form>
-                </div>
+                            {% if form.errors %}
+                                {% for field in form %}
+                                    {% if field.errors %}
+                                        {% for error in field.errors %}
+                                            <div class="alert alert-danger" role="alert">
+                                                {{ field.label }}: {{ error }}
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {{ wtf.form_field(form.comment, rows="4", cols="10", autocomplete="on",
+                                spellcheck="true", wrap="hard") }}
+                            {{ wtf.form_field(form.submit, type="submit", class="btn btn-block btn-lg",
+                                    placeholder=form.submit.label.text) }}
+                        </form>
+                    </div>
+
+                {% endif %}
 
                 <div class="mt-5 mb-3">
                     <h3>

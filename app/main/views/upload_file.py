@@ -2,6 +2,7 @@ from werkzeug.utils import secure_filename
 import app, os
 from app.main import main
 from flask import request, flash, redirect
+from app.main.decorators import tem_permissao
 
 def allowed_extension(filename):
     return ('.' in filename) and (filename.split('.')[1].lower() in app.config.ALLOWED_EXTENSIONS)

@@ -4,6 +4,8 @@ from app.main import main
 from app import db
 from slugify import slugify
 from datetime import datetime
+from populate_db import Permissoes
+from app.main.decorators import tem_permissao
 
 from flask import render_template, request, flash, redirect, url_for
 from flask_login import login_required, current_user
@@ -11,6 +13,8 @@ from .upload_file import allowed_extension, upload
 
 @main.route('/add_post', methods=["GET", "POST"])
 @login_required
+@tem_permissao(Permissoes.POSTAR,
+               msg_erro="O usuário atual não pode adicionar postagens")
 def add_post():
     form = PostForm()
     if form.validate_on_submit():

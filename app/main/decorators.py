@@ -1,18 +1,20 @@
-import functools
+from functools import wraps
 from flask_login import current_user
 from werkzeug.exceptions import HTTP_STATUS_CODES
 
 from .views.errors import not_authorized
 
 
-def admin_required(f):
-    """Verifica se o usuário está logado. Caso esteja, verifica se este é administrador."""
-    @functools.wraps(f)
-    def is_admin(*args, **kwargs):
-        if current_user and (current_user.is_authenticated and not \
-                current_user.funcao.nome_funcao.startswith('Adm')):
-            return not_authorized(HTTP_STATUS_CODES[401])
+def tem_permissao(permissao, msg_erro):
+    def decorador(f):
+        @wraps(f)
 
-        return f(*args, **kwargs)
+        def permitir(*args, **kwargs):
+            if current_user and (current_user.is_authenticated and not \
+                    current_user.funcao.tem_permissao(permissao)):
+                return not_authorized(e=msg_erro)
 
-    return is_admin
+            return f(*args, **kwargs)
+        return permitir
+
+    return decorador

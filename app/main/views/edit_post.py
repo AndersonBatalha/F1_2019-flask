@@ -9,9 +9,13 @@ from slugify import slugify
 from flask import render_template, request, flash, redirect, url_for
 from flask_login import login_required, current_user
 from .upload_file import allowed_extension, upload
+from populate_db import Permissoes
+from app.main.decorators import tem_permissao
 
 @main.route('/edit_post/<slug>', methods=['GET', 'POST'])
 @login_required
+@tem_permissao(Permissoes.POSTAR + Permissoes.EDITAR,
+               msg_erro="Apenas administradores e moderadores podem editar postagens")
 def edit_post(slug):
     post = Post.query.filter_by(slug=slug).first()
     form = EditPostForm(post=post)

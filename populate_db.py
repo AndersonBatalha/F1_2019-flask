@@ -8,6 +8,15 @@ from faker import Faker
 from slugify import slugify
 from sqlalchemy.exc import IntegrityError
 
+class Permissoes:
+    ADMINISTRAR = 64
+    MODERAR = 32
+    ESCREVER = 16
+    EDITAR = 8
+    COMENTAR = 4
+    POSTAR = 2
+    SEGUIR = 1
+
 class Populate_DB():
     def __init__(self):
         self.url_data = 'http://api.myjson.com/bins/jza81'
@@ -266,10 +275,45 @@ flask db downgrade""")
                 db.session.rollback()
 
     def adicionar_papeis(self):
-        if len(Funcao.query.all()) == 0:
-            print("\n\nPapéis")
-            Funcao().inserir_funcoes()
+        papeis = {
+            'Usuário': [
+                Permissoes.ESCREVER,
+                Permissoes.EDITAR,
+                Permissoes.COMENTAR,
+                Permissoes.POSTAR,
+                Permissoes.SEGUIR
+            ],
+            'Moderador': [
+                Permissoes.MODERAR,
+                Permissoes.ESCREVER,
+                Permissoes.EDITAR,
+                Permissoes.COMENTAR,
+                Permissoes.POSTAR,
+                Permissoes.SEGUIR
+            ],
+            'Administrador': [
+                Permissoes.ADMINISTRAR,
+                Permissoes.MODERAR,
+                Permissoes.ESCREVER,
+                Permissoes.EDITAR,
+                Permissoes.COMENTAR,
+                Permissoes.POSTAR,
+                Permissoes.SEGUIR
+            ]
+        }
 
+        for (papel, permissoes) in papeis.items():
+            p = Funcao.query.filter_by(nome_funcao=papel).first()
+            if not p:
+                p = Funcao(nome_funcao=papel)
+                p.apagar_permissoes()
+
+            for perm in permissoes:
+                p.adicionar_permissao(perm)
+
+            db.session.add(p)
+            print(papel)
+        db.session.commit()
 
     def posts(self):
         for i in range(100):
@@ -293,6 +337,7 @@ flask db downgrade""")
             print(i, p.titulo)
 
 """
+
 from app.models import *
 Funcao.query.all()
 f = Funcao.query.get(1)
@@ -376,6 +421,7 @@ if __name__ == '__main__':
             a.resultados_pilotos(**kwargs)
         kwargs.clear()
 
+    print("\n\nPapéis")
     a.adicionar_papeis()
 
     print("\n\nUsuários")

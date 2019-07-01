@@ -20,3 +20,7 @@ from .edit_post import edit_post
 from .perfil_usuario import perfil_usuario
 from .seguir import seguir
 from .info_piloto import info_piloto
+from .admin import admin_page
+from .moderate import moderator_page
+from .grupos import grupos
+from .criar_grupo import criar_grupo

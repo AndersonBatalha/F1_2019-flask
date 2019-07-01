@@ -33,14 +33,24 @@
                                         {{ post.titulo }}
                                     </a>
                                 </h5>
+
                                 <h3>
-                                    <a class="text-muted" href="{{ url_for('main.delete_post', slug=post.slug) }}">
-                                        <ion-icon class="text-dark" name="trash"></ion-icon>
-                                    </a>
-                                    <a class="text-muted" href="{{ url_for('main.edit_post', slug=post.slug) }}">
-                                        <ion-icon class="text-dark" name="create"></ion-icon>
-                                    </a>
+                                    {% if current_user.funcao.tem_permissao(64)
+                                            or current_user.funcao.tem_permissao(32) %}
+                                        <a class="text-muted" href="{{ url_for('main.delete_post', slug=post.slug) }}">
+                                            <ion-icon class="text-dark" name="trash"></ion-icon>
+                                        </a>
+                                    {% endif %}
+                                    {% if current_user
+                                        and (current_user == post.autor)
+                                        and (current_user.funcao.tem_permissao(16)
+                                            or current_user.funcao.tem_permissao(8)) %}
+                                        <a class="text-muted" href="{{ url_for('main.edit_post', slug=post.slug) }}">
+                                            <ion-icon class="text-dark" name="create"></ion-icon>
+                                        </a>
+                                    {% endif %}
                                 </h3>
+
                             </li>
                         {% endfor %}
                     </ul>

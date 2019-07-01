@@ -21,17 +21,19 @@
                             </div>
                             <div class="col-1 order-6">
                                 {% if usuario != seguidor %}
-                                    <a href='/seguir/{{ usuario.nome_usuario }}'
-                                       class="btn btn-lg botao
-                                        {% if relacionamento and relacionamento.seguindo == True %}
-                                           disabled desabilitado
-                                        {% endif %}">
-                                        {% if relacionamento and relacionamento.seguindo == True %}
-                                           Seguindo
-                                        {% else %}
-                                            Seguir
-                                        {% endif %}
-                                    </a>
+                                    {% if usuario.funcao.tem_permissao(1) %}
+                                        <a href='/seguir/{{ usuario.nome_usuario }}'
+                                           class="btn btn-lg botao
+                                            {% if relacionamento and relacionamento.seguindo == True %}
+                                               disabled desabilitado
+                                            {% endif %}">
+                                            {% if relacionamento and relacionamento.seguindo == True %}
+                                               Seguindo
+                                            {% else %}
+                                                Seguir
+                                            {% endif %}
+                                        </a>
+                                    {% endif %}
                                 {% endif %}
                             </div>
                         </div>

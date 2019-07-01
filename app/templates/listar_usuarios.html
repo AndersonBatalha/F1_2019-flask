@@ -25,9 +25,11 @@
                                     ({{ usuario.funcao }})
                                 {% endif %}
                             </h5>
-                            <a href="/editar/{{ usuario.nome_usuario }}">
-                                <h3><ion-icon class="text-dark" name="create"></ion-icon></h3>
-                            </a>
+                            {% if current_user.funcao.tem_permissao(64) %}
+                                <a href="/editar/{{ usuario.nome_usuario }}">
+                                    <h3><ion-icon class="text-dark" name="create"></ion-icon></h3>
+                                </a>
+                            {% endif %}
                         </li>
                     {% endfor %}
                 </ul>

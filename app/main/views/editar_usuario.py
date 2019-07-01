@@ -1,6 +1,7 @@
 from app import db
 from app.main import main
-from app.main.decorators import admin_required
+from app.main.decorators import tem_permissao
+from populate_db import Permissoes
 from app.models import Usuario, Funcao
 from ..forms import EditUserForm
 from flask import redirect, url_for, render_template, flash, request
@@ -8,7 +9,8 @@ from flask_login import login_required
 from populate_db import Populate_DB
 
 @main.route('/editar/<u>', methods=['GET', 'POST'])
-@admin_required
+@tem_permissao(Permissoes.ADMINISTRAR + Permissoes.EDITAR,
+               msg_erro="Apenas administradores podem editar perfis de usuário")
 @login_required
 def editar_usuario(u):
     usuario = Usuario.query.filter_by(nome_usuario=u).first()

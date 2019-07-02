@@ -1,5 +1,6 @@
 from app.main import main
-from app.main.decorators import admin_required
+from app.main.decorators import tem_permissao
+from populate_db import Permissoes
 from ..forms import FuncaoForm
 from app.models import Funcao
 from app import db
@@ -8,7 +9,7 @@ from flask_login import login_required
 
 @main.route('/nova_funcao', methods=['GET', 'POST'])
 @login_required
-@admin_required
+@tem_permissao(Permissoes.ADMINISTRAR, msg_erro="Apenas administradores podem criar funções")
 def criar_funcao():
     funcoes = Funcao.query.all()
     form = FuncaoForm()

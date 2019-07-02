@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}
+    Adicionar grupo
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+
+        <div class="row justify-content-center">
+
+            <div class="col-sm-12 col-md-8 col-lg-6 col-xl-6 mx-4">
+
+                <div class="col-12 my-4">
+                    <h2 class="text-center display-6">Cadastrar grupos</h2>
+                </div>
+
+                <form method="POST" role="form">
+                    {{ form.csrf_token }}
+
+                    {% if form.errors %}
+                        {% for field in form %}
+                            {% if field.errors %}
+                                {% for error in field.errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ field.label }}: {{ error }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="form-group">
+                        {{ wtf.form_field(form.nome_grupo, form_type='inline',
+                        class='form-control', placeholder=form.nome_grupo.label.text ) }}
+                    </div>
+                    <div class="form-group">
+                        {{ wtf.form_field(form.desc, rows="10", cols="10", autocomplete="on",
+                        spellcheck="true") }}
+                    </div>
+                    <div class="form-group">
+                        {{ wtf.form_field(form.usuarios, size="20") }}
+                    </div>
+                    {{ wtf.form_field(form.submit, form_type='inline', class='btn btn-lg
+                    btn-block mt-3') }}
+                </form>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mx-4">
+
+                {% if grupos | length > 0 %}
+
+                    <div class="col-12 my-4">
+                        <h2 class="text-center display-6">Grupos</h2>
+                    </div>
+
+                    <ul class="list-group">
+                        {% for grupo in grupos %}
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <h6>
+                                    <a class="text-dark"
+                                       href="{{ url_for('main.grupos', slug=grupo.slug ) }}">
+                                        {{ grupo.nome_grupo }}
+                                    </a>
+                                </h6>
+                                <h4>
+                                    <a class="text-dark"
+                                       href="{{ url_for('main.excluir_grupo', slug=grupo.slug ) }}">
+                                        <ion-icon class="text-dark" name="trash"></ion-icon>
+                                    </a>
+                                </h4>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <div class="alert alert-dark my-4">
+                        <p>Não existem grupos</p>
+                    </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock content %}

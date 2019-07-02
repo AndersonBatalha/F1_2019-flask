@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Membros do grupo "{{ grupo }}"
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid h-100 w-100">
+
+        <div class="row m-1 justify-content-center my-4">
+            <h2>{{ grupo }}</h2>
+        </div>
+        <div class="row m-1 justify-content-center my-4">
+
+            <div class="col-12 text-center">
+                <h5>Descrição</h5>
+                <p>{{ grupo.descricao }}</p>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-10 col-sm-12">
+                <ul class="list-group">
+                    {% for usuario in usuarios  %}
+                        <a href="{{ url_for('main.perfil_usuario', nome=usuario.nome_usuario) }}"
+                           class="text-dark">
+                            <li class="list-group-item my-2">
+                                <div class="row justify-content-center">
+                                    <h6>
+                                        {{ usuario.nome }}
+                                    </h6>
+                                </div>
+                            </li>
+                        </a>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}

@@ -50,8 +50,11 @@
                 <ul class="list-group">
                     {% for funcao in funcoes %}
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <h6>{{ funcao.nome_funcao }}</h6>
-                            <a href="/remover/{{ funcao.nome_funcao }}">
+                            <h6>
+                                {{ funcao.nome_funcao }}
+                            </h6>
+                            <a
+                                href="{{ url_for('main.remover_funcao', funcao=funcao.nome_funcao) }}">
                                 <h3><ion-icon class="text-dark" name="trash"></ion-icon></h3>
                             </a>
                         </li>

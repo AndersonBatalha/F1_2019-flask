@@ -185,3 +185,7 @@ footer {
     color: black;
     cursor: not-allowed;
 }
+
+textarea {
+    word-wrap: normal;
+}

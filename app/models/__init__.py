@@ -15,3 +15,4 @@ from .categoria_post import Post_Categoria
 from .comentario import Comentario
 from .relacionamento import Relacionamento
 from .grupo import Grupo
+from .membros_grupo import MembrosGrupo

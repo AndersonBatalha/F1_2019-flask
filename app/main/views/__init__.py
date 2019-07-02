@@ -24,3 +24,5 @@ from .admin import admin_page
 from .moderate import moderator_page
 from .grupos import grupos
 from .criar_grupo import criar_grupo
+from .grupos import grupos
+from .excluir_grupo import excluir_grupo

@@ -4,24 +4,26 @@ from flask import redirect, url_for, render_template, flash
 from app import db
 from app.models import Usuario, Funcao
 
+
 @main.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
     form = RegisterForm()
     if form.validate_on_submit():
-        usuario = Usuario()
-        usuario.nome = form.nome.data
-        usuario.nome_usuario = form.nome_usuario.data
-        usuario.email = form.email.data
-        usuario.data_nasc = form.data_nasc.data
-        usuario.endereco = form.endereco.data
-        usuario.numero = form.numero.data
-        usuario.complemento = form.complemento.data
-        usuario.bairro = form.bairro.data
-        usuario.cidade = form.cidade.data
-        usuario.estado = form.estado.data
-        usuario.pais = form.pais.data
-        usuario.senha = form.senha.data
-        usuario.funcao = Funcao.query.get(form.itemSelecionado(form.funcao.data))
+        usuario = Usuario(
+            nome=form.nome.data,
+            nome_usuario=form.nome_usuario.data,
+            email=form.email.data,
+            data_nasc=form.data_nasc.data,
+            endereco=form.endereco.data,
+            numero=form.numero.data,
+            complemento=form.complemento.data,
+            bairro=form.bairro.data,
+            cidade=form.cidade.data,
+            estado=form.estado.data,
+            pais=form.pais.data,
+            funcao = Funcao.query.get(form.itemSelecionado(form.funcao.data)),
+            senha=form.senha.data,
+        )
 
         db.session.add(usuario)
         db.session.commit()

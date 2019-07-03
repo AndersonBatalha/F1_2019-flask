@@ -251,21 +251,21 @@ flask db downgrade""")
                 nome_usuario=self.fake.user_name()
             ).first()
             if usuario is None:
-                usuario = Usuario()
-                usuario.nome = self.fake.name()
-                usuario.nome_usuario = self.fake.user_name()
-                usuario.email = self.fake.email()
-                usuario.data_nasc = self.fake.date_of_birth(tzinfo=None, minimum_age=18,
-                                                            maximum_age=60)
-                usuario.endereco = self.fake.street_name()
-                usuario.numero = self.fake.random_int(min=100, max=9999)
-                usuario.complemento = self.fake.neighborhood()
-                usuario.bairro = self.fake.bairro()
-                usuario.cidade = self.fake.city()
-                usuario.estado = self.fake.state()
-                usuario.pais = self.fake.country()
-                usuario.funcao = random.choice(Funcao.query.all())
-                usuario.senha = 'password'
+                usuario = Usuario(
+                    nome=self.fake.name(),
+                    nome_usuario=self.fake.user_name(),
+                    email=self.fake.email(),
+                    data_nasc=self.fake.date_of_birth(tzinfo=None, minimum_age=18, maximum_age=60),
+                    endereco=self.fake.street_name(),
+                    numero=self.fake.random_int(min=100, max=9999),
+                    complemento=self.fake.neighborhood(),
+                    bairro=self.fake.bairro(),
+                    cidade=self.fake.city(),
+                    estado=self.fake.state(),
+                    pais=self.fake.country(),
+                    funcao=random.choice(Funcao.query.all()),
+                    senha='password',
+                )
 
                 print(i, usuario.nome_usuario)
             db.session.add(usuario)

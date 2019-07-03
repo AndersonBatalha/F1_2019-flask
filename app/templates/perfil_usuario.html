@@ -17,9 +17,7 @@
                             <div class="col-10 order-0">
                                 <div class="row align-items-center">
                                     <div class="col-xl-1 col-lg-1 col-sm-6">
-                                        <img src="{{ usuario.email |
-                                            gravatar(size=64, rating='g',
-                                            default=['mp', 'identicon', 'monsterid', 'wavatar', 'retro', 'robohash'] | random) }}">
+                                        <img src="{{ usuario.url_avatar }}">
                                     </div>
                                     <div class="col-xl-10 col-lg-10 col-sm-12">
                                         <h3>

@@ -18,7 +18,7 @@
 
         {% block navbar %}
             <nav class="navbar navbar-expand-lg">
-                <a href="{{ url_for('.index') }}" class="navbar-brand">
+                <a href="{{ url_for('main.index') }}" class="navbar-brand">
                     <img src="{{ url_for('static', filename='img/f1_logo.svg') }}" alt="F1 Logo" class='border-0'>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,26 +66,6 @@
                                    href="{{ url_for('main.posts')}}">Posts</a>
                                 <a class="dropdown-item"
                                    href="{{ url_for('main.logout') }}">Logout</a>
-{#                                <div class="dropdown-divider"></div>#}
-{##}
-{#                                <div class="btn-group dropleft" role="group">#}
-{#                                    <div class="dropdown">#}
-{#                                        <a class="dropdown-toggle#}
-{#                                        dropdown-toggle-split text-dark" href="#}
-{#                                        .dropdown-menu"#}
-{#                                           role="button"#}
-{#                                           id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
-{#                                        </a>#}
-{#                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">#}
-{#                                            <a class="dropdown-item" href="/add_post">Adicionar postagem</a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <a class="dropdown-item"#}
-{#                                            href="{{ url_for('main.posts') }}">Posts</a>#}
-{#                                </div>#}
-{##}
-{#                            </div>#}
-
                         </div>
                     {% else %}
                         <div class="justify-content-end">

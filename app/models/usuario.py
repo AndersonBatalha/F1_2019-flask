@@ -1,7 +1,6 @@
 from app import db, login_manager
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
-
 from .funcao import Funcao
 
 class Usuario(db.Model, UserMixin):
@@ -40,13 +39,3 @@ class Usuario(db.Model, UserMixin):
 @login_manager.user_loader
 def load_user(user_id):
     return Usuario.query.get(int(user_id))
-
-"""
-
-from app.models import *
-from app import db
-a = Usuario.query.get(30)
-b = Usuario.query.get(80)
-r = Relacionamento(usuario=a, seguidor=b)
-r
-"""

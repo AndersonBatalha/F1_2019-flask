@@ -13,11 +13,20 @@
 
                 <ul class="list-group">
                     <li class="list-group-item align-items-center border-0">
-                        <div class="row mb-3">
+                        <div class="row mb-3 align-items-center">
                             <div class="col-10 order-0">
-                                <h3>
-                                    {{ usuario.nome }} <small>({{ usuario.nome_usuario }})</small>
-                                </h3>
+                                <div class="row align-items-center">
+                                    <div class="col-xl-1 col-lg-1 col-sm-6">
+                                        <img src="{{ usuario.email |
+                                            gravatar(size=64, rating='g',
+                                            default=['mp', 'identicon', 'monsterid', 'wavatar', 'retro', 'robohash'] | random) }}">
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-sm-12">
+                                        <h3>
+                                            {{ usuario.nome }} <small>({{ usuario.nome_usuario }})</small>
+                                        </h3>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-1 order-6">
                                 {% if usuario != seguidor %}

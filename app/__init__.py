@@ -2,6 +2,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
+from flask_gravatar import Gravatar
+from random import choice, randint
 
 from config import Config
 
@@ -24,6 +26,15 @@ def create_app():
     login_manager.login_view = 'main.login'
     login_manager.login_message = "É preciso fazer login para continuar"
     login_manager.login_message_category = 'warning'
+
+    gravatar = Gravatar(
+        app=app,
+        force_default=False,
+        force_lower=False,
+        use_ssl=False,
+        base_url=None
+    )
+    gravatar.init_app(app)
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)

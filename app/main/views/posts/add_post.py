@@ -1,4 +1,4 @@
-from ..forms import PostForm
+from app.main.forms import PostForm
 from app.models import Post, Usuario
 from app.main import main
 from app import db
@@ -9,7 +9,7 @@ from app.main.decorators import tem_permissao
 
 from flask import render_template, request, flash, redirect, url_for
 from flask_login import login_required, current_user
-from .upload_file import allowed_extension, upload
+from app.main.views.posts.upload_file import allowed_extension, upload
 
 @main.route('/add_post', methods=["GET", "POST"])
 @login_required

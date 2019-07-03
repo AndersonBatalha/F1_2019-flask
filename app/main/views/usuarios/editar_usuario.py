@@ -3,7 +3,7 @@ from app.main import main
 from app.main.decorators import tem_permissao
 from populate_db import Permissoes
 from app.models import Usuario, Funcao
-from ..forms import EditUserForm
+from app.main.forms import EditUserForm
 from flask import redirect, url_for, render_template, flash, request
 from flask_login import login_required
 from populate_db import Populate_DB

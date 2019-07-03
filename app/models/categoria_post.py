@@ -1,5 +1,6 @@
 from app import db
-from . import Post, Categoria
+from .post import Post
+from .categoria import Categoria
 
 class Post_Categoria(db.Model):
     __tablename__ = 'post_categoria'

@@ -1,7 +1,7 @@
 from app.main import main
 from app.main.decorators import tem_permissao
 from populate_db import Permissoes
-from ..forms import FuncaoForm
+from app.main.forms import RoleForm
 from app.models import Funcao
 from app import db
 from flask import render_template, flash, redirect, url_for
@@ -12,7 +12,7 @@ from flask_login import login_required
 @tem_permissao(Permissoes.ADMINISTRAR, msg_erro="Apenas administradores podem criar funções")
 def criar_funcao():
     funcoes = Funcao.query.all()
-    form = FuncaoForm()
+    form = RoleForm()
     if form.validate_on_submit():
         f = Funcao.query.filter_by(nome_funcao=form.nome_funcao.data).first()
         if f is None:

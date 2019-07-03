@@ -1,6 +1,6 @@
 from datetime import datetime
 import os
-from ..forms import EditPostForm
+from app.main.forms import EditPostForm
 from app.models import Post, Usuario
 from app.main import main
 from app import db
@@ -8,7 +8,7 @@ from slugify import slugify
 
 from flask import render_template, request, flash, redirect, url_for
 from flask_login import login_required, current_user
-from .upload_file import allowed_extension, upload
+from app.main.views.posts.upload_file import allowed_extension, upload
 from populate_db import Permissoes
 from app.main.decorators import tem_permissao
 

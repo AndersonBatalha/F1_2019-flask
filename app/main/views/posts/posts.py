@@ -8,5 +8,5 @@ from app.main.decorators import tem_permissao
 @tem_permissao(Permissoes.ESCREVER + Permissoes.POSTAR,
                msg_erro="O usuário atual não tem permissão para adicionar posts")
 def posts():
-    posts = Post.query.order_by(Post.data).all()
+    posts = Post.query.order_by(Post.data.desc()).all()
     return render_template('posts.html', posts=posts)

@@ -4,7 +4,7 @@ from .equipe import Equipe
 from .evento import Evento
 from .pais import Pais
 from .piloto import Piloto
-from .resultado_piloto import Resultado_Piloto
+from .resultado import Resultado_Piloto
 from .pontuacao import Pontuacao
 from .usuario import Usuario
 from .titulo import Titulo

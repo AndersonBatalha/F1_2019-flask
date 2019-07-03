@@ -1,5 +1,5 @@
 from app.main import main
-from ..forms import RegisterForm
+from app.main.forms import RegisterForm
 from flask import redirect, url_for, render_template, flash
 from app import db
 from app.models import Usuario, Funcao

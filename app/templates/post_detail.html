@@ -89,6 +89,13 @@
                                     <a class="text-dark" href="{{ url_for('main.perfil_usuario', nome=comentario.autor.nome_usuario) }}">
                                         {{ comentario.autor.nome_usuario }}
                                     </a>
+                                    <a class="text-muted"
+                                       href="{{ url_for('main.apagar_comentario',
+                                               autor=comentario.autor.nome_usuario,
+                                               post_slug=comentario.post.slug)
+                                               }}">
+                                        <ion-icon class="text-dark" name="trash"></ion-icon>
+                                    </a>
                                 </p>
                                 <p class="comentario">{{ comentario.texto }}</p>
                             </li>

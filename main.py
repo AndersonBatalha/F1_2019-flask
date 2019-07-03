@@ -16,7 +16,7 @@
 ## O site deve ter páginas com acesso restrito a usuários autenticados (X)
 ## O site deve possuir o gerenciamento de grupos ou funções de usuários (X)
 ## O site deve ter páginas com acesso restrito a usuários com funções específicas (X)
-## Permitir que o usuário com função de moderador possa excluir comentários
+## Permitir que o usuário com função de moderador possa excluir comentários (X)
 
 
 from app import create_app, db

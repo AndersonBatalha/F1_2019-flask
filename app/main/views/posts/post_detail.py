@@ -1,9 +1,9 @@
-from ..forms import CommentForm
+from app.main.forms import CommentForm
 from app.models import Post, Comentario, Usuario
 from app.main import main
 from app import db
 from flask import render_template, flash, redirect, request
-from .errors import page_not_found
+from app.main.views.errors import page_not_found
 
 from flask_login import login_required, current_user
 from werkzeug.http import HTTP_STATUS_CODES

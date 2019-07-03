@@ -1,7 +1,7 @@
 from app.main import main
 from app.main.decorators import tem_permissao
 from populate_db import Permissoes
-from ..forms import CriarGrupoForm
+from app.main.forms import CreateGroupForm
 from app.models import Grupo, MembrosGrupo
 from app import db
 from flask import render_template, flash
@@ -13,7 +13,7 @@ from slugify import slugify
 @login_required
 @tem_permissao(Permissoes.ADMINISTRAR, msg_erro="Apenas administradores podem criar grupos")
 def criar_grupo():
-    form = CriarGrupoForm()
+    form = CreateGroupForm()
     if form.validate_on_submit():
         g = Grupo(
             nome_grupo=form.nome_grupo.data,
